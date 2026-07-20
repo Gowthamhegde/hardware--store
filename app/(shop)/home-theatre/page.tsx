@@ -6,7 +6,7 @@ import { ShoppingCart, Speaker, ArrowLeft } from 'lucide-react';
 import TechnicalProductCard from '@/components/TechnicalProductCard';
 
 export const metadata = {
-  title: 'Home Theatre Systems | Vigesh Electrical Power House',
+  title: 'Home Theatre Systems | VIGNESH Electrical Power House',
   description: 'Premium home theatre and audio setups for immersive experiences.',
 };
 

@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vigesh Electrical Power House",
+  title: "VIGNESH Electrical Power House",
   description: "Hardware, switches, cables, home theatre and electronic items with a practical local-store feel.",
 };
 

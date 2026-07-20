@@ -1,11 +1,11 @@
 // Store Configuration
 
 export const STORE_CONFIG = {
-  name: "Vigesh Electrical Power House",
+  name: "VIGNESH Electrical Power House",
   tagline: "Hardware, electricals, home theatre and electronic items",
   description: "Switches, cables, lighting, home theatre and electronic items for every project",
   phone: "+1 (555) 782-4430",
-  email: "sales@vigeshelectricalpowerhouse.com",
+  email: "sales@vigneshelectricalpowerhouse.com",
   address: {
     line1: "123 Industrial Avenue",
     line2: "Suite 100",

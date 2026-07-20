@@ -133,7 +133,7 @@ export default function BentoGrid() {
               backgroundImage: 'linear-gradient(to bottom right, var(--foreground), rgba(150, 150, 150, 0.4))',
             }}
           >
-            VIGESH
+            VIGNESH
             <br />
             <span className="spatial-text-glow text-foreground">
               electrical space.
@@ -185,7 +185,7 @@ export default function BentoGrid() {
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${photo})` }}
-                aria-label={`Vigesh Electrical Power House photo ${index + 1}`}
+                aria-label={`VIGNESH Electrical Power House photo ${index + 1}`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
             </motion.div>
