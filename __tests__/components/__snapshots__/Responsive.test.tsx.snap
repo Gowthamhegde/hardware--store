@@ -1,0 +1,4246 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Responsive Layout Snapshots Desktop (1280px) BentoGrid matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="relative z-10 overflow-hidden"
+  >
+    <section
+      class="relative container mx-auto px-4 pt-20 pb-16 flex flex-col items-center text-center"
+    >
+      <div
+        class="flex items-center gap-3 mb-8"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <span
+          class="inline-flex items-center gap-2 font-display text-xs font-semibold text-foreground tracking-widest border border-foreground/20 rounded-full px-4 py-2 bg-foreground/5 backdrop-blur-md shadow-spatial"
+        >
+          <span
+            class="relative flex h-2 w-2"
+          >
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-foreground opacity-75"
+            />
+            <span
+              class="relative inline-flex rounded-full h-2 w-2 bg-foreground"
+            />
+          </span>
+          SPATIAL EDITION · LIVE INVENTORY
+        </span>
+      </div>
+      <div
+        class="relative z-20"
+        style="scale: [object Object];"
+      >
+        <h1
+          class="font-display text-6xl md:text-8xl lg:text-[100px] font-black text-transparent bg-clip-text leading-[0.9] tracking-tighter mb-6 pb-2"
+          initial="[object Object]"
+          style="background-image: linear-gradient(to bottom right, var(--foreground), rgba(150, 150, 150, 0.4));"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          Redefine your
+          <br />
+          <span
+            class="spatial-text-glow text-foreground"
+          >
+            digital space.
+          </span>
+        </h1>
+      </div>
+      <p
+        class="mt-2 text-foreground/60 text-xl max-w-2xl leading-relaxed font-display"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        Premium spatial hardware, curated for the modern era. Find the spec, compare, buy.
+      </p>
+      <div
+        class="flex flex-wrap items-center justify-center gap-4 mt-10 mb-8"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <a
+          class="group flex items-center gap-2 px-8 py-4 bg-foreground text-background font-display font-bold rounded-full hover:scale-105 transition-transform text-lg shadow-[0_0_40px_rgba(150,150,150,0.3)]"
+          href="/shop"
+        >
+          Shop all products
+          <div />
+        </a>
+        <a
+          class="group flex items-center gap-2 px-8 py-4 spatial-glass text-foreground font-display font-bold rounded-full hover:bg-foreground/10 transition-colors text-lg"
+          href="/build-setup"
+        >
+          <div />
+          Build a setup
+        </a>
+      </div>
+    </section>
+    <section
+      class="container mx-auto px-4 py-10 relative z-20"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-6"
+      >
+        <div
+          class="md:col-span-7 md:row-span-2"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=home-theatre-audio"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[500px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full flex flex-col justify-between p-10 bg-gradient-to-br from-foreground/[0.05] to-transparent"
+                >
+                  <div>
+                    <div
+                      class="flex items-center gap-4 mb-6"
+                    >
+                      <div
+                        class="w-14 h-14 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center shadow-lg"
+                      >
+                        <div />
+                      </div>
+                      <div>
+                        <span
+                          class="font-display font-bold text-xs text-foreground/80 tracking-widest block uppercase mb-1"
+                        >
+                          Spatial Audio
+                        </span>
+                        <span
+                          class="font-mono text-[10px] text-foreground/50 tracking-widest uppercase"
+                        >
+                          IMMERSIVE SOUNDSCAPES
+                        </span>
+                      </div>
+                    </div>
+                    <h2
+                      class="font-display text-4xl md:text-6xl font-black text-foreground leading-tight mb-4"
+                    >
+                      Home Theatre & Audio
+                    </h2>
+                    <p
+                      class="text-foreground/60 text-lg leading-relaxed max-w-md mb-8 font-display"
+                    >
+                      Speakers, soundbars, AVRs, projectors, mounts
+                    </p>
+                    <div
+                      class="flex flex-wrap gap-2"
+                    >
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Spatial Audio
+                      </span>
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Dolby Atmos
+                      </span>
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Soundbars
+                      </span>
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Projectors
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center justify-between mt-10"
+                  >
+                    <div
+                      class="flex items-center gap-3 text-foreground font-display text-lg font-bold transition-colors"
+                    >
+                      Explore collection
+                      <div />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-5"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=switches-sockets"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[240px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-8 flex flex-col justify-between bg-gradient-to-br from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="flex items-start justify-between"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center"
+                    >
+                      <div />
+                    </div>
+                    <span
+                      class="font-display font-medium text-[10px] text-foreground border border-foreground/30 rounded-full px-3 py-1 bg-foreground/10 uppercase tracking-wider"
+                    >
+                      16A max
+                    </span>
+                  </div>
+                  <div>
+                    <h3
+                      class="font-display text-2xl font-bold text-foreground mb-2"
+                    >
+                      Switches & Sockets
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm leading-relaxed max-w-xs font-display"
+                    >
+                      3-pin, modular, rated 6A–16A
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-5"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=cables-wires"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[240px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-8 flex flex-col justify-between bg-gradient-to-br from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="flex items-start justify-between"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center"
+                    >
+                      <div />
+                    </div>
+                    <span
+                      class="font-display font-medium text-[10px] text-foreground border border-foreground/30 rounded-full px-3 py-1 bg-foreground/10 uppercase tracking-wider"
+                    >
+                      Up to 4K@60Hz
+                    </span>
+                  </div>
+                  <div>
+                    <h3
+                      class="font-display text-2xl font-bold text-foreground mb-2"
+                    >
+                      Cables & Wires
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm leading-relaxed max-w-xs font-display"
+                    >
+                      Power, network, HDMI, speaker cable
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-6"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=smart-home"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[160px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-6 flex items-center gap-6 bg-gradient-to-r from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center flex-shrink-0"
+                  >
+                    <div />
+                  </div>
+                  <div
+                    class="flex-1 min-w-0"
+                  >
+                    <h3
+                      class="font-display text-xl font-bold text-foreground mb-1"
+                    >
+                      Smart Home
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm truncate font-display"
+                    >
+                      WiFi switches, sensors, controllers
+                    </p>
+                  </div>
+                  <div />
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-6"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=deals"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[160px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-6 flex items-center gap-6 bg-gradient-to-r from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center flex-shrink-0 relative"
+                  >
+                    <div
+                      class="absolute -top-1 -right-1"
+                    >
+                      <span
+                        class="relative flex h-3 w-3"
+                      >
+                        <span
+                          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-foreground opacity-75"
+                        />
+                        <span
+                          class="relative inline-flex rounded-full h-3 w-3 bg-foreground"
+                        />
+                      </span>
+                    </div>
+                    <div />
+                  </div>
+                  <div
+                    class="flex-1 min-w-0"
+                  >
+                    <h3
+                      class="font-display text-xl font-bold text-foreground mb-1"
+                    >
+                      Deals
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm truncate font-display"
+                    >
+                      Clearance and bundle offers
+                    </p>
+                  </div>
+                  <div />
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative container mx-auto px-4 py-10 z-20"
+    >
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-foreground/10 rounded-3xl spatial-glass overflow-hidden"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            2,400+
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Products stocked
+          </span>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            12
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Years trading
+          </span>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            48h
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Dispatch window
+          </span>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            4.9★
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Customer rating
+          </span>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative container mx-auto px-4 py-10 z-20"
+    >
+      <div
+        class="relative rounded-3xl overflow-hidden p-10 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-10 spatial-glass"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <div
+          class="relative z-10 max-w-2xl"
+        >
+          <div
+            class="flex items-center gap-3 mb-4"
+          >
+            <div
+              class="w-10 h-10 rounded-xl bg-foreground/10 flex items-center justify-center"
+            >
+              <div />
+            </div>
+            <span
+              class="font-display font-semibold text-xs text-foreground/80 tracking-widest uppercase"
+            >
+              Intelligent Setup Builder
+            </span>
+          </div>
+          <h2
+            class="font-display text-4xl md:text-5xl font-black text-foreground mb-4"
+          >
+            Design your dream space
+          </h2>
+          <p
+            class="text-foreground/70 text-lg leading-relaxed max-w-lg font-display"
+          >
+            Pick your core components, we seamlessly match the cables and smart controls. Build an immersive spatial environment in minutes.
+          </p>
+        </div>
+        <a
+          class="relative z-10 group flex items-center gap-3 px-8 py-5 bg-foreground text-background font-display font-bold rounded-full hover:scale-105 transition-transform text-lg shadow-[0_0_30px_rgba(150,150,150,0.2)]"
+          href="/build-setup"
+        >
+          Start building
+          <div />
+        </a>
+      </div>
+    </section>
+    <section
+      class="relative container mx-auto px-4 py-16 z-20"
+    >
+      <div
+        class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <div>
+          <p
+            class="font-display font-semibold text-xs text-foreground/60 tracking-widest mb-2 uppercase"
+          >
+            Curated Collection
+          </p>
+          <h2
+            class="font-display text-4xl md:text-5xl font-black text-foreground"
+          >
+            Spatial Audio
+          </h2>
+        </div>
+        <a
+          class="flex items-center gap-2 text-sm font-bold text-foreground/70 hover:text-foreground transition-colors uppercase tracking-widest font-display"
+          href="/shop?category=home-theatre-audio"
+        >
+          View collection 
+          <div />
+        </a>
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <div
+          class="relative z-10"
+        >
+          <div
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
+          >
+            <a
+              href="/product/yamaha-rx-v6a-avr"
+            >
+              <div
+                class="group relative flex flex-col glass-card h-full"
+              >
+                <div
+                  class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+                >
+                  <span
+                    class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+                  >
+                    HT-001
+                  </span>
+                  <div
+                    class="flex items-center gap-1.5"
+                  >
+                    <span
+                      animate="[object Object]"
+                      class="block w-1.5 h-1.5 bg-signal shadow-signal"
+                      transition="[object Object]"
+                    />
+                    <span
+                      class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+                    >
+                      STOCKED
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="relative h-48 overflow-hidden p-4"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+                  />
+                  <img
+                    alt="Yamaha RX-V6A 7.2-Ch AVR"
+                    class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+                    src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&auto=format&fit=crop"
+                  />
+                </div>
+                <div
+                  class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="absolute inset-0 w-full h-full pointer-events-none"
+                    preserveAspectRatio="none"
+                  >
+                    <line
+                      class="text-signal"
+                      stroke="currentColor"
+                      stroke-dasharray="200"
+                      stroke-opacity="0"
+                      stroke-width="1"
+                      style="stroke-dashoffset: [object Object];"
+                      x1="0"
+                      x2="100%"
+                      y1="50%"
+                      y2="50%"
+                    />
+                  </svg>
+                  <div
+                    class="relative flex flex-wrap gap-x-4 gap-y-1"
+                  >
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Channels: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        7.2
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Power: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        100W/ch @ 8Ω
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        HDMI: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        7 in / 2 out (2.1)
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+                >
+                  <span
+                    class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+                  >
+                    Yamaha
+                  </span>
+                  <h3
+                    class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+                  >
+                    Yamaha RX-V6A 7.2-Ch AVR
+                  </h3>
+                  <div
+                    class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+                  >
+                    <div>
+                      <div
+                        class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+                      >
+                        SYS_VALUE
+                      </div>
+                      <div
+                        class="font-mono text-lg font-bold text-cable-white text-gradient"
+                      >
+                        ₹650
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <button
+                        aria-label="Compare"
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+                      >
+                        <div
+                          data-testid="scale-icon"
+                        />
+                      </button>
+                      <button
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+                      >
+                        <div
+                          data-testid="shopping-cart-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="relative z-10"
+        >
+          <div
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
+          >
+            <a
+              href="/product/klipsch-r625fa-floorstanding"
+            >
+              <div
+                class="group relative flex flex-col glass-card h-full"
+              >
+                <div
+                  class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+                >
+                  <span
+                    class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+                  >
+                    HT-002
+                  </span>
+                  <div
+                    class="flex items-center gap-1.5"
+                  >
+                    <span
+                      animate="[object Object]"
+                      class="block w-1.5 h-1.5 bg-live-red shadow-magenta"
+                      transition="[object Object]"
+                    />
+                    <span
+                      class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+                    >
+                      LOW
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="relative h-48 overflow-hidden p-4"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+                  />
+                  <img
+                    alt="Klipsch R-625FA Floorstanding"
+                    class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+                    src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&auto=format&fit=crop"
+                  />
+                </div>
+                <div
+                  class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="absolute inset-0 w-full h-full pointer-events-none"
+                    preserveAspectRatio="none"
+                  >
+                    <line
+                      class="text-signal"
+                      stroke="currentColor"
+                      stroke-dasharray="200"
+                      stroke-opacity="0"
+                      stroke-width="1"
+                      style="stroke-dashoffset: [object Object];"
+                      x1="0"
+                      x2="100%"
+                      y1="50%"
+                      y2="50%"
+                    />
+                  </svg>
+                  <div
+                    class="relative flex flex-wrap gap-x-4 gap-y-1"
+                  >
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Type: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        Floorstanding
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Drivers: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        1" + 2× 6.5" + 5.25"
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Frequency: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        38Hz–21kHz ±3dB
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+                >
+                  <span
+                    class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+                  >
+                    Klipsch
+                  </span>
+                  <h3
+                    class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+                  >
+                    Klipsch R-625FA Floorstanding
+                  </h3>
+                  <div
+                    class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+                  >
+                    <div>
+                      <div
+                        class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+                      >
+                        SYS_VALUE
+                      </div>
+                      <div
+                        class="font-mono text-lg font-bold text-cable-white text-gradient"
+                      >
+                        ₹549
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <button
+                        aria-label="Compare"
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+                      >
+                        <div
+                          data-testid="scale-icon"
+                        />
+                      </button>
+                      <button
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+                      >
+                        <div
+                          data-testid="shopping-cart-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="relative z-10"
+        >
+          <div
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
+          >
+            <a
+              href="/product/sonos-arc-sl-soundbar"
+            >
+              <div
+                class="group relative flex flex-col glass-card h-full"
+              >
+                <div
+                  class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+                >
+                  <span
+                    class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+                  >
+                    HT-003
+                  </span>
+                  <div
+                    class="flex items-center gap-1.5"
+                  >
+                    <span
+                      animate="[object Object]"
+                      class="block w-1.5 h-1.5 bg-signal shadow-signal"
+                      transition="[object Object]"
+                    />
+                    <span
+                      class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+                    >
+                      STOCKED
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="relative h-48 overflow-hidden p-4"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+                  />
+                  <img
+                    alt="Sonos Arc SL Soundbar"
+                    class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+                    src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&auto=format&fit=crop"
+                  />
+                </div>
+                <div
+                  class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="absolute inset-0 w-full h-full pointer-events-none"
+                    preserveAspectRatio="none"
+                  >
+                    <line
+                      class="text-signal"
+                      stroke="currentColor"
+                      stroke-dasharray="200"
+                      stroke-opacity="0"
+                      stroke-width="1"
+                      style="stroke-dashoffset: [object Object];"
+                      x1="0"
+                      x2="100%"
+                      y1="50%"
+                      y2="50%"
+                    />
+                  </svg>
+                  <div
+                    class="relative flex flex-wrap gap-x-4 gap-y-1"
+                  >
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Drivers: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        11 (8 woofer, 3 tweet)
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Channels: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        5.0.2 virtual
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Formats: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        Dolby Atmos
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+                >
+                  <span
+                    class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+                  >
+                    Sonos
+                  </span>
+                  <h3
+                    class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+                  >
+                    Sonos Arc SL Soundbar
+                  </h3>
+                  <div
+                    class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+                  >
+                    <div>
+                      <div
+                        class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+                      >
+                        SYS_VALUE
+                      </div>
+                      <div
+                        class="font-mono text-lg font-bold text-cable-white text-gradient"
+                      >
+                        ₹879
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <button
+                        aria-label="Compare"
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+                      >
+                        <div
+                          data-testid="scale-icon"
+                        />
+                      </button>
+                      <button
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+                      >
+                        <div
+                          data-testid="shopping-cart-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="container mx-auto px-4 py-10 relative z-20"
+    >
+      <div
+        class="relative rounded-3xl spatial-glass py-8 overflow-hidden flex items-center"
+      >
+        <div
+          aria-hidden="true"
+          class="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none bg-gradient-to-r from-background to-transparent"
+        />
+        <div
+          aria-hidden="true"
+          class="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none bg-gradient-to-l from-background to-transparent"
+        />
+        <div
+          aria-hidden="true"
+          class="marquee-track"
+        >
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            APPLE
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONY
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            YAMAHA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            KLIPSCH
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            DENON
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SVS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AUDIOQUEST
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            BELKIN
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            PHILIPS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AQARA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOFF
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            APPLE
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONY
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            YAMAHA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            KLIPSCH
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            DENON
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SVS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AUDIOQUEST
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            BELKIN
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            PHILIPS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AQARA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOFF
+          </span>
+        </div>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Responsive Layout Snapshots Desktop (1280px) ProductPage matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto px-4 py-24 text-center"
+  >
+    <p
+      class="font-mono text-[10px] text-aluminum/50 uppercase"
+    >
+      [ ERR: PRODUCT_NOT_FOUND ]
+    </p>
+    <a
+      class="mt-4 inline-block font-mono text-[10px] text-signal hover:underline uppercase"
+      href="/shop"
+    >
+      [ RETURN_TO_CATALOG ]
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Responsive Layout Snapshots Desktop (1280px) TechnicalProductCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    initial="[object Object]"
+    transition="[object Object]"
+    viewport="[object Object]"
+    whileinview="[object Object]"
+  >
+    <a
+      href="/product/legrand-modular-3pin-socket"
+    >
+      <div
+        class="group relative flex flex-col glass-card h-full"
+      >
+        <div
+          class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+        >
+          <span
+            class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+          >
+            SW-001
+          </span>
+          <div
+            class="flex items-center gap-1.5"
+          >
+            <span
+              animate="[object Object]"
+              class="block w-1.5 h-1.5 bg-signal shadow-signal"
+              transition="[object Object]"
+            />
+            <span
+              class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+            >
+              STOCKED
+            </span>
+          </div>
+        </div>
+        <div
+          class="relative h-48 overflow-hidden p-4"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+          />
+          <img
+            alt="Legrand Modular 3-Pin Socket"
+            class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+            src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&auto=format&fit=crop"
+          />
+        </div>
+        <div
+          class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+        >
+          <svg
+            aria-hidden="true"
+            class="absolute inset-0 w-full h-full pointer-events-none"
+            preserveAspectRatio="none"
+          >
+            <line
+              class="text-signal"
+              stroke="currentColor"
+              stroke-dasharray="200"
+              stroke-opacity="0"
+              stroke-width="1"
+              style="stroke-dashoffset: [object Object];"
+              x1="0"
+              x2="100%"
+              y1="50%"
+              y2="50%"
+            />
+          </svg>
+          <div
+            class="relative flex flex-wrap gap-x-4 gap-y-1"
+          >
+            <span
+              class="font-mono text-[9px] uppercase tracking-wide"
+            >
+              <span
+                class="text-foreground/40"
+              >
+                Type: 
+              </span>
+              <span
+                class="text-cable-white"
+              >
+                3-pin socket
+              </span>
+            </span>
+            <span
+              class="font-mono text-[9px] uppercase tracking-wide"
+            >
+              <span
+                class="text-foreground/40"
+              >
+                Rating: 
+              </span>
+              <span
+                class="text-cable-white"
+              >
+                16A @ 250V
+              </span>
+            </span>
+            <span
+              class="font-mono text-[9px] uppercase tracking-wide"
+            >
+              <span
+                class="text-foreground/40"
+              >
+                Terminal: 
+              </span>
+              <span
+                class="text-cable-white"
+              >
+                Brass screw
+              </span>
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+        >
+          <span
+            class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+          >
+            Legrand
+          </span>
+          <h3
+            class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+          >
+            Legrand Modular 3-Pin Socket
+          </h3>
+          <div
+            class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+          >
+            <div>
+              <div
+                class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+              >
+                SYS_VALUE
+              </div>
+              <div
+                class="font-mono text-lg font-bold text-cable-white text-gradient"
+              >
+                ₹9
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-2"
+            >
+              <button
+                aria-label="Compare"
+                class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+              >
+                <div
+                  data-testid="scale-icon"
+                />
+              </button>
+              <button
+                class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+              >
+                <div
+                  data-testid="shopping-cart-icon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Responsive Layout Snapshots Mobile (375px) BentoGrid matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="relative z-10 overflow-hidden"
+  >
+    <section
+      class="relative container mx-auto px-4 pt-20 pb-16 flex flex-col items-center text-center"
+    >
+      <div
+        class="flex items-center gap-3 mb-8"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <span
+          class="inline-flex items-center gap-2 font-display text-xs font-semibold text-foreground tracking-widest border border-foreground/20 rounded-full px-4 py-2 bg-foreground/5 backdrop-blur-md shadow-spatial"
+        >
+          <span
+            class="relative flex h-2 w-2"
+          >
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-foreground opacity-75"
+            />
+            <span
+              class="relative inline-flex rounded-full h-2 w-2 bg-foreground"
+            />
+          </span>
+          SPATIAL EDITION · LIVE INVENTORY
+        </span>
+      </div>
+      <div
+        class="relative z-20"
+        style="scale: [object Object];"
+      >
+        <h1
+          class="font-display text-6xl md:text-8xl lg:text-[100px] font-black text-transparent bg-clip-text leading-[0.9] tracking-tighter mb-6 pb-2"
+          initial="[object Object]"
+          style="background-image: linear-gradient(to bottom right, var(--foreground), rgba(150, 150, 150, 0.4));"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          Redefine your
+          <br />
+          <span
+            class="spatial-text-glow text-foreground"
+          >
+            digital space.
+          </span>
+        </h1>
+      </div>
+      <p
+        class="mt-2 text-foreground/60 text-xl max-w-2xl leading-relaxed font-display"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        Premium spatial hardware, curated for the modern era. Find the spec, compare, buy.
+      </p>
+      <div
+        class="flex flex-wrap items-center justify-center gap-4 mt-10 mb-8"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <a
+          class="group flex items-center gap-2 px-8 py-4 bg-foreground text-background font-display font-bold rounded-full hover:scale-105 transition-transform text-lg shadow-[0_0_40px_rgba(150,150,150,0.3)]"
+          href="/shop"
+        >
+          Shop all products
+          <div />
+        </a>
+        <a
+          class="group flex items-center gap-2 px-8 py-4 spatial-glass text-foreground font-display font-bold rounded-full hover:bg-foreground/10 transition-colors text-lg"
+          href="/build-setup"
+        >
+          <div />
+          Build a setup
+        </a>
+      </div>
+    </section>
+    <section
+      class="container mx-auto px-4 py-10 relative z-20"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-6"
+      >
+        <div
+          class="md:col-span-7 md:row-span-2"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=home-theatre-audio"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[500px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full flex flex-col justify-between p-10 bg-gradient-to-br from-foreground/[0.05] to-transparent"
+                >
+                  <div>
+                    <div
+                      class="flex items-center gap-4 mb-6"
+                    >
+                      <div
+                        class="w-14 h-14 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center shadow-lg"
+                      >
+                        <div />
+                      </div>
+                      <div>
+                        <span
+                          class="font-display font-bold text-xs text-foreground/80 tracking-widest block uppercase mb-1"
+                        >
+                          Spatial Audio
+                        </span>
+                        <span
+                          class="font-mono text-[10px] text-foreground/50 tracking-widest uppercase"
+                        >
+                          IMMERSIVE SOUNDSCAPES
+                        </span>
+                      </div>
+                    </div>
+                    <h2
+                      class="font-display text-4xl md:text-6xl font-black text-foreground leading-tight mb-4"
+                    >
+                      Home Theatre & Audio
+                    </h2>
+                    <p
+                      class="text-foreground/60 text-lg leading-relaxed max-w-md mb-8 font-display"
+                    >
+                      Speakers, soundbars, AVRs, projectors, mounts
+                    </p>
+                    <div
+                      class="flex flex-wrap gap-2"
+                    >
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Spatial Audio
+                      </span>
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Dolby Atmos
+                      </span>
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Soundbars
+                      </span>
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Projectors
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center justify-between mt-10"
+                  >
+                    <div
+                      class="flex items-center gap-3 text-foreground font-display text-lg font-bold transition-colors"
+                    >
+                      Explore collection
+                      <div />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-5"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=switches-sockets"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[240px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-8 flex flex-col justify-between bg-gradient-to-br from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="flex items-start justify-between"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center"
+                    >
+                      <div />
+                    </div>
+                    <span
+                      class="font-display font-medium text-[10px] text-foreground border border-foreground/30 rounded-full px-3 py-1 bg-foreground/10 uppercase tracking-wider"
+                    >
+                      16A max
+                    </span>
+                  </div>
+                  <div>
+                    <h3
+                      class="font-display text-2xl font-bold text-foreground mb-2"
+                    >
+                      Switches & Sockets
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm leading-relaxed max-w-xs font-display"
+                    >
+                      3-pin, modular, rated 6A–16A
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-5"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=cables-wires"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[240px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-8 flex flex-col justify-between bg-gradient-to-br from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="flex items-start justify-between"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center"
+                    >
+                      <div />
+                    </div>
+                    <span
+                      class="font-display font-medium text-[10px] text-foreground border border-foreground/30 rounded-full px-3 py-1 bg-foreground/10 uppercase tracking-wider"
+                    >
+                      Up to 4K@60Hz
+                    </span>
+                  </div>
+                  <div>
+                    <h3
+                      class="font-display text-2xl font-bold text-foreground mb-2"
+                    >
+                      Cables & Wires
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm leading-relaxed max-w-xs font-display"
+                    >
+                      Power, network, HDMI, speaker cable
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-6"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=smart-home"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[160px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-6 flex items-center gap-6 bg-gradient-to-r from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center flex-shrink-0"
+                  >
+                    <div />
+                  </div>
+                  <div
+                    class="flex-1 min-w-0"
+                  >
+                    <h3
+                      class="font-display text-xl font-bold text-foreground mb-1"
+                    >
+                      Smart Home
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm truncate font-display"
+                    >
+                      WiFi switches, sensors, controllers
+                    </p>
+                  </div>
+                  <div />
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-6"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=deals"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[160px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-6 flex items-center gap-6 bg-gradient-to-r from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center flex-shrink-0 relative"
+                  >
+                    <div
+                      class="absolute -top-1 -right-1"
+                    >
+                      <span
+                        class="relative flex h-3 w-3"
+                      >
+                        <span
+                          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-foreground opacity-75"
+                        />
+                        <span
+                          class="relative inline-flex rounded-full h-3 w-3 bg-foreground"
+                        />
+                      </span>
+                    </div>
+                    <div />
+                  </div>
+                  <div
+                    class="flex-1 min-w-0"
+                  >
+                    <h3
+                      class="font-display text-xl font-bold text-foreground mb-1"
+                    >
+                      Deals
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm truncate font-display"
+                    >
+                      Clearance and bundle offers
+                    </p>
+                  </div>
+                  <div />
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative container mx-auto px-4 py-10 z-20"
+    >
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-foreground/10 rounded-3xl spatial-glass overflow-hidden"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            2,400+
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Products stocked
+          </span>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            12
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Years trading
+          </span>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            48h
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Dispatch window
+          </span>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            4.9★
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Customer rating
+          </span>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative container mx-auto px-4 py-10 z-20"
+    >
+      <div
+        class="relative rounded-3xl overflow-hidden p-10 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-10 spatial-glass"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <div
+          class="relative z-10 max-w-2xl"
+        >
+          <div
+            class="flex items-center gap-3 mb-4"
+          >
+            <div
+              class="w-10 h-10 rounded-xl bg-foreground/10 flex items-center justify-center"
+            >
+              <div />
+            </div>
+            <span
+              class="font-display font-semibold text-xs text-foreground/80 tracking-widest uppercase"
+            >
+              Intelligent Setup Builder
+            </span>
+          </div>
+          <h2
+            class="font-display text-4xl md:text-5xl font-black text-foreground mb-4"
+          >
+            Design your dream space
+          </h2>
+          <p
+            class="text-foreground/70 text-lg leading-relaxed max-w-lg font-display"
+          >
+            Pick your core components, we seamlessly match the cables and smart controls. Build an immersive spatial environment in minutes.
+          </p>
+        </div>
+        <a
+          class="relative z-10 group flex items-center gap-3 px-8 py-5 bg-foreground text-background font-display font-bold rounded-full hover:scale-105 transition-transform text-lg shadow-[0_0_30px_rgba(150,150,150,0.2)]"
+          href="/build-setup"
+        >
+          Start building
+          <div />
+        </a>
+      </div>
+    </section>
+    <section
+      class="relative container mx-auto px-4 py-16 z-20"
+    >
+      <div
+        class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <div>
+          <p
+            class="font-display font-semibold text-xs text-foreground/60 tracking-widest mb-2 uppercase"
+          >
+            Curated Collection
+          </p>
+          <h2
+            class="font-display text-4xl md:text-5xl font-black text-foreground"
+          >
+            Spatial Audio
+          </h2>
+        </div>
+        <a
+          class="flex items-center gap-2 text-sm font-bold text-foreground/70 hover:text-foreground transition-colors uppercase tracking-widest font-display"
+          href="/shop?category=home-theatre-audio"
+        >
+          View collection 
+          <div />
+        </a>
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <div
+          class="relative z-10"
+        >
+          <div
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
+          >
+            <a
+              href="/product/yamaha-rx-v6a-avr"
+            >
+              <div
+                class="group relative flex flex-col glass-card h-full"
+              >
+                <div
+                  class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+                >
+                  <span
+                    class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+                  >
+                    HT-001
+                  </span>
+                  <div
+                    class="flex items-center gap-1.5"
+                  >
+                    <span
+                      animate="[object Object]"
+                      class="block w-1.5 h-1.5 bg-signal shadow-signal"
+                      transition="[object Object]"
+                    />
+                    <span
+                      class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+                    >
+                      STOCKED
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="relative h-48 overflow-hidden p-4"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+                  />
+                  <img
+                    alt="Yamaha RX-V6A 7.2-Ch AVR"
+                    class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+                    src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&auto=format&fit=crop"
+                  />
+                </div>
+                <div
+                  class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="absolute inset-0 w-full h-full pointer-events-none"
+                    preserveAspectRatio="none"
+                  >
+                    <line
+                      class="text-signal"
+                      stroke="currentColor"
+                      stroke-dasharray="200"
+                      stroke-opacity="0"
+                      stroke-width="1"
+                      style="stroke-dashoffset: [object Object];"
+                      x1="0"
+                      x2="100%"
+                      y1="50%"
+                      y2="50%"
+                    />
+                  </svg>
+                  <div
+                    class="relative flex flex-wrap gap-x-4 gap-y-1"
+                  >
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Channels: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        7.2
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Power: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        100W/ch @ 8Ω
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        HDMI: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        7 in / 2 out (2.1)
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+                >
+                  <span
+                    class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+                  >
+                    Yamaha
+                  </span>
+                  <h3
+                    class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+                  >
+                    Yamaha RX-V6A 7.2-Ch AVR
+                  </h3>
+                  <div
+                    class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+                  >
+                    <div>
+                      <div
+                        class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+                      >
+                        SYS_VALUE
+                      </div>
+                      <div
+                        class="font-mono text-lg font-bold text-cable-white text-gradient"
+                      >
+                        ₹650
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <button
+                        aria-label="Compare"
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+                      >
+                        <div
+                          data-testid="scale-icon"
+                        />
+                      </button>
+                      <button
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+                      >
+                        <div
+                          data-testid="shopping-cart-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="relative z-10"
+        >
+          <div
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
+          >
+            <a
+              href="/product/klipsch-r625fa-floorstanding"
+            >
+              <div
+                class="group relative flex flex-col glass-card h-full"
+              >
+                <div
+                  class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+                >
+                  <span
+                    class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+                  >
+                    HT-002
+                  </span>
+                  <div
+                    class="flex items-center gap-1.5"
+                  >
+                    <span
+                      animate="[object Object]"
+                      class="block w-1.5 h-1.5 bg-live-red shadow-magenta"
+                      transition="[object Object]"
+                    />
+                    <span
+                      class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+                    >
+                      LOW
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="relative h-48 overflow-hidden p-4"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+                  />
+                  <img
+                    alt="Klipsch R-625FA Floorstanding"
+                    class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+                    src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&auto=format&fit=crop"
+                  />
+                </div>
+                <div
+                  class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="absolute inset-0 w-full h-full pointer-events-none"
+                    preserveAspectRatio="none"
+                  >
+                    <line
+                      class="text-signal"
+                      stroke="currentColor"
+                      stroke-dasharray="200"
+                      stroke-opacity="0"
+                      stroke-width="1"
+                      style="stroke-dashoffset: [object Object];"
+                      x1="0"
+                      x2="100%"
+                      y1="50%"
+                      y2="50%"
+                    />
+                  </svg>
+                  <div
+                    class="relative flex flex-wrap gap-x-4 gap-y-1"
+                  >
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Type: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        Floorstanding
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Drivers: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        1" + 2× 6.5" + 5.25"
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Frequency: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        38Hz–21kHz ±3dB
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+                >
+                  <span
+                    class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+                  >
+                    Klipsch
+                  </span>
+                  <h3
+                    class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+                  >
+                    Klipsch R-625FA Floorstanding
+                  </h3>
+                  <div
+                    class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+                  >
+                    <div>
+                      <div
+                        class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+                      >
+                        SYS_VALUE
+                      </div>
+                      <div
+                        class="font-mono text-lg font-bold text-cable-white text-gradient"
+                      >
+                        ₹549
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <button
+                        aria-label="Compare"
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+                      >
+                        <div
+                          data-testid="scale-icon"
+                        />
+                      </button>
+                      <button
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+                      >
+                        <div
+                          data-testid="shopping-cart-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="relative z-10"
+        >
+          <div
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
+          >
+            <a
+              href="/product/sonos-arc-sl-soundbar"
+            >
+              <div
+                class="group relative flex flex-col glass-card h-full"
+              >
+                <div
+                  class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+                >
+                  <span
+                    class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+                  >
+                    HT-003
+                  </span>
+                  <div
+                    class="flex items-center gap-1.5"
+                  >
+                    <span
+                      animate="[object Object]"
+                      class="block w-1.5 h-1.5 bg-signal shadow-signal"
+                      transition="[object Object]"
+                    />
+                    <span
+                      class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+                    >
+                      STOCKED
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="relative h-48 overflow-hidden p-4"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+                  />
+                  <img
+                    alt="Sonos Arc SL Soundbar"
+                    class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+                    src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&auto=format&fit=crop"
+                  />
+                </div>
+                <div
+                  class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="absolute inset-0 w-full h-full pointer-events-none"
+                    preserveAspectRatio="none"
+                  >
+                    <line
+                      class="text-signal"
+                      stroke="currentColor"
+                      stroke-dasharray="200"
+                      stroke-opacity="0"
+                      stroke-width="1"
+                      style="stroke-dashoffset: [object Object];"
+                      x1="0"
+                      x2="100%"
+                      y1="50%"
+                      y2="50%"
+                    />
+                  </svg>
+                  <div
+                    class="relative flex flex-wrap gap-x-4 gap-y-1"
+                  >
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Drivers: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        11 (8 woofer, 3 tweet)
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Channels: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        5.0.2 virtual
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Formats: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        Dolby Atmos
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+                >
+                  <span
+                    class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+                  >
+                    Sonos
+                  </span>
+                  <h3
+                    class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+                  >
+                    Sonos Arc SL Soundbar
+                  </h3>
+                  <div
+                    class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+                  >
+                    <div>
+                      <div
+                        class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+                      >
+                        SYS_VALUE
+                      </div>
+                      <div
+                        class="font-mono text-lg font-bold text-cable-white text-gradient"
+                      >
+                        ₹879
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <button
+                        aria-label="Compare"
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+                      >
+                        <div
+                          data-testid="scale-icon"
+                        />
+                      </button>
+                      <button
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+                      >
+                        <div
+                          data-testid="shopping-cart-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="container mx-auto px-4 py-10 relative z-20"
+    >
+      <div
+        class="relative rounded-3xl spatial-glass py-8 overflow-hidden flex items-center"
+      >
+        <div
+          aria-hidden="true"
+          class="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none bg-gradient-to-r from-background to-transparent"
+        />
+        <div
+          aria-hidden="true"
+          class="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none bg-gradient-to-l from-background to-transparent"
+        />
+        <div
+          aria-hidden="true"
+          class="marquee-track"
+        >
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            APPLE
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONY
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            YAMAHA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            KLIPSCH
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            DENON
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SVS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AUDIOQUEST
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            BELKIN
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            PHILIPS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AQARA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOFF
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            APPLE
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONY
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            YAMAHA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            KLIPSCH
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            DENON
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SVS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AUDIOQUEST
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            BELKIN
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            PHILIPS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AQARA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOFF
+          </span>
+        </div>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Responsive Layout Snapshots Mobile (375px) ProductPage matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto px-4 py-24 text-center"
+  >
+    <p
+      class="font-mono text-[10px] text-aluminum/50 uppercase"
+    >
+      [ ERR: PRODUCT_NOT_FOUND ]
+    </p>
+    <a
+      class="mt-4 inline-block font-mono text-[10px] text-signal hover:underline uppercase"
+      href="/shop"
+    >
+      [ RETURN_TO_CATALOG ]
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Responsive Layout Snapshots Mobile (375px) TechnicalProductCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    initial="[object Object]"
+    transition="[object Object]"
+    viewport="[object Object]"
+    whileinview="[object Object]"
+  >
+    <a
+      href="/product/legrand-modular-3pin-socket"
+    >
+      <div
+        class="group relative flex flex-col glass-card h-full"
+      >
+        <div
+          class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+        >
+          <span
+            class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+          >
+            SW-001
+          </span>
+          <div
+            class="flex items-center gap-1.5"
+          >
+            <span
+              animate="[object Object]"
+              class="block w-1.5 h-1.5 bg-signal shadow-signal"
+              transition="[object Object]"
+            />
+            <span
+              class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+            >
+              STOCKED
+            </span>
+          </div>
+        </div>
+        <div
+          class="relative h-48 overflow-hidden p-4"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+          />
+          <img
+            alt="Legrand Modular 3-Pin Socket"
+            class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+            src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&auto=format&fit=crop"
+          />
+        </div>
+        <div
+          class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+        >
+          <svg
+            aria-hidden="true"
+            class="absolute inset-0 w-full h-full pointer-events-none"
+            preserveAspectRatio="none"
+          >
+            <line
+              class="text-signal"
+              stroke="currentColor"
+              stroke-dasharray="200"
+              stroke-opacity="0"
+              stroke-width="1"
+              style="stroke-dashoffset: [object Object];"
+              x1="0"
+              x2="100%"
+              y1="50%"
+              y2="50%"
+            />
+          </svg>
+          <div
+            class="relative flex flex-wrap gap-x-4 gap-y-1"
+          >
+            <span
+              class="font-mono text-[9px] uppercase tracking-wide"
+            >
+              <span
+                class="text-foreground/40"
+              >
+                Type: 
+              </span>
+              <span
+                class="text-cable-white"
+              >
+                3-pin socket
+              </span>
+            </span>
+            <span
+              class="font-mono text-[9px] uppercase tracking-wide"
+            >
+              <span
+                class="text-foreground/40"
+              >
+                Rating: 
+              </span>
+              <span
+                class="text-cable-white"
+              >
+                16A @ 250V
+              </span>
+            </span>
+            <span
+              class="font-mono text-[9px] uppercase tracking-wide"
+            >
+              <span
+                class="text-foreground/40"
+              >
+                Terminal: 
+              </span>
+              <span
+                class="text-cable-white"
+              >
+                Brass screw
+              </span>
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+        >
+          <span
+            class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+          >
+            Legrand
+          </span>
+          <h3
+            class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+          >
+            Legrand Modular 3-Pin Socket
+          </h3>
+          <div
+            class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+          >
+            <div>
+              <div
+                class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+              >
+                SYS_VALUE
+              </div>
+              <div
+                class="font-mono text-lg font-bold text-cable-white text-gradient"
+              >
+                ₹9
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-2"
+            >
+              <button
+                aria-label="Compare"
+                class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+              >
+                <div
+                  data-testid="scale-icon"
+                />
+              </button>
+              <button
+                class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+              >
+                <div
+                  data-testid="shopping-cart-icon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Responsive Layout Snapshots Tablet (768px) BentoGrid matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="relative z-10 overflow-hidden"
+  >
+    <section
+      class="relative container mx-auto px-4 pt-20 pb-16 flex flex-col items-center text-center"
+    >
+      <div
+        class="flex items-center gap-3 mb-8"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <span
+          class="inline-flex items-center gap-2 font-display text-xs font-semibold text-foreground tracking-widest border border-foreground/20 rounded-full px-4 py-2 bg-foreground/5 backdrop-blur-md shadow-spatial"
+        >
+          <span
+            class="relative flex h-2 w-2"
+          >
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-foreground opacity-75"
+            />
+            <span
+              class="relative inline-flex rounded-full h-2 w-2 bg-foreground"
+            />
+          </span>
+          SPATIAL EDITION · LIVE INVENTORY
+        </span>
+      </div>
+      <div
+        class="relative z-20"
+        style="scale: [object Object];"
+      >
+        <h1
+          class="font-display text-6xl md:text-8xl lg:text-[100px] font-black text-transparent bg-clip-text leading-[0.9] tracking-tighter mb-6 pb-2"
+          initial="[object Object]"
+          style="background-image: linear-gradient(to bottom right, var(--foreground), rgba(150, 150, 150, 0.4));"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          Redefine your
+          <br />
+          <span
+            class="spatial-text-glow text-foreground"
+          >
+            digital space.
+          </span>
+        </h1>
+      </div>
+      <p
+        class="mt-2 text-foreground/60 text-xl max-w-2xl leading-relaxed font-display"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        Premium spatial hardware, curated for the modern era. Find the spec, compare, buy.
+      </p>
+      <div
+        class="flex flex-wrap items-center justify-center gap-4 mt-10 mb-8"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <a
+          class="group flex items-center gap-2 px-8 py-4 bg-foreground text-background font-display font-bold rounded-full hover:scale-105 transition-transform text-lg shadow-[0_0_40px_rgba(150,150,150,0.3)]"
+          href="/shop"
+        >
+          Shop all products
+          <div />
+        </a>
+        <a
+          class="group flex items-center gap-2 px-8 py-4 spatial-glass text-foreground font-display font-bold rounded-full hover:bg-foreground/10 transition-colors text-lg"
+          href="/build-setup"
+        >
+          <div />
+          Build a setup
+        </a>
+      </div>
+    </section>
+    <section
+      class="container mx-auto px-4 py-10 relative z-20"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-6"
+      >
+        <div
+          class="md:col-span-7 md:row-span-2"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=home-theatre-audio"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[500px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full flex flex-col justify-between p-10 bg-gradient-to-br from-foreground/[0.05] to-transparent"
+                >
+                  <div>
+                    <div
+                      class="flex items-center gap-4 mb-6"
+                    >
+                      <div
+                        class="w-14 h-14 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center shadow-lg"
+                      >
+                        <div />
+                      </div>
+                      <div>
+                        <span
+                          class="font-display font-bold text-xs text-foreground/80 tracking-widest block uppercase mb-1"
+                        >
+                          Spatial Audio
+                        </span>
+                        <span
+                          class="font-mono text-[10px] text-foreground/50 tracking-widest uppercase"
+                        >
+                          IMMERSIVE SOUNDSCAPES
+                        </span>
+                      </div>
+                    </div>
+                    <h2
+                      class="font-display text-4xl md:text-6xl font-black text-foreground leading-tight mb-4"
+                    >
+                      Home Theatre & Audio
+                    </h2>
+                    <p
+                      class="text-foreground/60 text-lg leading-relaxed max-w-md mb-8 font-display"
+                    >
+                      Speakers, soundbars, AVRs, projectors, mounts
+                    </p>
+                    <div
+                      class="flex flex-wrap gap-2"
+                    >
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Spatial Audio
+                      </span>
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Dolby Atmos
+                      </span>
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Soundbars
+                      </span>
+                      <span
+                        class="font-display font-medium text-xs text-foreground border border-foreground/20 rounded-full px-4 py-1.5 bg-foreground/5 backdrop-blur-md"
+                      >
+                        Projectors
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center justify-between mt-10"
+                  >
+                    <div
+                      class="flex items-center gap-3 text-foreground font-display text-lg font-bold transition-colors"
+                    >
+                      Explore collection
+                      <div />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-5"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=switches-sockets"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[240px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-8 flex flex-col justify-between bg-gradient-to-br from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="flex items-start justify-between"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center"
+                    >
+                      <div />
+                    </div>
+                    <span
+                      class="font-display font-medium text-[10px] text-foreground border border-foreground/30 rounded-full px-3 py-1 bg-foreground/10 uppercase tracking-wider"
+                    >
+                      16A max
+                    </span>
+                  </div>
+                  <div>
+                    <h3
+                      class="font-display text-2xl font-bold text-foreground mb-2"
+                    >
+                      Switches & Sockets
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm leading-relaxed max-w-xs font-display"
+                    >
+                      3-pin, modular, rated 6A–16A
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-5"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=cables-wires"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[240px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-8 flex flex-col justify-between bg-gradient-to-br from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="flex items-start justify-between"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center"
+                    >
+                      <div />
+                    </div>
+                    <span
+                      class="font-display font-medium text-[10px] text-foreground border border-foreground/30 rounded-full px-3 py-1 bg-foreground/10 uppercase tracking-wider"
+                    >
+                      Up to 4K@60Hz
+                    </span>
+                  </div>
+                  <div>
+                    <h3
+                      class="font-display text-2xl font-bold text-foreground mb-2"
+                    >
+                      Cables & Wires
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm leading-relaxed max-w-xs font-display"
+                    >
+                      Power, network, HDMI, speaker cable
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-6"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=smart-home"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[160px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-6 flex items-center gap-6 bg-gradient-to-r from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center flex-shrink-0"
+                  >
+                    <div />
+                  </div>
+                  <div
+                    class="flex-1 min-w-0"
+                  >
+                    <h3
+                      class="font-display text-xl font-bold text-foreground mb-1"
+                    >
+                      Smart Home
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm truncate font-display"
+                    >
+                      WiFi switches, sensors, controllers
+                    </p>
+                  </div>
+                  <div />
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="md:col-span-6"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
+        >
+          <a
+            class="block h-full"
+            href="/shop?category=deals"
+          >
+            <div
+              class="spatial-glass rounded-3xl overflow-hidden group h-full min-h-[160px]"
+              transition="[object Object]"
+              whilehover="[object Object]"
+            >
+              <div
+                class="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 z-20"
+              />
+              <div
+                class="relative z-10 h-full"
+              >
+                <div
+                  class="h-full p-6 flex items-center gap-6 bg-gradient-to-r from-foreground/[0.05] to-transparent"
+                >
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center flex-shrink-0 relative"
+                  >
+                    <div
+                      class="absolute -top-1 -right-1"
+                    >
+                      <span
+                        class="relative flex h-3 w-3"
+                      >
+                        <span
+                          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-foreground opacity-75"
+                        />
+                        <span
+                          class="relative inline-flex rounded-full h-3 w-3 bg-foreground"
+                        />
+                      </span>
+                    </div>
+                    <div />
+                  </div>
+                  <div
+                    class="flex-1 min-w-0"
+                  >
+                    <h3
+                      class="font-display text-xl font-bold text-foreground mb-1"
+                    >
+                      Deals
+                    </h3>
+                    <p
+                      class="text-foreground/60 text-sm truncate font-display"
+                    >
+                      Clearance and bundle offers
+                    </p>
+                  </div>
+                  <div />
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative container mx-auto px-4 py-10 z-20"
+    >
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-foreground/10 rounded-3xl spatial-glass overflow-hidden"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            2,400+
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Products stocked
+          </span>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            12
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Years trading
+          </span>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            48h
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Dispatch window
+          </span>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center py-8 px-4 gap-2 bg-foreground/[0.02]"
+        >
+          <span
+            class="font-display text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
+          >
+            4.9★
+          </span>
+          <span
+            class="font-display text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase"
+          >
+            Customer rating
+          </span>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative container mx-auto px-4 py-10 z-20"
+    >
+      <div
+        class="relative rounded-3xl overflow-hidden p-10 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-10 spatial-glass"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <div
+          class="relative z-10 max-w-2xl"
+        >
+          <div
+            class="flex items-center gap-3 mb-4"
+          >
+            <div
+              class="w-10 h-10 rounded-xl bg-foreground/10 flex items-center justify-center"
+            >
+              <div />
+            </div>
+            <span
+              class="font-display font-semibold text-xs text-foreground/80 tracking-widest uppercase"
+            >
+              Intelligent Setup Builder
+            </span>
+          </div>
+          <h2
+            class="font-display text-4xl md:text-5xl font-black text-foreground mb-4"
+          >
+            Design your dream space
+          </h2>
+          <p
+            class="text-foreground/70 text-lg leading-relaxed max-w-lg font-display"
+          >
+            Pick your core components, we seamlessly match the cables and smart controls. Build an immersive spatial environment in minutes.
+          </p>
+        </div>
+        <a
+          class="relative z-10 group flex items-center gap-3 px-8 py-5 bg-foreground text-background font-display font-bold rounded-full hover:scale-105 transition-transform text-lg shadow-[0_0_30px_rgba(150,150,150,0.2)]"
+          href="/build-setup"
+        >
+          Start building
+          <div />
+        </a>
+      </div>
+    </section>
+    <section
+      class="relative container mx-auto px-4 py-16 z-20"
+    >
+      <div
+        class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
+      >
+        <div>
+          <p
+            class="font-display font-semibold text-xs text-foreground/60 tracking-widest mb-2 uppercase"
+          >
+            Curated Collection
+          </p>
+          <h2
+            class="font-display text-4xl md:text-5xl font-black text-foreground"
+          >
+            Spatial Audio
+          </h2>
+        </div>
+        <a
+          class="flex items-center gap-2 text-sm font-bold text-foreground/70 hover:text-foreground transition-colors uppercase tracking-widest font-display"
+          href="/shop?category=home-theatre-audio"
+        >
+          View collection 
+          <div />
+        </a>
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <div
+          class="relative z-10"
+        >
+          <div
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
+          >
+            <a
+              href="/product/yamaha-rx-v6a-avr"
+            >
+              <div
+                class="group relative flex flex-col glass-card h-full"
+              >
+                <div
+                  class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+                >
+                  <span
+                    class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+                  >
+                    HT-001
+                  </span>
+                  <div
+                    class="flex items-center gap-1.5"
+                  >
+                    <span
+                      animate="[object Object]"
+                      class="block w-1.5 h-1.5 bg-signal shadow-signal"
+                      transition="[object Object]"
+                    />
+                    <span
+                      class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+                    >
+                      STOCKED
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="relative h-48 overflow-hidden p-4"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+                  />
+                  <img
+                    alt="Yamaha RX-V6A 7.2-Ch AVR"
+                    class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+                    src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&auto=format&fit=crop"
+                  />
+                </div>
+                <div
+                  class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="absolute inset-0 w-full h-full pointer-events-none"
+                    preserveAspectRatio="none"
+                  >
+                    <line
+                      class="text-signal"
+                      stroke="currentColor"
+                      stroke-dasharray="200"
+                      stroke-opacity="0"
+                      stroke-width="1"
+                      style="stroke-dashoffset: [object Object];"
+                      x1="0"
+                      x2="100%"
+                      y1="50%"
+                      y2="50%"
+                    />
+                  </svg>
+                  <div
+                    class="relative flex flex-wrap gap-x-4 gap-y-1"
+                  >
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Channels: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        7.2
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Power: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        100W/ch @ 8Ω
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        HDMI: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        7 in / 2 out (2.1)
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+                >
+                  <span
+                    class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+                  >
+                    Yamaha
+                  </span>
+                  <h3
+                    class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+                  >
+                    Yamaha RX-V6A 7.2-Ch AVR
+                  </h3>
+                  <div
+                    class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+                  >
+                    <div>
+                      <div
+                        class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+                      >
+                        SYS_VALUE
+                      </div>
+                      <div
+                        class="font-mono text-lg font-bold text-cable-white text-gradient"
+                      >
+                        ₹650
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <button
+                        aria-label="Compare"
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+                      >
+                        <div
+                          data-testid="scale-icon"
+                        />
+                      </button>
+                      <button
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+                      >
+                        <div
+                          data-testid="shopping-cart-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="relative z-10"
+        >
+          <div
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
+          >
+            <a
+              href="/product/klipsch-r625fa-floorstanding"
+            >
+              <div
+                class="group relative flex flex-col glass-card h-full"
+              >
+                <div
+                  class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+                >
+                  <span
+                    class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+                  >
+                    HT-002
+                  </span>
+                  <div
+                    class="flex items-center gap-1.5"
+                  >
+                    <span
+                      animate="[object Object]"
+                      class="block w-1.5 h-1.5 bg-live-red shadow-magenta"
+                      transition="[object Object]"
+                    />
+                    <span
+                      class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+                    >
+                      LOW
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="relative h-48 overflow-hidden p-4"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+                  />
+                  <img
+                    alt="Klipsch R-625FA Floorstanding"
+                    class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+                    src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&auto=format&fit=crop"
+                  />
+                </div>
+                <div
+                  class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="absolute inset-0 w-full h-full pointer-events-none"
+                    preserveAspectRatio="none"
+                  >
+                    <line
+                      class="text-signal"
+                      stroke="currentColor"
+                      stroke-dasharray="200"
+                      stroke-opacity="0"
+                      stroke-width="1"
+                      style="stroke-dashoffset: [object Object];"
+                      x1="0"
+                      x2="100%"
+                      y1="50%"
+                      y2="50%"
+                    />
+                  </svg>
+                  <div
+                    class="relative flex flex-wrap gap-x-4 gap-y-1"
+                  >
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Type: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        Floorstanding
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Drivers: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        1" + 2× 6.5" + 5.25"
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Frequency: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        38Hz–21kHz ±3dB
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+                >
+                  <span
+                    class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+                  >
+                    Klipsch
+                  </span>
+                  <h3
+                    class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+                  >
+                    Klipsch R-625FA Floorstanding
+                  </h3>
+                  <div
+                    class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+                  >
+                    <div>
+                      <div
+                        class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+                      >
+                        SYS_VALUE
+                      </div>
+                      <div
+                        class="font-mono text-lg font-bold text-cable-white text-gradient"
+                      >
+                        ₹549
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <button
+                        aria-label="Compare"
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+                      >
+                        <div
+                          data-testid="scale-icon"
+                        />
+                      </button>
+                      <button
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+                      >
+                        <div
+                          data-testid="shopping-cart-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="relative z-10"
+        >
+          <div
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
+          >
+            <a
+              href="/product/sonos-arc-sl-soundbar"
+            >
+              <div
+                class="group relative flex flex-col glass-card h-full"
+              >
+                <div
+                  class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+                >
+                  <span
+                    class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+                  >
+                    HT-003
+                  </span>
+                  <div
+                    class="flex items-center gap-1.5"
+                  >
+                    <span
+                      animate="[object Object]"
+                      class="block w-1.5 h-1.5 bg-signal shadow-signal"
+                      transition="[object Object]"
+                    />
+                    <span
+                      class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+                    >
+                      STOCKED
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="relative h-48 overflow-hidden p-4"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+                  />
+                  <img
+                    alt="Sonos Arc SL Soundbar"
+                    class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+                    src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&auto=format&fit=crop"
+                  />
+                </div>
+                <div
+                  class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="absolute inset-0 w-full h-full pointer-events-none"
+                    preserveAspectRatio="none"
+                  >
+                    <line
+                      class="text-signal"
+                      stroke="currentColor"
+                      stroke-dasharray="200"
+                      stroke-opacity="0"
+                      stroke-width="1"
+                      style="stroke-dashoffset: [object Object];"
+                      x1="0"
+                      x2="100%"
+                      y1="50%"
+                      y2="50%"
+                    />
+                  </svg>
+                  <div
+                    class="relative flex flex-wrap gap-x-4 gap-y-1"
+                  >
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Drivers: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        11 (8 woofer, 3 tweet)
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Channels: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        5.0.2 virtual
+                      </span>
+                    </span>
+                    <span
+                      class="font-mono text-[9px] uppercase tracking-wide"
+                    >
+                      <span
+                        class="text-foreground/40"
+                      >
+                        Formats: 
+                      </span>
+                      <span
+                        class="text-cable-white"
+                      >
+                        Dolby Atmos
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+                >
+                  <span
+                    class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+                  >
+                    Sonos
+                  </span>
+                  <h3
+                    class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+                  >
+                    Sonos Arc SL Soundbar
+                  </h3>
+                  <div
+                    class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+                  >
+                    <div>
+                      <div
+                        class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+                      >
+                        SYS_VALUE
+                      </div>
+                      <div
+                        class="font-mono text-lg font-bold text-cable-white text-gradient"
+                      >
+                        ₹879
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <button
+                        aria-label="Compare"
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+                      >
+                        <div
+                          data-testid="scale-icon"
+                        />
+                      </button>
+                      <button
+                        class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+                      >
+                        <div
+                          data-testid="shopping-cart-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="container mx-auto px-4 py-10 relative z-20"
+    >
+      <div
+        class="relative rounded-3xl spatial-glass py-8 overflow-hidden flex items-center"
+      >
+        <div
+          aria-hidden="true"
+          class="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none bg-gradient-to-r from-background to-transparent"
+        />
+        <div
+          aria-hidden="true"
+          class="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none bg-gradient-to-l from-background to-transparent"
+        />
+        <div
+          aria-hidden="true"
+          class="marquee-track"
+        >
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            APPLE
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONY
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            YAMAHA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            KLIPSCH
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            DENON
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SVS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AUDIOQUEST
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            BELKIN
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            PHILIPS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AQARA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOFF
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            APPLE
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONY
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            YAMAHA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            KLIPSCH
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            DENON
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SVS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AUDIOQUEST
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            BELKIN
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            PHILIPS
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            AQARA
+          </span>
+          <span
+            class="font-display font-bold text-xl text-foreground/20 tracking-[0.3em] mx-12 flex-shrink-0"
+          >
+            SONOFF
+          </span>
+        </div>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Responsive Layout Snapshots Tablet (768px) ProductPage matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto px-4 py-24 text-center"
+  >
+    <p
+      class="font-mono text-[10px] text-aluminum/50 uppercase"
+    >
+      [ ERR: PRODUCT_NOT_FOUND ]
+    </p>
+    <a
+      class="mt-4 inline-block font-mono text-[10px] text-signal hover:underline uppercase"
+      href="/shop"
+    >
+      [ RETURN_TO_CATALOG ]
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Responsive Layout Snapshots Tablet (768px) TechnicalProductCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    initial="[object Object]"
+    transition="[object Object]"
+    viewport="[object Object]"
+    whileinview="[object Object]"
+  >
+    <a
+      href="/product/legrand-modular-3pin-socket"
+    >
+      <div
+        class="group relative flex flex-col glass-card h-full"
+      >
+        <div
+          class="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20"
+        >
+          <span
+            class="font-mono text-[9px] text-white/50 tracking-widest uppercase"
+          >
+            SW-001
+          </span>
+          <div
+            class="flex items-center gap-1.5"
+          >
+            <span
+              animate="[object Object]"
+              class="block w-1.5 h-1.5 bg-signal shadow-signal"
+              transition="[object Object]"
+            />
+            <span
+              class="font-mono text-[9px] text-aluminum/50 tracking-widest"
+            >
+              STOCKED
+            </span>
+          </div>
+        </div>
+        <div
+          class="relative h-48 overflow-hidden p-4"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"
+          />
+          <img
+            alt="Legrand Modular 3-Pin Socket"
+            class="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+            src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&auto=format&fit=crop"
+          />
+        </div>
+        <div
+          class="relative px-4 pt-3 pb-2 border-t border-white/5 bg-black/40"
+        >
+          <svg
+            aria-hidden="true"
+            class="absolute inset-0 w-full h-full pointer-events-none"
+            preserveAspectRatio="none"
+          >
+            <line
+              class="text-signal"
+              stroke="currentColor"
+              stroke-dasharray="200"
+              stroke-opacity="0"
+              stroke-width="1"
+              style="stroke-dashoffset: [object Object];"
+              x1="0"
+              x2="100%"
+              y1="50%"
+              y2="50%"
+            />
+          </svg>
+          <div
+            class="relative flex flex-wrap gap-x-4 gap-y-1"
+          >
+            <span
+              class="font-mono text-[9px] uppercase tracking-wide"
+            >
+              <span
+                class="text-foreground/40"
+              >
+                Type: 
+              </span>
+              <span
+                class="text-cable-white"
+              >
+                3-pin socket
+              </span>
+            </span>
+            <span
+              class="font-mono text-[9px] uppercase tracking-wide"
+            >
+              <span
+                class="text-foreground/40"
+              >
+                Rating: 
+              </span>
+              <span
+                class="text-cable-white"
+              >
+                16A @ 250V
+              </span>
+            </span>
+            <span
+              class="font-mono text-[9px] uppercase tracking-wide"
+            >
+              <span
+                class="text-foreground/40"
+              >
+                Terminal: 
+              </span>
+              <span
+                class="text-cable-white"
+              >
+                Brass screw
+              </span>
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60"
+        >
+          <span
+            class="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]"
+          >
+            Legrand
+          </span>
+          <h3
+            class="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md"
+          >
+            Legrand Modular 3-Pin Socket
+          </h3>
+          <div
+            class="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10"
+          >
+            <div>
+              <div
+                class="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase"
+              >
+                SYS_VALUE
+              </div>
+              <div
+                class="font-mono text-lg font-bold text-cable-white text-gradient"
+              >
+                ₹9
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-2"
+            >
+              <button
+                aria-label="Compare"
+                class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal"
+              >
+                <div
+                  data-testid="scale-icon"
+                />
+              </button>
+              <button
+                class="relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta"
+              >
+                <div
+                  data-testid="shopping-cart-icon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,87 @@
+═══════════════════════════════════════════════════════════
+  ELECTROPRO HARDWARE - QUICK START (5 Minutes)
+═══════════════════════════════════════════════════════════
+
+Step 1: Install Dependencies
+────────────────────────────
+npm install
+
+
+Step 2: Create Environment File
+────────────────────────────────
+Copy .env.local.example to .env.local and fill in:
+
+Required keys:
+- NEXT_PUBLIC_SUPABASE_URL (get from supabase.com)
+- NEXT_PUBLIC_SUPABASE_ANON_KEY (get from supabase.com)
+- NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY (get from stripe.com)
+- STRIPE_SECRET_KEY (get from stripe.com)
+
+
+Step 3: Set Up Database
+────────────────────────
+1. Create project at supabase.com
+2. Go to SQL Editor
+3. Copy & run: supabase/schema.sql
+
+
+Step 4: Run Development Server
+────────────────────────────────
+npm run dev
+
+
+Step 5: Seed Sample Data
+─────────────────────────
+Visit: http://localhost:3000/api/seed
+
+
+Step 6: Test The Site
+──────────────────────
+✓ Homepage: http://localhost:3000
+✓ Shop: http://localhost:3000/shop  
+✓ Admin: http://localhost:3000/admin
+✓ Cart: Add items and test checkout flow
+
+
+Step 7: Customize Your Store
+──────────────────────────────
+Edit lib/constants.ts:
+- Store name, phone, email, address
+- Business hours
+- Social links
+
+Edit lib/sample-data.ts:
+- Replace sample products with yours
+- Update images, prices, categories
+
+
+Step 8: Deploy to Vercel
+──────────────────────────
+1. Push code to GitHub
+2. Import in vercel.com
+3. Add environment variables
+4. Deploy!
+
+═══════════════════════════════════════════════════════════
+
+📚 NEED HELP?
+
+Setup Issues → Read SETUP_GUIDE.md
+Customization → Read CUSTOMIZATION.md  
+Features List → Read FEATURES.md
+Full Overview → Read PROJECT_SUMMARY.md
+
+═══════════════════════════════════════════════════════════
+
+🎯 READY TO LAUNCH CHECKLIST
+
+Before going live:
+□ Update store info in lib/constants.ts
+□ Add real products in lib/sample-data.ts
+□ Replace logo in components/Navbar.tsx
+□ Test checkout flow completely
+□ Add production Stripe keys
+□ Set up production database
+□ Test on mobile devices
+
+═══════════════════════════════════════════════════════════

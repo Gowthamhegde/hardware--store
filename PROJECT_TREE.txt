@@ -1,0 +1,119 @@
+electropro-hardware/
+│
+├── 📄 Configuration Files
+│   ├── .env.local.example          # Environment variables template
+│   ├── .eslintrc.json              # ESLint configuration
+│   ├── .gitignore                  # Git ignore rules
+│   ├── next.config.js              # Next.js configuration
+│   ├── package.json                # Dependencies & scripts
+│   ├── postcss.config.js           # PostCSS configuration
+│   ├── tailwind.config.ts          # Tailwind CSS configuration
+│   └── tsconfig.json               # TypeScript configuration
+│
+├── 📚 Documentation
+│   ├── README.md                   # Main project documentation
+│   ├── SETUP_GUIDE.md              # Step-by-step setup instructions
+│   ├── CUSTOMIZATION.md            # How to customize the store
+│   ├── FEATURES.md                 # Feature list & roadmap
+│   ├── PROJECT_SUMMARY.md          # Comprehensive overview
+│   └── QUICK_START.txt             # 5-minute quick start
+│
+├── 📁 app/                         # Next.js App Router
+│   │
+│   ├── (shop)/                     # Public store pages
+│   │   ├── layout.tsx              # Shop layout with navbar/footer
+│   │   ├── page.tsx                # Homepage (hero, categories, products)
+│   │   ├── shop/page.tsx           # Product catalog with filters
+│   │   ├── product/[slug]/page.tsx # Product detail page
+│   │   ├── cart/page.tsx           # Shopping cart
+│   │   ├── checkout/page.tsx       # Checkout flow
+│   │   ├── order-confirmation/     # Order success page
+│   │   ├── about/page.tsx          # About page
+│   │   └── contact/page.tsx        # Contact form
+│   │
+│   ├── admin/                      # Admin dashboard (protected)
+│   │   ├── layout.tsx              # Admin layout with sidebar
+│   │   ├── page.tsx                # Dashboard overview with stats
+│   │   ├── products/page.tsx       # Product management
+│   │   └── orders/page.tsx         # Order management
+│   │
+│   ├── api/                        # API routes
+│   │   ├── create-payment-intent/  # Stripe payment intent
+│   │   └── seed/route.ts           # Database seeding endpoint
+│   │
+│   ├── layout.tsx                  # Root layout (fonts, toaster)
+│   └── globals.css                 # Global styles
+│
+├── 📁 components/                  # React components
+│   │
+│   ├── ui/                         # Reusable UI components
+│   │   ├── Button.tsx              # Animated button with variants
+│   │   ├── Card.tsx                # Card with hover tilt effect
+│   │   └── Input.tsx               # Form input with label/error
+│   │
+│   ├── shop/                       # Shop-specific components
+│   │   ├── ProductCard.tsx         # Product card with animations
+│   │   ├── CategoryGrid.tsx        # Category display grid
+│   │   └── FeaturedProducts.tsx    # Featured products section
+│   │
+│   ├── Navbar.tsx                  # Navigation with glassmorphism
+│   ├── Footer.tsx                  # Footer with links & contact
+│   ├── Hero.tsx                    # Homepage hero section
+│   └── TrustBanner.tsx             # Trust badges section
+│
+├── 📁 lib/                         # Utilities & configuration
+│   ├── constants.ts                # ⚠️ CUSTOMIZE: Store config
+│   ├── sample-data.ts              # 12 sample products
+│   ├── store.ts                    # Zustand cart state management
+│   ├── supabase.ts                 # Supabase client & helpers
+│   ├── stripe.ts                   # Stripe integration
+│   └── utils.ts                    # Helper functions
+│
+├── 📁 types/
+│   └── index.ts                    # TypeScript type definitions
+│
+├── 📁 supabase/
+│   └── schema.sql                  # Database schema (run in Supabase)
+│
+└── 📁 public/                      # Static assets
+    └── favicon.ico                 # ⚠️ REPLACE: Add your favicon
+
+
+═══════════════════════════════════════════════════════════════════
+
+📊 STATS
+
+- Total Pages: 11 (9 public + 2 admin)
+- Components: 13 (10 shared + 3 shop-specific)
+- Sample Products: 12 across 6 categories
+- API Routes: 2 (payment, seed)
+- Animation Library: Framer Motion
+- Database: Supabase (PostgreSQL)
+- Styling: Tailwind CSS
+- State: Zustand (cart only)
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 KEY FILES TO EDIT
+
+Before launch, customize these files:
+
+1. lib/constants.ts → Your store details
+2. lib/sample-data.ts → Your products
+3. tailwind.config.ts → Your brand colors
+4. components/Navbar.tsx → Your logo
+5. .env.local → Your API keys
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 COMMANDS
+
+npm install          # Install dependencies
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run linter
+
+Visit /api/seed after first run to populate database
+
+═══════════════════════════════════════════════════════════════════
