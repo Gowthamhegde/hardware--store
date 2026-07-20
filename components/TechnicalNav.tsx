@@ -262,7 +262,7 @@ export default function TechnicalNav() {
                     >
                       {results.length === 0 ? (
                         <div className="px-4 py-6 text-center">
-                          <p className="font-mono text-xs text-aluminum/50">NO SIGNAL MATCH FOR "{query}"</p>
+                          <p className="font-mono text-xs text-aluminum/50">NO SIGNAL MATCH FOR &quot;{query}&quot;</p>
                         </div>
                       ) : (
                         <ul className="divide-y divide-aluminum/10">

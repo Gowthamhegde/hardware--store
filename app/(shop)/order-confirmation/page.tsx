@@ -26,7 +26,7 @@ export default function OrderConfirmationPage() {
           Order Confirmed!
         </h1>
         <p className="text-xl text-gray-600 mb-8">
-          Thank you for your order. We've received it and will process it shortly.
+          Thank you for your order. We&apos;ve received it and will process it shortly.
         </p>
 
         <div className="bg-white rounded-xl p-8 shadow-md mb-8">
@@ -36,7 +36,7 @@ export default function OrderConfirmationPage() {
               <div className="text-left">
                 <h3 className="font-semibold mb-1">Confirmation Email</h3>
                 <p className="text-sm text-gray-600">
-                  We've sent order details to your email
+                  We&apos;ve sent order details to your email
                 </p>
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function OrderConfirmationPage() {
               <div className="text-left">
                 <h3 className="font-semibold mb-1">Shipping Updates</h3>
                 <p className="text-sm text-gray-600">
-                  You'll receive tracking information soon
+                  You&apos;ll receive tracking information soon
                 </p>
               </div>
             </div>

@@ -51,7 +51,7 @@ export default function AboutPage() {
           </p>
           <p className="text-gray-700 leading-relaxed">
             We pride ourselves on offering a practical selection of products from trusted brands,
-            backed by hands-on advice and friendly local service. Whether you're wiring a room,
+            backed by hands-on advice and friendly local service. Whether you&apos;re wiring a room,
             upgrading a home theatre, or replacing a small electronic part, we have the stock and support to help.
           </p>
         </div>

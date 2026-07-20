@@ -78,7 +78,7 @@ export default function Hero() {
             className="font-display text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] font-black text-cable-white mb-6 leading-[0.85] tracking-tighter uppercase"
             style={{ textShadow: '0 0 80px rgba(0, 243, 255, 0.18)' }}
           >
-            VIGESH<br />
+            VIGNESH<br />
             <span className="inline-block" style={{ letterSpacing: '-0.05em' }}>E</span>LECTRICAL
           </motion.h1>
 

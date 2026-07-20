@@ -13,7 +13,7 @@ export default function TechnicalFeaturedProducts() {
     <section className="container mx-auto px-4 py-12">
       <div className="flex items-end justify-between mb-8">
         <div>
-          <p className="font-mono text-[10px] text-copper tracking-widest mb-1">// FEATURED</p>
+          <p className="font-mono text-[10px] text-copper tracking-widest mb-1">{'// FEATURED'}</p>
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
