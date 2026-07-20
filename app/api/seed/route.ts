@@ -1,10 +1,20 @@
 import { NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
+import { isSupabaseConfigured, supabase } from '@/lib/supabase';
 import { SAMPLE_PRODUCTS } from '@/lib/sample-data';
 import { CATEGORIES } from '@/lib/constants';
 
 export async function GET() {
   try {
+    if (!isSupabaseConfigured || !supabase) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Supabase is not configured. Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to enable seeding.',
+        },
+        { status: 503 }
+      );
+    }
+
     // Insert categories
     const categoriesData = CATEGORIES.map(cat => ({
       name: cat.name,
