@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface Props {
   children: React.ReactNode;
@@ -17,6 +17,18 @@ export default function GlobalHorizontalScrollWrapper({
   contentClassName = 'flex h-full w-max'
 }: Props) {
   const targetRef = useRef<HTMLDivElement | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -24,6 +36,22 @@ export default function GlobalHorizontalScrollWrapper({
 
   // Shift the container to the left by exactly its width minus 100vw (the visible area)
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "calc(-100% + 100vw)"]);
+
+  // On mobile, just stack everything vertically and skip horizontal scroll effects
+  if (mounted && isMobile) {
+    return (
+      <section className="relative bg-enclosure flex flex-col">
+        {fixedOverlay && (
+          <div className="sticky top-0 z-10 pointer-events-auto">
+            {fixedOverlay}
+          </div>
+        )}
+        <div className="flex flex-col w-full">
+          {children}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section ref={targetRef} className={`relative bg-enclosure ${heightClasses}`}>

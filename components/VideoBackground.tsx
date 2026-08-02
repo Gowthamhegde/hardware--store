@@ -16,6 +16,18 @@ export default function VideoBackground() {
   const video1Ref = useRef<HTMLVideoElement>(null);
   const video2Ref = useRef<HTMLVideoElement>(null);
   const [activeVideo, setActiveVideo] = useState<1 | 2>(1);
+  const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const v1 = video1Ref.current;
@@ -23,6 +35,10 @@ export default function VideoBackground() {
     if (!v1 || !v2) return;
 
     const handleTimeUpdate = (e: Event) => {
+      // On mobile, to save battery and processing, skip the complex crossfade 
+      // and just let a single video loop natively.
+      if (isMobile) return;
+
       const video = e.target as HTMLVideoElement;
       const isV1 = video === v1;
       const isActive = (isV1 && activeVideo === 1) || (!isV1 && activeVideo === 2);
@@ -51,7 +67,7 @@ export default function VideoBackground() {
       v1.removeEventListener('timeupdate', handleTimeUpdate);
       v2.removeEventListener('timeupdate', handleTimeUpdate);
     };
-  }, [activeVideo]);
+  }, [activeVideo, isMobile]);
 
   return (
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-background">
@@ -60,31 +76,38 @@ export default function VideoBackground() {
         initial={{ scale: 1.1, opacity: 0, filter: 'blur(10px)' }}
         animate={{ scale: 1, opacity: 0.8, filter: 'blur(0px)' }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        style={{ scale, opacity: containerOpacity, filter, y }}
+        style={
+          mounted && isMobile
+            ? { scale: 1, opacity: 0.8, filter: 'blur(0px)', y: 0 }
+            : { scale, opacity: containerOpacity, filter, y }
+        }
       >
-        {/* Dual video setup for seamless crossfading loop */}
+        {/* Dual video setup for seamless crossfading loop on desktop */}
         <video
           ref={video1Ref}
           autoPlay
           muted
           playsInline
+          loop={isMobile} // Loop natively on mobile
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-            activeVideo === 1 ? 'opacity-60 z-10' : 'opacity-0 z-0'
+            activeVideo === 1 || isMobile ? 'opacity-60 z-10' : 'opacity-0 z-0'
           }`}
         >
           <source src="/bgvid.mp4" type="video/mp4" />
         </video>
         
-        <video
-          ref={video2Ref}
-          muted
-          playsInline
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-            activeVideo === 2 ? 'opacity-60 z-10' : 'opacity-0 z-0'
-          }`}
-        >
-          <source src="/bgvid.mp4" type="video/mp4" />
-        </video>
+        {!isMobile && (
+          <video
+            ref={video2Ref}
+            muted
+            playsInline
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              activeVideo === 2 ? 'opacity-60 z-10' : 'opacity-0 z-0'
+            }`}
+          >
+            <source src="/bgvid.mp4" type="video/mp4" />
+          </video>
+        )}
         
         {/* Gradient overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background z-20" />
