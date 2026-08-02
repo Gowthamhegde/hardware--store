@@ -1,11 +1,11 @@
 import BentoGrid from '@/components/BentoGrid';
-import BackgroundModel from '@/components/BackgroundModel';
+import VideoBackground from '@/components/VideoBackground';
 
 export default function HomePage() {
   return (
     <div className="relative min-h-screen bg-background">
-      {/* 3D Copper Cables Background */}
-      <BackgroundModel />
+      {/* Video Background with Scroll Animations */}
+      <VideoBackground />
       
       {/* Main Content Overlay */}
       <BentoGrid />
