@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, useMotionValue, useTransform, animate, MotionValue } from 'framer-motion';
+import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { ShoppingCart, Scale } from 'lucide-react';
 import { useState } from 'react';
 import type { Product } from '@/types';
@@ -17,16 +17,23 @@ interface Props {
 }
 
 // Stock LED — animated, colour-coded
+// ponytail: 1.5px is literal per Req 5.6 — inline style beats inventing a custom Tailwind size
 function StockLED({ stock }: { stock: number }) {
-  const color =
-    stock === 0 ? 'bg-aluminum/20' : stock < 10 ? 'bg-live-red shadow-magenta' : 'bg-signal shadow-signal';
-  const label = stock === 0 ? 'OUT' : stock < 10 ? 'LOW' : 'STOCKED';
+  const isOut = stock === 0;
+  const isLow = stock > 0 && stock < 10;
+  const color = isOut ? 'bg-aluminum/20' : isLow ? 'bg-live-red shadow-magenta' : 'bg-signal shadow-signal';
+  const label = isOut ? 'OUT' : isLow ? 'LOW' : 'STOCKED';
   return (
-    <div className="flex items-center gap-1.5">
+    <div
+      className="flex items-center gap-1.5"
+      aria-label={`Stock status: ${label}`}
+      role="status"
+    >
       <motion.span
-        className={`block w-1.5 h-1.5 ${color}`}
-        animate={stock > 0 ? { opacity: [1, 0.3, 1] } : { opacity: 0.3 }}
-        transition={{ duration: 2, repeat: Infinity }}
+        className={`block rounded-full ${color}`}
+        style={{ width: '1.5px', height: '1.5px' }}
+        animate={isOut ? { opacity: 0.3 } : { opacity: [1, 0.3, 1] }}
+        transition={isOut ? {} : { duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       />
       <span className="font-mono text-[9px] text-aluminum/50 tracking-widest">{label}</span>
     </div>
@@ -103,24 +110,28 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
               preserveAspectRatio="none"
               aria-hidden="true"
             >
-              <line
+              <motion.line
                 x1="0" y1="50%" x2="100%" y2="50%"
                 stroke="currentColor"
                 className="text-signal"
                 strokeWidth="1"
                 strokeDasharray="200"
-                style={{ strokeDashoffset: strokeDashoffset as any }}
+                style={{ strokeDashoffset }}
                 strokeOpacity={pulsing ? 1 : 0}
               />
             </svg>
 
             <div className="relative flex flex-wrap gap-x-4 gap-y-1">
-              {specEntries.map(([key, val]) => (
+              {specEntries.length > 0 ? specEntries.map(([key, val]) => (
                 <span key={key} className="font-mono text-[9px] uppercase tracking-wide">
                   <span className="text-foreground/40">{key}: </span>
                   <span className="text-cable-white">{val}</span>
                 </span>
-              ))}
+              )) : (
+                <span className="font-mono text-[9px] uppercase tracking-wide text-foreground/40">
+                  {product.category}
+                </span>
+              )}
             </div>
           </div>
 

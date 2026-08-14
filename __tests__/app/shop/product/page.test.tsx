@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ProductPage from '../../../app/(shop)/product/[slug]/page';
-import { useCartStore } from '../../../lib/store';
+import ProductPage from '@/app/(shop)/product/[slug]/page';
+import { useCartStore } from '@/lib/store';
 
 // Mock the useParams hook
 jest.mock('next/navigation', () => ({

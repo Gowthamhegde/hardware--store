@@ -228,7 +228,7 @@ export default function TechnicalNav() {
               aria-label="Search products"
               aria-modal="true"
             >
-              <div className="bg-[#111614] border border-aluminum/20 overflow-hidden shadow-2xl">
+              <div className="bg-enclosure border border-aluminum/20 overflow-hidden shadow-2xl transition-colors duration-500">
                 {/* Input row */}
                 <div className="flex items-center gap-4 px-6 py-4 border-b border-aluminum/10 relative">
                   <div className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-transparent via-signal/50 to-transparent" />
@@ -301,7 +301,7 @@ export default function TechnicalNav() {
 
                       {/* View all results link */}
                       {results.length > 0 && (
-                        <div className="px-4 py-2 border-t border-aluminum/10 bg-[#0d1110]">
+                        <div className="px-4 py-2 border-t border-aluminum/10 bg-black/5 dark:bg-white/5 transition-colors duration-500">
                           <Link
                             href={`/shop?search=${encodeURIComponent(query)}`}
                             onClick={() => setSearchOpen(false)}

@@ -9,6 +9,11 @@ export const supabase = isSupabaseConfigured
   ? createClient(supabaseUrl!, supabaseAnonKey!)
   : null;
 
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+export const adminSupabase = supabaseUrl && supabaseServiceKey
+  ? createClient(supabaseUrl, supabaseServiceKey)
+  : null;
+
 // Helper functions
 export async function getProducts(filters?: {
   category?: string;

@@ -5,12 +5,12 @@ import { useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SlidersHorizontal, X, ChevronDown, ChevronUp, ArrowUpDown, LayoutGrid, List } from 'lucide-react';
 import Link from 'next/link';
-import { SAMPLE_PRODUCTS } from '@/lib/sample-data';
 import { CATEGORIES } from '@/lib/constants';
 import TechnicalProductCard from '@/components/TechnicalProductCard';
 import { formatPrice } from '@/lib/utils';
 import { useCartStore } from '@/lib/store';
 import GlobalHorizontalScrollWrapper from '@/components/GlobalHorizontalScrollWrapper';
+import type { Product } from '@/types';
 
 const PRICE_RANGES = [
   { label: 'Any', value: 'all' },
@@ -29,9 +29,7 @@ const SORT_OPTIONS: { label: string; value: SortKey }[] = [
   { label: 'In stock first', value: 'stock-desc' },
 ];
 
-const ALL_BRANDS = Array.from(
-  new Set(SAMPLE_PRODUCTS.map((p) => p.brand).filter((b): b is string => Boolean(b)))
-).sort();
+
 
 // ── Chip button ────────────────────────────────────────────────────────────
 function Chip({
@@ -113,8 +111,26 @@ function ShopContent() {
   
   // Grid vs List view
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
   const addItem = useCartStore(s => s.addItem);
+
+  useEffect(() => {
+    fetch('/api/products')
+      .then(res => res.json())
+      .then(data => {
+        setProducts(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Failed to fetch products', err);
+        setLoading(false);
+      });
+  }, []);
+
+  const ALL_BRANDS = useMemo(() => {
+    return Array.from(new Set(products.map((p) => p.brand).filter((b): b is string => Boolean(b)))).sort();
+  }, [products]);
 
   // Sync URL params on load / navigation
   useEffect(() => {
@@ -127,7 +143,7 @@ function ShopContent() {
   }, [searchParams]);
 
   const filtered = useMemo(() => {
-    let list = SAMPLE_PRODUCTS.filter((p) => {
+    let list = products.filter((p) => {
       if (selectedCategory !== 'all') {
         const catSlug = CATEGORIES.find((c) => c.name === p.category)?.slug;
         if (catSlug !== selectedCategory) return false;
@@ -161,7 +177,7 @@ function ShopContent() {
       case 'stock-desc': list = [...list].sort((a, b) => b.stock - a.stock); break;
     }
     return list;
-  }, [selectedCategory, selectedBrand, priceRange, inStockOnly, sortKey, searchQuery]);
+  }, [products, selectedCategory, selectedBrand, priceRange, inStockOnly, sortKey, searchQuery]);
 
   const activeCategory = CATEGORIES.find((c) => c.slug === selectedCategory);
   const activeFilters = [
@@ -186,7 +202,7 @@ function ShopContent() {
     <div className="space-y-0">
       <FilterSection title="Category">
         <div className="flex flex-col gap-1">
-          <CategoryRow value="all" label="All products" selected={selectedCategory === 'all'} onSelect={setSelectedCategory} count={SAMPLE_PRODUCTS.length} />
+          <CategoryRow value="all" label="All products" selected={selectedCategory === 'all'} onSelect={setSelectedCategory} count={products.length} />
           {CATEGORIES.map((cat) => (
             <CategoryRow
               key={cat.slug}
@@ -194,7 +210,7 @@ function ShopContent() {
               label={cat.name}
               selected={selectedCategory === cat.slug}
               onSelect={setSelectedCategory}
-              count={SAMPLE_PRODUCTS.filter((p) => CATEGORIES.find((c) => c.name === p.category)?.slug === cat.slug).length}
+              count={products.filter((p) => CATEGORIES.find((c) => c.name === p.category)?.slug === cat.slug).length}
             />
           ))}
         </div>
@@ -269,7 +285,7 @@ function ShopContent() {
               <div className="relative flex-1">
                 <button
                   onClick={() => setSortOpen((v) => !v)}
-                  className="flex items-center justify-between w-full px-3 py-1.5 font-mono text-[9px] text-aluminum hover:text-cable-white transition-colors uppercase bg-[#111614]"
+                  className="flex items-center justify-between w-full px-3 py-1.5 font-mono text-[9px] text-aluminum hover:text-cable-white transition-colors uppercase bg-transparent"
                 >
                   <span className="flex items-center gap-2"><ArrowUpDown className="w-3 h-3" /> {currentSort.label}</span>
                   <ChevronDown className={`w-3 h-3 transition-transform ${sortOpen ? 'rotate-180' : ''}`} />
@@ -280,7 +296,7 @@ function ShopContent() {
                       initial={{ opacity: 0, y: -4 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -4 }}
-                      className="absolute left-0 right-0 top-full mt-1 border border-aluminum/15 bg-[#141918] shadow-2xl z-20 overflow-hidden"
+                      className="absolute left-0 right-0 top-full mt-1 border border-aluminum/15 bg-enclosure shadow-2xl z-20 overflow-hidden transition-colors duration-500"
                     >
                       {SORT_OPTIONS.map((opt) => (
                         <button
@@ -306,7 +322,11 @@ function ShopContent() {
         }
       >
         <div className="flex gap-8 h-full items-center px-12">
-          {filtered.length === 0 ? (
+          {loading ? (
+             <div className="flex flex-col items-center justify-center w-[50vw] h-[50vh] glass-panel rounded-2xl">
+               <p className="font-mono text-white/50 text-xs mb-2 uppercase drop-shadow-md">[ FETCHING_DATA... ]</p>
+             </div>
+          ) : filtered.length === 0 ? (
              <div className="flex flex-col items-center justify-center w-[50vw] h-[50vh] glass-panel rounded-2xl">
                <p className="font-mono text-white/50 text-xs mb-2 uppercase drop-shadow-md">[ ERR: NO_SIGNALS_FOUND ]</p>
                <button onClick={resetFilters} className="font-mono text-[10px] text-copper hover:text-signal hover:shadow-signal uppercase transition-colors">CLEAR_PARAMETERS</button>
@@ -339,7 +359,7 @@ function ShopContent() {
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ type: 'tween', duration: 0.22 }}
-              className="fixed left-0 top-0 bottom-0 z-50 w-72 bg-[#0B0F0E] border-r border-signal/20 p-5 overflow-y-auto lg:hidden"
+              className="fixed left-0 top-0 bottom-0 z-50 w-72 bg-enclosure border-r border-signal/20 p-5 overflow-y-auto lg:hidden"
             >
               <div className="flex items-center justify-between mb-6 border-b border-aluminum/10 pb-4">
                 <span className="font-mono text-[10px] text-signal tracking-widest uppercase">PARAMETERS</span>

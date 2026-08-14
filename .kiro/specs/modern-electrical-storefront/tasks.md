@@ -8,7 +8,7 @@ The approach prioritizes reusing existing project patterns (Next.js App Router, 
 
 ## Tasks
 
-- [~] 1. Set up design system foundation and color tokens
+- [x] 1. Set up design system foundation and color tokens
   - Add color tokens to `tailwind.config.ts`: `enclosure`, `cable-white`, `copper`, `circuit-green`, `live-red`, `aluminum`, `signal`
   - Configure monospace font family (JetBrains Mono or IBM Plex Mono) for technical data
   - Configure Space Grotesk or Inter for UI text
@@ -16,33 +16,33 @@ The approach prioritizes reusing existing project patterns (Next.js App Router, 
   - Add cubic-bezier fade-up config [0.22, 1, 0.36, 1]
   - _Requirements: 10.2, 10.3, 11.1, 11.2, 12.1_
 
-- [ ] 2. Implement TypeScript types and interfaces
-  - [~] 2.1 Define core product and cart types in `types/index.ts`
+- [x] 2. Implement TypeScript types and interfaces
+  - [x] 2.1 Define core product and cart types in `types/index.ts`
     - Add `Product` interface with specifications field (Record<string, string>)
     - Add `CartItem`, `Order`, `OrderItem`, `Address` interfaces
     - Add `BentoTile` interface for homepage grid
     - _Requirements: 1.1, 3.1, 17.1_
   
-  - [~] 2.2 Write unit tests for type validation
+  - [x] 2.2 Write unit tests for type validation
     - Test product type structure with required fields
     - Test specifications field accepts key-value pairs
     - _Requirements: 1.1, 3.1_
 
-- [ ] 3. Build homepage bento grid layout
-  - [~] 3.1 Create `BentoGrid.tsx` client component
+- [x] 3. Build homepage bento grid layout
+  - [x] 3.1 Create `BentoGrid.tsx` client component
     - Implement 5-tile responsive grid layout (uses existing Tailwind grid classes)
     - Map grid sizes: large (7 cols × 2 rows), medium (5 cols × 1 row), small (6 cols)
     - Add category data: Switches & Sockets, Cables & Wires, Home Theatre & Audio (large), Smart Home, Deals
     - Display subcategory tag strip for Home Theatre tile
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.8_
   
-  - [~] 3.2 Add staggered scroll-reveal animation
+  - [x] 3.2 Add staggered scroll-reveal animation
     - Use Framer Motion `motion.div` with stagger children (70ms delay)
     - Apply fadeUp animation (y: 20 → 0, opacity: 0 → 1)
     - Detect `prefers-reduced-motion` and conditionally disable animations
     - _Requirements: 1.6, 1.7, 10.4_
   
-  - [~] 3.3 Implement keyboard navigation and focus states
+  - [x] 3.3 Implement keyboard navigation and focus states
     - Add visible focus ring using copper accent color
     - Ensure all tiles are keyboard accessible with proper tab order
     - _Requirements: 1.5, 14.1, 14.2_
@@ -53,34 +53,34 @@ The approach prioritizes reusing existing project patterns (Next.js App Router, 
   - Verify `prefers-reduced-motion` disables animations
   - Ask the user if questions arise.
 
-- [ ] 5. Implement 3D tilt card interaction
-  - [~] 5.1 Add mouse tracking to bento tiles
+- [x] 5. Implement 3D tilt card interaction
+  - [x] 5.1 Add mouse tracking to bento tiles
     - Calculate mouse position relative to card center
     - Apply 3D rotation (rotateX, rotateY) with perspective: 1000px
     - Clamp rotation to ±5 degrees
     - _Requirements: 2.1, 2.2_
   
-  - [~] 5.2 Add hover effects and reset behavior
+  - [x] 5.2 Add hover effects and reset behavior
     - Apply spring-based rotation reset on mouse leave (stiffness: 400, damping: 30)
     - Add scale transform (1.02) on hover
     - Add radial gradient glow following cursor position
     - Add ArrowRight icon translateX(4px) on hover
     - _Requirements: 2.3, 2.4, 2.6, 2.7_
   
-  - [~] 5.3 Implement reduced motion fallback
+  - [x] 5.3 Implement reduced motion fallback
     - Disable 3D tilt when `prefers-reduced-motion` is enabled
     - Maintain hover scale, glow, and icon translation
     - _Requirements: 2.5, 10.7_
 
-- [ ] 6. Build technical product card component
-  - [~] 6.1 Create `TechnicalProductCard.tsx` with spec strip
+- [x] 6. Build technical product card component
+  - [x] 6.1 Create `TechnicalProductCard.tsx` with spec strip
     - Display product image, name, price, SKU (monospace at 9px uppercase)
     - Add spec strip at bottom with up to 3 key specifications
     - Format specs as "KEY: VALUE" with monospace font (9px uppercase)
     - Show category name if no specifications exist
     - _Requirements: 3.1, 3.2, 3.3, 3.4, 3.5, 3.6_
   
-  - [~] 6.2 Implement stock LED indicator
+  - [x] 6.2 Implement stock LED indicator
     - Add LED circle (1.5px diameter) with pulse animation
     - Stock 0: aluminum grey, "OUT" label, no pulse
     - Stock 1-9: live red with magenta shadow, "LOW" label, pulse
@@ -89,28 +89,28 @@ The approach prioritizes reusing existing project patterns (Next.js App Router, 
     - Add accessible text alternative (not just color)
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 14.9_
   
-  - [~] 6.3 Write unit tests for stock LED logic
+  - [x] 6.3 Write unit tests for stock LED logic
     - Test LED color and label for stock = 0, 5, 50
     - Test pulse animation presence/absence
     - Test accessible label generation
     - _Requirements: 5.2, 5.3, 5.4_
 
 - [ ] 7. Implement connection-pulse micro-interaction
-  - [~] 7.1 Add animated trace line on product card hover
+  - [x] 7.1 Add animated trace line on product card hover
     - Create SVG line from spec strip to Add to Cart button
     - Animate stroke-dashoffset from 200 to 0 over 600ms (easeInOut)
     - Use Signal color (cyan) for line stroke
     - Position at 50% vertical height within spec strip
     - _Requirements: 4.1, 4.2, 4.3, 4.5_
   
-  - [~] 7.2 Add reverse animation and reduced motion support
+  - [-] 7.2 Add reverse animation and reduced motion support
     - Reverse animation to 200 over 300ms on hover end
     - Animate only once per hover gesture (not continuously)
     - Show line at full opacity without animation if `prefers-reduced-motion`
     - _Requirements: 4.4, 4.6, 4.7_
 
 - [ ] 8. Build Home Theatre category page
-  - [~] 8.1 Create `/app/(shop)/home-theatre/page.tsx` with cinematic hero
+  - [-] 8.1 Create `/app/(shop)/home-theatre/page.tsx` with cinematic hero
     - Add dark gradient overlay hero section (80vh on desktop)
     - Add centered headline with gradient text (live-red to copper)
     - Add speaker icon above headline at 50% opacity
@@ -192,8 +192,8 @@ The approach prioritizes reusing existing project patterns (Next.js App Router, 
     - Test multiple filters combined (AND logic)
     - _Requirements: 9.2, 9.3, 9.5_
 
-- [ ] 13. Implement cart state management with Zustand
-  - [~] 13.1 Update `lib/store.ts` with cart operations
+- [x] 13. Implement cart state management with Zustand
+  - [x] 13.1 Update `lib/store.ts` with cart operations
     - Implement `addItem` with quantity increment for duplicates
     - Implement `removeItem`, `updateQuantity`, `clearCart`
     - Implement `getTotal`, `getItemCount` computed methods
@@ -201,7 +201,7 @@ The approach prioritizes reusing existing project patterns (Next.js App Router, 
     - Configure Zustand persist middleware to localStorage
     - _Requirements: 17.1, 17.3_
   
-  - [~] 13.2 Write unit tests for cart store
+  - [x] 13.2 Write unit tests for cart store
     - Test adding new item to empty cart
     - Test incrementing quantity for existing item
     - Test removing item when quantity set to 0
@@ -230,7 +230,7 @@ The approach prioritizes reusing existing project patterns (Next.js App Router, 
   - Ask the user if questions arise.
 
 - [ ] 16. Implement product comparison feature
-  - [~] 16.1 Create comparison Zustand store in `lib/store.ts`
+  - [ ] 16.1 Create comparison Zustand store in `lib/store.ts`
     - Add `compareItems` array (max 3 products)
     - Implement `toggleCompare`, `removeCompare`, `clearCompare`
     - Add localStorage persistence

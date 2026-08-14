@@ -1,13 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Minus, Plus, ShoppingCart, Truck, RotateCcw, Shield, ChevronRight, Activity, Share2 } from 'lucide-react';
-import { SAMPLE_PRODUCTS } from '@/lib/sample-data';
 import { CATEGORIES } from '@/lib/constants';
+import type { Product } from '@/types';
 import { formatPrice } from '@/lib/utils';
 import { useCartStore } from '@/lib/store';
 import TechnicalProductCard from '@/components/TechnicalProductCard';
@@ -89,10 +89,43 @@ function SignatureIndicator({ category }: { category: string }) {
 
 export default function ProductPage() {
   const { slug } = useParams<{ slug: string }>();
-  const product = SAMPLE_PRODUCTS.find((p) => p.slug === slug);
+  const [product, setProduct] = useState<Product | null>(null);
+  const [related, setRelated] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  
   const [qty, setQty] = useState(1);
   const [activeTab, setActiveTab] = useState<'specs' | 'box' | 'compat'>('specs');
   const addItem = useCartStore((s) => s.addItem);
+
+  useEffect(() => {
+    Promise.all([
+      fetch(`/api/products/${slug}`).then(r => r.ok ? r.json() : null),
+      fetch(`/api/products`).then(r => r.ok ? r.json() : [])
+    ])
+    .then(([prodData, allProducts]) => {
+      setProduct(prodData);
+      if (prodData) {
+        setRelated(
+          allProducts
+            .filter((p: Product) => p.category === prodData.category && p.id !== prodData.id)
+            .slice(0, 3)
+        );
+      }
+      setLoading(false);
+    })
+    .catch(err => {
+      console.error(err);
+      setLoading(false);
+    });
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <div className="container mx-auto px-4 py-24 text-center">
+        <p className="font-mono text-[10px] text-aluminum/50 uppercase">[ FETCHING_DATA... ]</p>
+      </div>
+    );
+  }
 
   if (!product) {
     return (
@@ -106,9 +139,6 @@ export default function ProductPage() {
   }
 
   const catSlug = CATEGORIES.find((c) => c.name === product.category)?.slug ?? 'shop';
-  const related = SAMPLE_PRODUCTS
-    .filter((p) => p.category === product.category && p.id !== product.id)
-    .slice(0, 3);
 
   const whatsInBox = getWhatsInBox(product.category);
   const compat = getCompatibility(product.category, product.specifications ?? {});

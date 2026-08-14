@@ -1,16 +1,86 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Plus, Edit, Trash2, Search } from 'lucide-react';
-import { SAMPLE_PRODUCTS } from '@/lib/sample-data';
+import type { Product } from '@/types';
 import { formatPrice } from '@/lib/utils';
 import Button from '@/components/ui/Button';
+import ProductForm from '@/components/admin/ProductForm';
 
 export default function AdminProductsPage() {
   const [search, setSearch] = useState('');
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [editingProduct, setEditingProduct] = useState<Product | undefined>();
 
-  const filteredProducts = SAMPLE_PRODUCTS.filter(p =>
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    try {
+      const res = await fetch('/api/products');
+      const data = await res.json();
+      setProducts(data);
+    } catch (error) {
+      console.error('Error fetching products:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleDelete = async (slug: string) => {
+    if (!confirm('Are you sure you want to delete this product?')) return;
+    try {
+      const res = await fetch(`/api/products/${slug}`, { method: 'DELETE' });
+      if (res.ok) {
+        fetchProducts(); // Refresh list
+      } else {
+        alert('Failed to delete product');
+      }
+    } catch (error) {
+      console.error('Error deleting product:', error);
+    }
+  };
+
+  const handleOpenAdd = () => {
+    setEditingProduct(undefined);
+    setIsModalOpen(true);
+  };
+
+  const handleOpenEdit = (product: Product) => {
+    setEditingProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const handleFormSubmit = async (data: Partial<Product>) => {
+    try {
+      const url = editingProduct ? `/api/products/${editingProduct.slug}` : '/api/products';
+      const method = editingProduct ? 'PUT' : 'POST';
+
+      const res = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setIsModalOpen(false);
+        fetchProducts();
+      } else {
+        alert('Failed to save product');
+      }
+    } catch (error) {
+      console.error('Error saving product:', error);
+      alert('Error saving product');
+    }
+  };
+
+  const filteredProducts = products.filter(p =>
     p.name.toLowerCase().includes(search.toLowerCase()) ||
     p.category.toLowerCase().includes(search.toLowerCase())
   );
@@ -21,7 +91,7 @@ export default function AdminProductsPage() {
         <h1 className="font-heading text-4xl font-bold text-primary">
           Products
         </h1>
-        <Button size="lg" className="flex items-center space-x-2">
+        <Button size="lg" className="flex items-center space-x-2" onClick={handleOpenAdd}>
           <Plus className="w-5 h-5" />
           <span>Add Product</span>
         </Button>
@@ -81,10 +151,10 @@ export default function AdminProductsPage() {
                 </td>
                 <td className="px-6 py-4">
                   <div className="flex space-x-2">
-                    <button className="p-2 hover:bg-blue-50 rounded-lg transition-colors">
+                    <button onClick={() => handleOpenEdit(product)} className="p-2 hover:bg-blue-50 rounded-lg transition-colors">
                       <Edit className="w-4 h-4 text-blue-600" />
                     </button>
-                    <button className="p-2 hover:bg-red-50 rounded-lg transition-colors">
+                    <button onClick={() => handleDelete(product.slug)} className="p-2 hover:bg-red-50 rounded-lg transition-colors">
                       <Trash2 className="w-4 h-4 text-red-600" />
                     </button>
                   </div>
@@ -94,6 +164,19 @@ export default function AdminProductsPage() {
           </tbody>
         </table>
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">{editingProduct ? 'Edit Product' : 'Add Product'}</h2>
+            <ProductForm 
+              initialData={editingProduct} 
+              onSubmit={handleFormSubmit} 
+              onCancel={() => setIsModalOpen(false)} 
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

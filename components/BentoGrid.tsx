@@ -22,7 +22,7 @@ const fadeUp = (delay = 0, reducedMotion = false) => {
     };
   }
   return {
-    initial: { opacity: 0, y: 32 },
+    initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
     transition: { duration: 0.5, delay, ease },
@@ -231,7 +231,7 @@ export default function BentoGrid() {
                 <div className="flex items-center justify-between mt-10">
                   <div className="flex items-center gap-3 text-foreground font-display text-lg font-bold transition-colors">
                     Explore collection
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </div>

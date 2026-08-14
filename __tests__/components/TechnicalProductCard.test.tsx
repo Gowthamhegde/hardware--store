@@ -64,4 +64,28 @@ describe('TechnicalProductCard Stock LED Logic', () => {
     expect(ledSpan).toHaveClass('bg-signal');
     expect(ledSpan).toHaveClass('shadow-signal');
   });
+
+  // Pulse: stock=0 uses fixed dim opacity (no pulse class); stock>0 uses signal/live-red (pulse active).
+  // framer-motion is mocked so we verify color correctness as the pulse proxy — gray = no pulse, colored = pulse.
+  it('LED has no-pulse color (aluminum) for stock 0 and pulse color for stock > 0', () => {
+    const { rerender } = render(<TechnicalProductCard product={mockProduct(0)} />);
+    const noStock = screen.getByText('OUT').previousSibling as HTMLElement;
+    expect(noStock).toHaveClass('bg-aluminum/20'); // dim = no pulse
+
+    rerender(<TechnicalProductCard product={mockProduct(5)} />);
+    const lowStock = screen.getByText('LOW').previousSibling as HTMLElement;
+    expect(lowStock).not.toHaveClass('bg-aluminum/20'); // colored = pulse active
+  });
+
+  // Req 14.9: accessible text alternative — label text is the non-color indicator
+  it('provides accessible text label as stock status (not color only)', () => {
+    const { rerender } = render(<TechnicalProductCard product={mockProduct(0)} />);
+    expect(screen.getByText('OUT')).toBeInTheDocument();
+
+    rerender(<TechnicalProductCard product={mockProduct(5)} />);
+    expect(screen.getByText('LOW')).toBeInTheDocument();
+
+    rerender(<TechnicalProductCard product={mockProduct(50)} />);
+    expect(screen.getByText('STOCKED')).toBeInTheDocument();
+  });
 });

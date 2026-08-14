@@ -50,9 +50,6 @@ jest.mock('lucide-react', () => ({
   Activity: () => <div />,
   Share2: () => <div />,
 }));
-  };
-});
-
 describe('Responsive Layout Snapshots', () => {
   const viewports = [
     { width: 375, name: 'Mobile' },

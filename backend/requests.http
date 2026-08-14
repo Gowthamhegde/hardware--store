@@ -1,0 +1,78 @@
+### Hardware Store API Requests
+
+@baseUrl = http://localhost:5000/api
+@token = {{login.response.body.accessToken}}
+
+### --- Auth ---
+
+# Register
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com",
+  "password": "password123",
+  "phone": "9876543210"
+}
+
+###
+# Login
+# @name login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "customer@example.com",
+  "password": "password123"
+}
+
+###
+# Get Me
+GET {{baseUrl}}/auth/me
+Authorization: Bearer {{token}}
+
+
+### --- Products ---
+
+# Get Products (Paginated)
+GET {{baseUrl}}/products?page=1&limit=5
+
+###
+# Search Products
+GET {{baseUrl}}/search?q=drill
+
+
+### --- Cart ---
+
+# Get Cart
+GET {{baseUrl}}/cart
+Authorization: Bearer {{token}}
+
+###
+# Add to Cart (You'll need a real product_id from GET /products)
+POST {{baseUrl}}/cart/items
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "product_id": "REPLACE_WITH_PRODUCT_ID",
+  "quantity": 1
+}
+
+
+### --- Orders ---
+
+# Checkout (Requires items in cart)
+POST {{baseUrl}}/orders
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "shipping_address_id": "REPLACE_WITH_ADDRESS_ID"
+}
+
+###
+# Get My Orders
+GET {{baseUrl}}/orders
+Authorization: Bearer {{token}}

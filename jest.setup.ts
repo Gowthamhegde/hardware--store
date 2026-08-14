@@ -48,6 +48,7 @@ jest.mock('framer-motion', () => {
       li: mockComponent('li'),
       button: mockComponent('button'),
       a: mockComponent('a'),
+      line: mockComponent('line'),
     },
     AnimatePresence: ({ children }: any) => React.createElement(React.Fragment, null, children),
     useScroll: () => ({ scrollYProgress: { get: () => 0, onChange: () => () => {} } }),

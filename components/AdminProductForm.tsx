@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { CATEGORIES } from '@/lib/constants';
-import { insertProduct } from '@/lib/supabase';
 import { slugify } from '@/lib/utils';
 import toast from 'react-hot-toast';
 import { Plus, Check, Loader2 } from 'lucide-react';
@@ -36,12 +35,18 @@ export default function AdminProductForm() {
     const slug = slugify(formData.name);
 
     try {
-      await insertProduct({
-        ...formData,
-        price: parseFloat(formData.price),
-        stock: parseInt(formData.stock, 10),
-        slug,
+      const res = await fetch('/api/products', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          price: parseFloat(formData.price),
+          stock: parseInt(formData.stock, 10),
+          slug,
+        })
       });
+
+      if (!res.ok) throw new Error('Failed to create product');
 
       toast.success(`SYSTEM UPDATED: ${formData.name} initialized`);
       setFormData({
