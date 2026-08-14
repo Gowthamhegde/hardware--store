@@ -1,5 +1,6 @@
 import BentoGrid from '@/components/BentoGrid';
 import AnimatedBackground from '@/components/AnimatedBackground';
+import BrandCarousel from '@/components/BrandCarousel';
 
 export default function HomePage() {
   return (
@@ -8,7 +9,14 @@ export default function HomePage() {
       <AnimatedBackground />
       
       {/* Main Content Overlay */}
-      <BentoGrid />
+      <div className="relative z-10 flex flex-col items-center">
+        <BentoGrid />
+        
+        {/* Brand Showcase Section */}
+        <div className="w-full border-t border-white/5 bg-black/20 backdrop-blur-sm mt-8">
+          <BrandCarousel />
+        </div>
+      </div>
     </div>
   );
 }

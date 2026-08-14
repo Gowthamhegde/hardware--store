@@ -65,6 +65,13 @@ export const CATEGORIES = [
     description: "Clearance and bundle offers",
     specs: "Up to 40% off",
   },
+  {
+    name: "MCB & DB",
+    slug: "mcb-db",
+    icon: "shield-alert",
+    description: "Miniature Circuit Breakers and Distribution Boards",
+    specs: "Reliable Protection",
+  },
 ];
 
 export const TRUST_BADGES = [
@@ -74,11 +81,29 @@ export const TRUST_BADGES = [
   "Tech support included",
 ];
 
-export const BRAND_PARTNERS = [
-  "Legrand",
-  "Schneider",
-  "AudioEngine",
-  "Yamaha",
-  "Klipsch",
-  "Sonos",
+export const BRANDS = [
+  { name: 'Anchor', logo: 'https://ui-avatars.com/api/?name=Anchor&background=random&color=fff&size=128' },
+  { name: 'Panasonic', logo: 'https://www.google.com/s2/favicons?domain=panasonic.com&sz=128' },
+  { name: 'Kolors', logo: 'https://www.google.com/s2/favicons?domain=kolorsworld.com&sz=128' },
+  { name: 'Legrand', logo: 'https://www.google.com/s2/favicons?domain=legrand.com&sz=128' },
+  { name: 'Norisys', logo: 'https://ui-avatars.com/api/?name=Norisys&background=random&color=fff&size=128' },
+  { name: 'Schneider Electric', logo: 'https://www.google.com/s2/favicons?domain=se.com&sz=128' },
+  { name: 'Finolex', logo: 'https://www.google.com/s2/favicons?domain=finolex.com&sz=128' },
+  { name: 'Hi-Fi', logo: 'https://ui-avatars.com/api/?name=Hi+Fi&background=random&color=fff&size=128' },
+  { name: 'Havells', logo: 'https://www.google.com/s2/favicons?domain=havells.com&sz=128' },
+  { name: 'Crabtree', logo: 'https://ui-avatars.com/api/?name=Crabtree&background=random&color=fff&size=128' },
+  { name: 'Luker', logo: 'https://www.google.com/s2/favicons?domain=lukerindia.com&sz=128' },
+  { name: 'Yale', logo: 'https://www.google.com/s2/favicons?domain=yalehome.com&sz=128' },
+  { name: 'LG', logo: 'https://www.google.com/s2/favicons?domain=lg.com&sz=128' },
+  { name: 'Epson', logo: 'https://www.google.com/s2/favicons?domain=epson.com&sz=128' },
+  { name: 'Sony', logo: 'https://www.google.com/s2/favicons?domain=sony.com&sz=128' },
+  { name: 'Yamaha', logo: 'https://www.google.com/s2/favicons?domain=yamaha.com&sz=128' },
+  { name: 'Marantz', logo: 'https://www.google.com/s2/favicons?domain=marantz.com&sz=128' },
+  { name: 'Tone Winner', logo: 'https://www.google.com/s2/favicons?domain=tonewinner.com&sz=128' },
+  { name: 'Paradigm', logo: 'https://www.google.com/s2/favicons?domain=paradigm.com&sz=128' },
+  { name: 'Klipsch', logo: 'https://www.google.com/s2/favicons?domain=klipsch.com&sz=128' },
+  { name: 'OSD Audio', logo: 'https://www.google.com/s2/favicons?domain=osdaudio.com&sz=128' },
+  { name: 'Liberty', logo: 'https://www.google.com/s2/favicons?domain=libertyav.com&sz=128' },
+  { name: 'IndoAsian', logo: 'https://www.google.com/s2/favicons?domain=indoasian.com&sz=128' },
+  { name: 'Hager', logo: 'https://www.google.com/s2/favicons?domain=hager.com&sz=128' }
 ];

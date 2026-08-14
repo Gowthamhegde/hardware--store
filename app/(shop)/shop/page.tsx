@@ -9,7 +9,7 @@ import { CATEGORIES } from '@/lib/constants';
 import TechnicalProductCard from '@/components/TechnicalProductCard';
 import { formatPrice } from '@/lib/utils';
 import { useCartStore } from '@/lib/store';
-import GlobalHorizontalScrollWrapper from '@/components/GlobalHorizontalScrollWrapper';
+import BrandCarousel from '@/components/BrandCarousel';
 import type { Product } from '@/types';
 
 const PRICE_RANGES = [
@@ -138,6 +138,9 @@ function ShopContent() {
     const match = CATEGORIES.find((c) => c.slug === cat);
     setSelectedCategory(match ? match.slug : cat === 'all' ? 'all' : cat);
 
+    const bnd = searchParams.get('brand') ?? 'all';
+    setSelectedBrand(bnd);
+
     const sq = searchParams.get('search') ?? '';
     setSearchQuery(sq);
   }, [searchParams]);
@@ -265,13 +268,18 @@ function ShopContent() {
   );
 
   return (
-    <div className="-mt-24 -mb-12">
-      <GlobalHorizontalScrollWrapper 
-        heightClasses="h-[500vh]"
-        contentClassName="flex h-full w-max pt-32 pb-12 pl-[320px]"
-        fixedOverlay={
-          <aside className="hidden lg:flex w-[320px] h-full flex-col border-r border-white/10 glass-panel p-6 overflow-hidden mt-24">
-            <div className="mb-6 pb-4 border-b border-white/10 shrink-0">
+    <div className="container mx-auto px-4 py-24 min-h-screen">
+      
+      {/* Brand Carousel Section */}
+      <div className="mb-12 w-full border-b border-white/5 pb-8">
+        <BrandCarousel />
+      </div>
+
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Sidebar Filter */}
+        <aside className="hidden lg:flex w-[320px] shrink-0 flex-col">
+          <div className="glass-panel p-6 rounded-2xl sticky top-28">
+            <div className="mb-6 pb-4 border-b border-white/10">
               <h1 className="font-display text-2xl font-bold text-cable-white mb-2 drop-shadow-md">
                 {searchQuery ? `RESULTS: "${searchQuery}"` : 'CATALOG'}
               </h1>
@@ -281,7 +289,7 @@ function ShopContent() {
             </div>
             
             {/* Top Bar for View/Sort */}
-            <div className="flex items-center gap-2 mb-6 shrink-0 border border-white/10 p-2 bg-black/20 rounded-lg">
+            <div className="flex items-center gap-2 mb-6 border border-white/10 p-2 bg-black/20 rounded-lg">
               <div className="relative flex-1">
                 <button
                   onClick={() => setSortOpen((v) => !v)}
@@ -318,28 +326,43 @@ function ShopContent() {
             <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar">
               <FilterPanel />
             </div>
-          </aside>
-        }
-      >
-        <div className="flex gap-8 h-full items-center px-12">
+          </div>
+        </aside>
+
+        {/* Main Products Grid */}
+        <div className="flex-1">
+          {/* Mobile Filter Toggle */}
+          <div className="lg:hidden mb-6 flex justify-between items-center">
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="flex items-center gap-2 px-4 py-2 glass-panel rounded-lg font-mono text-[10px] text-cable-white uppercase"
+            >
+              <SlidersHorizontal className="w-4 h-4" />
+              FILTERS
+            </button>
+            <p className="font-mono text-[9px] text-signal tracking-widest uppercase">
+              {filtered.length} COMPONENTS
+            </p>
+          </div>
+
           {loading ? (
-             <div className="flex flex-col items-center justify-center w-[50vw] h-[50vh] glass-panel rounded-2xl">
+             <div className="flex flex-col items-center justify-center w-full h-[50vh] glass-panel rounded-2xl">
                <p className="font-mono text-white/50 text-xs mb-2 uppercase drop-shadow-md">[ FETCHING_DATA... ]</p>
              </div>
           ) : filtered.length === 0 ? (
-             <div className="flex flex-col items-center justify-center w-[50vw] h-[50vh] glass-panel rounded-2xl">
+             <div className="flex flex-col items-center justify-center w-full h-[50vh] glass-panel rounded-2xl">
                <p className="font-mono text-white/50 text-xs mb-2 uppercase drop-shadow-md">[ ERR: NO_SIGNALS_FOUND ]</p>
                <button onClick={resetFilters} className="font-mono text-[10px] text-copper hover:text-signal hover:shadow-signal uppercase transition-colors">CLEAR_PARAMETERS</button>
              </div>
           ) : (
-             filtered.map((product, i) => (
-               <div key={product.id} className="w-[320px] md:w-[380px] shrink-0 h-full max-h-[70vh]">
-                 <TechnicalProductCard product={product} index={i} />
-               </div>
-             ))
+             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+               {filtered.map((product, i) => (
+                 <TechnicalProductCard key={product.id} product={product} index={i} />
+               ))}
+             </div>
           )}
         </div>
-      </GlobalHorizontalScrollWrapper>
+      </div>
 
       {/* ── Mobile filter drawer ── */}
       <AnimatePresence>

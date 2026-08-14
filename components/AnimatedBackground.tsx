@@ -203,6 +203,14 @@ export default function AnimatedBackground() {
 
   return (
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-enclosure transition-colors duration-500">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-60"
+        src="/back_video.mp4"
+      />
       <motion.div
         className="absolute inset-0"
         initial={{ opacity: 0 }}
