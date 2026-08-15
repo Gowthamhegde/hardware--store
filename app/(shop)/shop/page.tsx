@@ -9,7 +9,7 @@ import { CATEGORIES } from '@/lib/constants';
 import TechnicalProductCard from '@/components/TechnicalProductCard';
 import { formatPrice } from '@/lib/utils';
 import { useCartStore } from '@/lib/store';
-import BrandCarousel from '@/components/BrandCarousel';
+import BrandGrid from '@/components/BrandGrid';
 import type { Product } from '@/types';
 
 const PRICE_RANGES = [
@@ -272,7 +272,7 @@ function ShopContent() {
       
       {/* Brand Carousel Section */}
       <div className="mb-12 w-full border-b border-white/5 pb-8">
-        <BrandCarousel />
+        <BrandGrid />
       </div>
 
       <div className="flex flex-col lg:flex-row gap-8">

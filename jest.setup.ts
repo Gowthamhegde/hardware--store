@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-
+import 'whatwg-fetch';
 jest.mock('framer-motion', () => {
   const React = require('react');
   

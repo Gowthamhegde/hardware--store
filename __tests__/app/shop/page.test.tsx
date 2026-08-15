@@ -14,10 +14,17 @@ jest.mock('next/navigation', () => ({
 describe('Shop Page Logic', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    global.fetch = jest.fn(() => 
+      Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(SAMPLE_PRODUCTS)
+      })
+    ) as jest.Mock;
   });
 
-  it('renders all products by default', () => {
+  it('renders all products by default', async () => {
     render(<ShopPage />);
-    expect(screen.getByText(SAMPLE_PRODUCTS[0].name)).toBeInTheDocument();
+    const elements = await screen.findAllByText(SAMPLE_PRODUCTS[0].name);
+    expect(elements.length).toBeGreaterThan(0);
   });
 });
