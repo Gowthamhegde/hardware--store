@@ -219,7 +219,7 @@ export default function CheckoutPage() {
               disabled={isProcessing}
               className="w-full"
             >
-              {isProcessing ? 'Processing...' : `Place Order - ${formatPrice(finalTotal)}`}
+              {isProcessing ? 'Processing...' : 'Place Order'}
             </Button>
           </form>
         </div>
@@ -235,27 +235,14 @@ export default function CheckoutPage() {
                   <span className="text-cable-white/70">
                     {item.quantity}× {item.product.name}
                   </span>
-                  <span className="font-medium text-cable-white">
-                    {formatPrice(item.product.price * item.quantity)}
-                  </span>
                 </div>
               ))}
             </div>
 
             <div className="border-t pt-4 space-y-3">
               <div className="flex justify-between">
-                <span className="text-cable-white/70">Subtotal</span>
-                <span className="font-semibold text-cable-white">{formatPrice(total)}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-cable-white/70">Shipping</span>
-                <span className="font-semibold text-cable-white">
-                  {shipping === 0 ? 'FREE' : formatPrice(shipping)}
-                </span>
-              </div>
-              <div className="flex justify-between text-lg font-bold border-t pt-3">
-                <span>Total</span>
-                <span className="text-signal">{formatPrice(finalTotal)}</span>
+                <span className="text-cable-white/70">Total Items</span>
+                <span className="font-semibold text-cable-white">{items.length}</span>
               </div>
             </div>
           </div>

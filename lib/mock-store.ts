@@ -5,10 +5,8 @@ import { SAMPLE_PRODUCTS } from './sample-data';
 let globalMockProducts: Product[] | null = null;
 
 export function getMockProducts(): Product[] {
-  if (!globalMockProducts) {
-    globalMockProducts = [...SAMPLE_PRODUCTS];
-  }
-  return globalMockProducts;
+  // Always return fresh data in development to pick up sample-data updates
+  return [...SAMPLE_PRODUCTS];
 }
 
 export function addMockProduct(product: Product) {

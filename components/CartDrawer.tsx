@@ -62,7 +62,7 @@ export default function CartDrawer() {
                   {items.map((item) => (
                     <li key={item.product.id} className="flex gap-4">
                       <div className="relative w-20 h-20 bg-enclosure/50 border border-aluminum/20 flex-shrink-0">
-                        <Image src={getStorePhotoByKey(item.product.id, item.product.image_url)} alt={item.product.name} fill className="object-contain p-2" />
+                        <Image src={getStorePhotoByKey(item.product.id, item.product.image_url, item.product.brand)} alt={item.product.name} fill sizes="80px" className="object-contain p-2" />
                       </div>
                       
                       <div className="flex-1 min-w-0 flex flex-col">

@@ -83,9 +83,9 @@ export const TRUST_BADGES = [
 
 export const BRANDS = [
   { name: 'Anchor', logo: 'https://ui-avatars.com/api/?name=Anchor&background=random&color=fff&size=128' },
-  { name: 'Panasonic', logo: 'https://www.google.com/s2/favicons?domain=panasonic.com&sz=128' },
-  { name: 'Kolors', logo: 'https://www.google.com/s2/favicons?domain=kolorsworld.com&sz=128' },
-  { name: 'Legrand', logo: 'https://www.google.com/s2/favicons?domain=legrand.com&sz=128' },
+  { name: 'Panasonic', logo: '/images/panasonic/Panasonic-logo.jpg' },
+  { name: 'Kolors', logo: '/images/kolors/logo.jpeg' },
+  { name: 'Legrand', logo: '/images/legrand/Logo.png' },
   { name: 'Norisys', logo: 'https://ui-avatars.com/api/?name=Norisys&background=random&color=fff&size=128' },
   { name: 'Schneider Electric', logo: 'https://www.google.com/s2/favicons?domain=se.com&sz=128' },
   { name: 'Finolex', logo: 'https://www.google.com/s2/favicons?domain=finolex.com&sz=128' },
@@ -103,7 +103,7 @@ export const BRANDS = [
   { name: 'Paradigm', logo: 'https://www.google.com/s2/favicons?domain=paradigm.com&sz=128' },
   { name: 'Klipsch', logo: 'https://www.google.com/s2/favicons?domain=klipsch.com&sz=128' },
   { name: 'OSD Audio', logo: 'https://www.google.com/s2/favicons?domain=osdaudio.com&sz=128' },
-  { name: 'Liberty', logo: 'https://www.google.com/s2/favicons?domain=libertyav.com&sz=128' },
+  { name: 'Liberty', logo: 'https://ui-avatars.com/api/?name=Liberty&background=random&color=fff&size=128' },
   { name: 'IndoAsian', logo: 'https://www.google.com/s2/favicons?domain=indoasian.com&sz=128' },
   { name: 'Hager', logo: 'https://www.google.com/s2/favicons?domain=hager.com&sz=128' }
 ];

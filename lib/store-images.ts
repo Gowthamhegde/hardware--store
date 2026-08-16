@@ -1,3 +1,5 @@
+import { getProductImageByBrand } from './product-images';
+
 export const STORE_PHOTOS = [
   '/store-photos/photo-01.jpeg',
   '/store-photos/photo-02.jpeg',
@@ -23,7 +25,19 @@ function hashKey(value: string) {
   return hash;
 }
 
-export function getStorePhotoByKey(key: string, fallback = '') {
+/**
+ * Get product image with brand-based real images
+ * @param key - Product ID or unique key
+ * @param fallback - Fallback URL if needed
+ * @param brand - Product brand (Panasonic, Kolors, Legrand, Norisys)
+ */
+export function getStorePhotoByKey(key: string, fallback = '', brand?: string) {
+  // If brand is provided, use real product images
+  if (brand) {
+    return getProductImageByBrand(brand, key, fallback);
+  }
+  
+  // Fallback to store photos
   if (STORE_PHOTOS.length === 0) return fallback;
   return STORE_PHOTOS[hashKey(key) % STORE_PHOTOS.length] ?? fallback;
 }

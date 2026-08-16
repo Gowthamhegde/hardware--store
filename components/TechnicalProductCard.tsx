@@ -95,9 +95,10 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
             {/* Ambient inner glow for image */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0" />
             <Image
-              src={getStorePhotoByKey(product.id, product.image_url)}
+              src={getStorePhotoByKey(product.id, product.image_url, product.brand)}
               alt={product.name}
               fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
             />
           </div>
@@ -135,7 +136,7 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
             </div>
           </div>
 
-          {/* Name + price + add to cart */}
+          {/* Name + add to cart */}
           <div className="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60">
             {product.brand && (
               <span className="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]">
@@ -146,14 +147,7 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
               {product.name}
             </h3>
 
-            <div className="flex items-center justify-between mt-auto pt-4 border-t border-foreground/10">
-              <div>
-                <div className="font-mono text-[9px] text-foreground/40 tracking-widest mb-0.5 uppercase">SYS_VALUE</div>
-                <div className="font-mono text-lg font-bold text-cable-white text-gradient">
-                  {formatPrice(product.price)}
-                </div>
-              </div>
-
+            <div className="flex items-center justify-end mt-auto pt-4 border-t border-foreground/10">
               <div className="flex items-center gap-2">
                 <button
                   onClick={(e) => {

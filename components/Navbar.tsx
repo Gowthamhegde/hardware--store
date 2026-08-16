@@ -40,6 +40,7 @@ export default function Navbar() {
                 src="/logo.jpeg"
                 alt={STORE_CONFIG.name}
                 fill
+                sizes="56px"
                 className="object-contain p-1"
                 priority
               />

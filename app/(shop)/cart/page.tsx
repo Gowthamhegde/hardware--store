@@ -59,9 +59,10 @@ export default function CartPage() {
             >
               <div className="relative w-full sm:w-32 h-32 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
                 <Image
-                  src={getStorePhotoByKey(item.product.id, item.product.image_url)}
+                  src={getStorePhotoByKey(item.product.id, item.product.image_url, item.product.brand)}
                   alt={item.product.name}
                   fill
+                  sizes="128px"
                   className="object-cover"
                 />
               </div>
@@ -89,15 +90,6 @@ export default function CartPage() {
                       <Plus className="w-4 h-4" />
                     </button>
                   </div>
-
-                  <div className="text-right">
-                    <p className="text-xl font-bold text-primary">
-                      {formatPrice(item.product.price * item.quantity)}
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      {formatPrice(item.product.price)} each
-                    </p>
-                  </div>
                 </div>
               </div>
 
@@ -122,28 +114,10 @@ export default function CartPage() {
 
             <div className="space-y-4 mb-6">
               <div className="flex justify-between">
-                <span className="text-gray-600">Subtotal</span>
-                <span className="font-semibold">{formatPrice(total)}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Shipping</span>
-                <span className="font-semibold">
-                  {total >= 100 ? 'FREE' : formatPrice(10)}
-                </span>
-              </div>
-              <div className="border-t pt-4 flex justify-between text-lg">
-                <span className="font-bold">Total</span>
-                <span className="font-bold text-primary">
-                  {formatPrice(total >= 100 ? total : total + 10)}
-                </span>
+                <span className="text-gray-600">Total Items</span>
+                <span className="font-semibold">{items.length} item{items.length !== 1 ? 's' : ''}</span>
               </div>
             </div>
-
-            {total < 100 && (
-              <p className="text-sm text-gray-600 mb-6 bg-accent/10 p-3 rounded-lg">
-                Add {formatPrice(100 - total)} more to get free shipping!
-              </p>
-            )}
 
             <Link href="/checkout">
               <Button size="lg" className="w-full">

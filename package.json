@@ -13,7 +13,7 @@
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.18.0",
     "@supabase/supabase-js": "^2.39.0",
-    "@types/three": "^0.185.1",
+    "@types/three": "0.169.0",
     "framer-motion": "^11.0.3",
     "lucide-react": "^0.314.0",
     "next": "^14.2.35",
@@ -21,7 +21,7 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "stripe": "^14.12.0",
-    "three": "^0.185.1",
+    "three": "0.169.0",
     "zustand": "^4.5.0"
   },
   "devDependencies": {

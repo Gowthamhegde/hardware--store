@@ -91,7 +91,7 @@ export default function TechnicalNav() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group" aria-label={`${STORE_CONFIG.name} home`}>
               <div className="w-10 h-10 relative overflow-hidden rounded-full border border-white/20 bg-black/50 group-hover:border-signal/50 group-hover:shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300">
-                <Image src="/logo.jpeg" alt="" fill className="object-cover" />
+                <Image src="/logo.jpeg" alt="" fill sizes="40px" className="object-cover" />
               </div>
               <div className="hidden sm:block">
                 <div className="font-display font-bold text-cable-white text-lg tracking-tight group-hover:text-signal transition-colors">
@@ -274,7 +274,7 @@ export default function TechnicalNav() {
                                 className="flex items-center gap-3 px-4 py-3 hover:bg-aluminum/5 transition-colors group"
                               >
                                 <div className="relative w-10 h-10 rounded bg-enclosure flex-shrink-0 border border-aluminum/10 group-hover:border-signal/50 transition-colors">
-                                  <Image src={getStorePhotoByKey(product.id, product.image_url)} alt="" fill className="object-cover" />
+                                  <Image src={getStorePhotoByKey(product.id, product.image_url, product.brand)} alt="" fill sizes="40px" className="object-cover" />
                                 </div>
                                 <div className="flex-1 min-w-0">
                                   <div className="font-display text-sm text-cable-white group-hover:text-signal transition-colors truncate">
@@ -289,9 +289,6 @@ export default function TechnicalNav() {
                                     )}
                                   </div>
                                 </div>
-                                <span className="font-mono text-xs text-copper flex-shrink-0">
-                                  {formatPrice(product.price)}
-                                </span>
                                 <ArrowRight className="w-3.5 h-3.5 text-aluminum/30 group-hover:text-signal group-hover:translate-x-1 transition-all flex-shrink-0" />
                               </Link>
                             </li>

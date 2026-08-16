@@ -63,11 +63,10 @@ export default function CompareDrawer() {
                 {/* Product Info */}
                 <div className="p-4 border-b border-aluminum/10 text-center flex flex-col items-center">
                   <div className="w-24 h-24 relative mb-3">
-                    <Image src={getStorePhotoByKey(product.id, product.image_url)} alt={product.name} fill className="object-contain" />
+                    <Image src={getStorePhotoByKey(product.id, product.image_url, product.brand)} alt={product.name} fill sizes="96px" className="object-contain" />
                   </div>
                   <div className="font-mono text-[9px] text-aluminum/50 uppercase mb-1">{product.id}</div>
-                  <div className="font-display text-sm font-bold text-cable-white line-clamp-2 h-10 mb-2 uppercase">{product.name}</div>
-                  <div className="font-mono text-sm font-bold text-signal mb-4">{formatPrice(product.price)}</div>
+                  <div className="font-display text-sm font-bold text-cable-white line-clamp-2 h-10 mb-4 uppercase">{product.name}</div>
                   <button
                     onClick={() => { addItem(product); toast.success('ADDED TO CART'); }}
                     disabled={product.stock === 0}

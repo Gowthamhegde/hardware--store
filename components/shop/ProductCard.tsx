@@ -37,9 +37,10 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
         <Card className="group">
           <div className="relative h-64 overflow-hidden bg-gradient-to-b from-enclosure/30 to-enclosure/70">
             <Image
-              src={getStorePhotoByKey(product.id, product.image_url)}
+              src={getStorePhotoByKey(product.id, product.image_url, product.brand)}
               alt={product.name}
               fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
             />
             {product.stock < 10 && product.stock > 0 && (
@@ -63,11 +64,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
               {product.description}
             </p>
 
-            <div className="flex items-center justify-between">
-              <span className="text-2xl font-bold text-signal">
-                {formatPrice(product.price)}
-              </span>
-              
+            <div className="flex items-center justify-end">
               <Button
                 size="sm"
                 onClick={handleAddToCart}

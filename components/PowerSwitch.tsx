@@ -41,6 +41,7 @@ export default function PowerSwitch() {
             src="/switch.webp"
             alt="Hardware switch"
             fill
+            sizes="80px"
             className="object-contain"
             priority
           />

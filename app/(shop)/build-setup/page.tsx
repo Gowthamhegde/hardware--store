@@ -138,7 +138,7 @@ export default function BuildSetupPage() {
 
                     <div className="relative h-32 bg-enclosure border-b border-aluminum/10 p-4 flex items-center justify-center">
                       <div className="relative w-full h-full opacity-80 hover:opacity-100 transition-opacity">
-                        <Image src={getStorePhotoByKey(product.id, product.image_url)} alt={product.name} fill className="object-contain" />
+                        <Image src={getStorePhotoByKey(product.id, product.image_url, product.brand)} alt={product.name} fill sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-contain" />
                       </div>
                     </div>
                     
@@ -157,10 +157,6 @@ export default function BuildSetupPage() {
                           </div>
                         </div>
                       )}
-                      
-                      <div className="font-mono text-xs text-signal font-bold pt-3 border-t border-aluminum/10">
-                        {formatPrice(product.price)}
-                      </div>
                     </div>
                   </button>
                 );

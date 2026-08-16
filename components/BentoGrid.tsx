@@ -9,6 +9,7 @@ import TechnicalProductCard from './TechnicalProductCard';
 import { SAMPLE_PRODUCTS } from '@/lib/sample-data';
 import { usePrefersReducedMotion } from '@/lib/hooks';
 import { STORE_PHOTOS } from '@/lib/store-images';
+import { useCartStore } from '@/lib/store';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -107,7 +108,15 @@ export default function BentoGrid() {
   const cb = CATEGORIES[1];
   const sh = CATEGORIES[3];
   const dl = CATEGORIES[4];
-  const featured = SAMPLE_PRODUCTS.filter((p) => p.category === 'Home Theatre & Audio').slice(0, 3);
+  
+  // Get products from cart instead of static featured list
+  const cartItems = useCartStore((s) => s.items);
+  const productsInCart = cartItems.map(item => item.product);
+  
+  // Show cart products if available, otherwise fallback to featured products
+  const featured = productsInCart.length > 0 
+    ? productsInCart.slice(0, 6) 
+    : SAMPLE_PRODUCTS.filter((p) => p.category === 'Home Theatre & Audio').slice(0, 3);
 
   return (
     <div className="relative z-10 overflow-hidden">
@@ -367,14 +376,18 @@ export default function BentoGrid() {
       <section className="relative container mx-auto px-4 py-16 z-20">
         <motion.div {...fadeUp(0, prefersReducedMotion)} className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <p className="font-display font-semibold text-xs text-foreground/60 tracking-widest mb-2 uppercase">Curated Collection</p>
-            <h2 className="font-display text-4xl md:text-5xl font-black text-foreground">Spatial Audio</h2>
+            <p className="font-display font-semibold text-xs text-foreground/60 tracking-widest mb-2 uppercase">
+              {productsInCart.length > 0 ? 'Your Cart Items' : 'Curated Collection'}
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-black text-foreground">
+              {productsInCart.length > 0 ? 'Added Products' : 'Spatial Audio'}
+            </h2>
           </div>
           <Link
-            href="/shop?category=home-theatre-audio"
+            href={productsInCart.length > 0 ? '/cart' : '/shop?category=home-theatre-audio'}
             className="flex items-center gap-2 text-sm font-bold text-foreground/70 hover:text-foreground transition-colors uppercase tracking-widest font-display"
           >
-            View collection <ArrowRight className="w-4 h-4" />
+            {productsInCart.length > 0 ? 'View cart' : 'View collection'} <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>
 

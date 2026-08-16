@@ -176,7 +176,7 @@ export default function ProductPage() {
           >
             {/* Inner ambient glow */}
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-signal/10 pointer-events-none" />
-            <Image src={getStorePhotoByKey(product.id, product.image_url)} alt={product.name} fill className="object-contain p-12 opacity-80 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-700" />
+            <Image src={getStorePhotoByKey(product.id, product.image_url, product.brand)} alt={product.name} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-contain p-12 opacity-80 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-700" />
 
             {/* HUD Overlay */}
             <div className="absolute inset-0 pointer-events-none border-[0.5px] border-signal/10 m-4">
@@ -232,13 +232,6 @@ export default function ProductPage() {
               <p className="mt-4 font-mono text-[11px] text-aluminum/80 leading-relaxed uppercase max-w-2xl">
                 {product.long_description ?? product.description}
               </p>
-            </div>
-
-            <div className="flex items-center justify-between border border-white/10 bg-black/20 p-4 rounded-xl max-w-xl">
-              <div>
-                <div className="font-mono text-[9px] text-signal/70 tracking-widest mb-1 uppercase">SYS_VALUE</div>
-                <div className="font-mono text-4xl font-bold text-cable-white text-gradient">{formatPrice(product.price)}</div>
-              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 max-w-xl">

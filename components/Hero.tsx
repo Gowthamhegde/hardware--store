@@ -64,6 +64,7 @@ export default function Hero() {
                   src="/logo.jpeg"
                   alt={STORE_CONFIG.name}
                   fill
+                  sizes="(max-width: 768px) 256px, 384px"
                   className="object-contain p-8"
                   priority
                 />
