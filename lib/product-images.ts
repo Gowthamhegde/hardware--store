@@ -3,77 +3,99 @@
  * Maps product IDs and brands to actual product images from /public/product-images/
  */
 
-// Company-specific image mappings
+// Brand logos
+export const BRAND_LOGOS = {
+  kolors: '/images/kolors/logo.jpeg',
+  legrand: '/product-images/legrand/Legrand-Logo.png',
+  norisys: '/images/norisys/logo.png',
+  panasonic: '/product-images/panasonic/panasonic/Panasonic-logo.jpg',
+  finolex: '/images/finolex/logo.jpg',
+};
+
+// Company-specific image mappings (ALL IMAGES)
 const COMPANY_IMAGES = {
   kolors: [
-    '/images/kolors/switch.jpg',
-    '/images/kolors/switch1.jpeg',
-    '/images/kolors/switch10.jpeg',
-    '/images/kolors/switch11.jpeg',
-    '/images/kolors/switch12.jpeg',
-    '/images/kolors/switch13.jpeg',
-    '/images/kolors/switch14.jpeg',
-    '/images/kolors/switch15.jpeg',
-    '/images/kolors/switch16.jpeg',
-    '/images/kolors/switch17.jpeg',
-    '/images/kolors/switch18.jpeg',
-    '/images/kolors/switch19.jpeg',
-    '/images/kolors/switch2.jpeg',
-    '/images/kolors/switch3.jpeg',
-    '/images/kolors/switch4.jpeg',
-    '/images/kolors/switch6.jpeg',
-    '/images/kolors/switch7.jpeg',
-    '/images/kolors/switch8.jpeg',
-    '/images/kolors/switch9.jpeg',
+    '/product-images/kolors/kolors/716bXbLET-L.jpg',
+    '/product-images/kolors/kolors/images-2.jpeg',
+    '/product-images/kolors/kolors/images-3.jpeg',
+    '/product-images/kolors/kolors/images-4.jpeg',
+    '/product-images/kolors/kolors/images-5.jpeg',
+    '/product-images/kolors/kolors/images-6.jpeg',
+    '/product-images/kolors/kolors/images-7.jpeg',
+    '/product-images/kolors/kolors/images-8.jpeg',
+    '/product-images/kolors/kolors/images-9.jpeg',
+    '/product-images/kolors/kolors/images-10.jpeg',
+    '/product-images/kolors/kolors/images-11.jpeg',
+    '/product-images/kolors/kolors/images-12.jpeg',
+    '/product-images/kolors/kolors/images-13.jpeg',
+    '/product-images/kolors/kolors/images-14.jpeg',
+    '/product-images/kolors/kolors/images-15.jpeg',
+    '/product-images/kolors/kolors/images-16.jpeg',
+    '/product-images/kolors/kolors/images-17.jpeg',
+    '/product-images/kolors/kolors/images-18.jpeg',
+    '/product-images/kolors/kolors/images-19.jpeg',
+    '/product-images/kolors/kolors/images-20.jpeg',
+    '/product-images/kolors/kolors/images-21.jpeg',
   ],
   legrand: [
-    '/images/legrand/switch.jpeg',
-    '/images/legrand/switch1.jpeg',
-    '/images/legrand/switch10.jpeg',
-    '/images/legrand/switch11.jpeg',
-    '/images/legrand/switch12.jpeg',
-    '/images/legrand/switch13.jpeg',
-    '/images/legrand/switch14.jpeg',
-    '/images/legrand/switch15.jpeg',
-    '/images/legrand/switch16.jpg',
-    '/images/legrand/switch2.jpeg',
-    '/images/legrand/switch3.jpeg',
-    '/images/legrand/switch4.jpeg',
-    '/images/legrand/switch5.jpeg',
-    '/images/legrand/switch6.jpeg',
-    '/images/legrand/switch7.jpeg',
-    '/images/legrand/switch8.jpeg',
-    '/images/legrand/switch9.jpeg',
+    '/product-images/legrand/images-2.jpeg',
+    '/product-images/legrand/images-3.jpeg',
+    '/product-images/legrand/images-4.jpeg',
+    '/product-images/legrand/images-5.jpeg',
+    '/product-images/legrand/images-6.jpeg',
+    '/product-images/legrand/images-7.jpeg',
+    '/product-images/legrand/images-8.jpeg',
+    '/product-images/legrand/images-9.jpeg',
+    '/product-images/legrand/images-10.jpeg',
+    '/product-images/legrand/images-11.jpeg',
+    '/product-images/legrand/images-12.jpeg',
+    '/product-images/legrand/images-13.jpeg',
+    '/product-images/legrand/images-14.jpeg',
+    '/product-images/legrand/images-15.jpeg',
+    '/product-images/legrand/images-16.jpeg',
+    '/product-images/legrand/images-17.jpeg',
+    '/product-images/legrand/legrand-modular-switch-board-470.jpg',
   ],
   norisys: [
-    '/images/norisys/switch (1).jpeg',
-    '/images/norisys/switch (10).jpeg',
-    '/images/norisys/switch (11).jpeg',
-    '/images/norisys/switch (12).jpeg',
-    '/images/norisys/switch (13).jpeg',
-    '/images/norisys/switch (14).jpeg',
-    '/images/norisys/switch (15).jpeg',
-    '/images/norisys/switch (16).jpeg',
-    '/images/norisys/switch (17).jpeg',
-    '/images/norisys/switch (18).jpeg',
-    '/images/norisys/switch (19).jpeg',
-    '/images/norisys/switch (2).jpeg',
-    '/images/norisys/switch (3).jpeg',
-    '/images/norisys/switch (4).jpeg',
-    '/images/norisys/switch (5).jpeg',
-    '/images/norisys/switch (6).jpeg',
-    '/images/norisys/switch (7).jpeg',
-    '/images/norisys/switch (8).jpeg',
-    '/images/norisys/switch (9).jpeg',
+    '/product-images/norisys/norisys/images-3.jpeg',
+    '/product-images/norisys/norisys/images-4.jpeg',
+    '/product-images/norisys/norisys/images-5.jpeg',
+    '/product-images/norisys/norisys/images-6.jpeg',
+    '/product-images/norisys/norisys/images-7.jpeg',
+    '/product-images/norisys/norisys/images-8.jpeg',
+    '/product-images/norisys/norisys/images-9.jpeg',
+    '/product-images/norisys/norisys/images-10.jpeg',
+    '/product-images/norisys/norisys/images-11.jpeg',
+    '/product-images/norisys/norisys/images-12.jpeg',
+    '/product-images/norisys/norisys/images-13.jpeg',
+    '/product-images/norisys/norisys/images-14.jpeg',
+    '/product-images/norisys/norisys/images-15.jpeg',
+    '/product-images/norisys/norisys/images-16.jpeg',
+    '/product-images/norisys/norisys/images-17.jpeg',
+    '/product-images/norisys/norisys/images-18.jpeg',
+    '/product-images/norisys/norisys/images-19.jpeg',
+    '/product-images/norisys/norisys/images-20.jpeg',
+    '/product-images/norisys/norisys/images-21.jpeg',
   ],
   panasonic: [
-    '/images/panasonic/switch (1).jpeg',
-    '/images/panasonic/switch (1).jpg',
-    '/images/panasonic/switch (1).png',
-    '/images/panasonic/switch (1).webp',
-    '/images/panasonic/switch (2).jpeg',
-    '/images/panasonic/switch (2).png',
-    '/images/panasonic/switch (3).png',
+    '/product-images/panasonic/panasonic/images-2.jpeg',
+    '/product-images/panasonic/panasonic/images-3.jpeg',
+    '/product-images/panasonic/panasonic/Panasonic1__ACE.jpg',
+    '/product-images/panasonic/panasonic/0ad8cbd9-b83d-468c-a5cf-a8f8892f1dc6.png',
+    '/product-images/panasonic/panasonic/16a-3g-2w-switch-panasonic-refina-high-quality-multi-gang-electrical-switch-webp535327mwk04f4108f7222e036bfae1719cd3e730e946cb71d.png',
+    '/product-images/panasonic/panasonic/panasonic-combination-4-way-1-way-switch-16a-250v-front-view.jpg.webp',
+    '/product-images/panasonic/panasonic/thea_comp21.png',
+  ],
+  finolex: [
+    '/images/finolex/switch (1).jpg',
+    '/images/finolex/switch (2).jpg',
+    '/images/finolex/switch (3).jpg',
+    '/images/finolex/switch (4).jpg',
+    '/images/finolex/cable (1).jpg',
+    '/images/finolex/cable (2).jpg',
+    '/images/finolex/cable (3).jpg',
+    '/images/finolex/cable (4).jpg',
+    '/images/finolex/cable (5).jpg',
   ],
 };
 
@@ -101,8 +123,16 @@ export function getProductImageByBrand(brand: string, productId: string, fallbac
   }
   
   // Use first available image from any brand as final fallback
-  const allImages = [...COMPANY_IMAGES.kolors, ...COMPANY_IMAGES.legrand, ...COMPANY_IMAGES.norisys, ...COMPANY_IMAGES.panasonic];
+  const allImages = [...COMPANY_IMAGES.kolors, ...COMPANY_IMAGES.legrand, ...COMPANY_IMAGES.norisys, ...COMPANY_IMAGES.panasonic, ...COMPANY_IMAGES.finolex];
   return allImages[0] || '/placeholder-product.png';
+}
+
+/**
+ * Get brand logo
+ */
+export function getBrandLogo(brand: string): string {
+  const brandLower = brand?.toLowerCase();
+  return BRAND_LOGOS[brandLower as keyof typeof BRAND_LOGOS] || '';
 }
 
 /**
@@ -120,7 +150,7 @@ export function getRandomBrandImage(brand: string): string {
   const images = getImagesByBrand(brand);
   if (images.length === 0) {
     // Use first available image from any brand as fallback
-    const allImages = [...COMPANY_IMAGES.kolors, ...COMPANY_IMAGES.legrand, ...COMPANY_IMAGES.norisys, ...COMPANY_IMAGES.panasonic];
+    const allImages = [...COMPANY_IMAGES.kolors, ...COMPANY_IMAGES.legrand, ...COMPANY_IMAGES.norisys, ...COMPANY_IMAGES.panasonic, ...COMPANY_IMAGES.finolex];
     return allImages[0] || '/placeholder-product.png';
   }
   return images[Math.floor(Math.random() * images.length)];

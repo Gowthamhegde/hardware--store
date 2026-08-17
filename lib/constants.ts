@@ -83,12 +83,12 @@ export const TRUST_BADGES = [
 
 export const BRANDS = [
   { name: 'Anchor', logo: 'https://ui-avatars.com/api/?name=Anchor&background=random&color=fff&size=128' },
-  { name: 'Panasonic', logo: '/images/panasonic/Panasonic-logo.jpg' },
+  { name: 'Panasonic', logo: '/product-images/panasonic/panasonic/Panasonic-logo.jpg' },
   { name: 'Kolors', logo: '/images/kolors/logo.jpeg' },
-  { name: 'Legrand', logo: '/images/legrand/Logo.png' },
-  { name: 'Norisys', logo: 'https://ui-avatars.com/api/?name=Norisys&background=random&color=fff&size=128' },
+  { name: 'Legrand', logo: '/product-images/legrand/Legrand-Logo.png' },
+  { name: 'Norisys', logo: '/images/norisys/logo.png' },
   { name: 'Schneider Electric', logo: 'https://www.google.com/s2/favicons?domain=se.com&sz=128' },
-  { name: 'Finolex', logo: 'https://www.google.com/s2/favicons?domain=finolex.com&sz=128' },
+  { name: 'Finolex', logo: '/images/finolex/logo.jpg' },
   { name: 'Hi-Fi', logo: 'https://ui-avatars.com/api/?name=Hi+Fi&background=random&color=fff&size=128' },
   { name: 'Havells', logo: 'https://www.google.com/s2/favicons?domain=havells.com&sz=128' },
   { name: 'Crabtree', logo: 'https://ui-avatars.com/api/?name=Crabtree&background=random&color=fff&size=128' },

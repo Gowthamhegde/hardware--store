@@ -1,6 +1,11 @@
 import type { Product } from '@/types';
+import { EXPANDED_PRODUCTS } from './expanded-products';
 
 export const SAMPLE_PRODUCTS: Product[] = [
+  // Include all expanded brand products (73 products total: 21 Kolors + 17 Legrand + 19 Norisys + 7 Panasonic + 9 Finolex)
+  ...EXPANDED_PRODUCTS,
+  
+  // Original products for other brands
   // Switches and accessories
   {
     id: 'prd-100',

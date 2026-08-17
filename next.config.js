@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com', 'placeholder.com', 'www.google.com', 'ui-avatars.com'],
+    // Deprecated 'domains' removed; using remotePatterns for external images
     remotePatterns: [
       {
         protocol: 'https',

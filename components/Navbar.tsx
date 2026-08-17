@@ -31,25 +31,25 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo - Using logo.jpeg */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-4 group">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="relative w-14 h-14 rounded-2xl overflow-hidden shadow-glass bg-enclosure/80 border border-signal/15"
+              className="relative w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(0,243,255,0.4)] bg-white/98 border-2 border-signal/40 group-hover:border-signal/70 transition-all"
             >
               <Image
                 src="/logo.jpeg"
                 alt={STORE_CONFIG.name}
                 fill
-                sizes="56px"
-                className="object-contain p-1"
+                sizes="(max-width: 768px) 112px, 128px"
+                className="object-contain p-3"
                 priority
               />
             </motion.div>
             <div className="hidden md:block">
-              <span className="font-display font-bold text-xl block leading-none text-cable-white">
+              <span className="font-display font-bold text-2xl block leading-none text-cable-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                 {STORE_CONFIG.name}
               </span>
-              <span className="text-[10px] tracking-widest text-aluminum">
+              <span className="text-xs tracking-widest text-signal/90 font-semibold mt-1 block">
                 EST. {STORE_CONFIG.established}
               </span>
             </div>
