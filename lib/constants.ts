@@ -82,18 +82,23 @@ export const TRUST_BADGES = [
 ];
 
 export const BRANDS = [
-  { name: 'Anchor', logo: 'https://ui-avatars.com/api/?name=Anchor&background=random&color=fff&size=128' },
-  { name: 'Panasonic', logo: '/product-images/panasonic/panasonic/Panasonic-logo.jpg' },
+  { name: 'Anchor', logo: '/images/anchor/logo.png' },
+  { name: 'Panasonic', logo: '/images/panasonic/Panasonic-logo.jpg' },
   { name: 'Kolors', logo: '/images/kolors/logo.jpeg' },
   { name: 'Legrand', logo: '/product-images/legrand/Legrand-Logo.png' },
   { name: 'Norisys', logo: '/images/norisys/logo.png' },
-  { name: 'Schneider Electric', logo: 'https://www.google.com/s2/favicons?domain=se.com&sz=128' },
   { name: 'Finolex', logo: '/images/finolex/logo.jpg' },
-  { name: 'Hi-Fi', logo: 'https://ui-avatars.com/api/?name=Hi+Fi&background=random&color=fff&size=128' },
+  { name: 'Schneider Electric', logo: 'https://www.google.com/s2/favicons?domain=se.com&sz=128' },
   { name: 'Havells', logo: 'https://www.google.com/s2/favicons?domain=havells.com&sz=128' },
   { name: 'Crabtree', logo: 'https://ui-avatars.com/api/?name=Crabtree&background=random&color=fff&size=128' },
+  { name: 'IndoAsian', logo: 'https://www.google.com/s2/favicons?domain=indoasian.com&sz=128' },
+  { name: 'Hager', logo: 'https://www.google.com/s2/favicons?domain=hager.com&sz=128' },
+  { name: 'Hi-Fi', logo: 'https://ui-avatars.com/api/?name=Hi+Fi&background=random&color=fff&size=128' },
   { name: 'Luker', logo: 'https://www.google.com/s2/favicons?domain=lukerindia.com&sz=128' },
-  { name: 'Yale', logo: 'https://www.google.com/s2/favicons?domain=yalehome.com&sz=128' },
+  { name: 'Yale', logo: 'https://www.google.com/s2/favicons?domain=yalehome.com&sz=128' }
+];
+
+export const HOME_THEATRE_BRANDS = [
   { name: 'LG', logo: 'https://www.google.com/s2/favicons?domain=lg.com&sz=128' },
   { name: 'Epson', logo: 'https://www.google.com/s2/favicons?domain=epson.com&sz=128' },
   { name: 'Sony', logo: 'https://www.google.com/s2/favicons?domain=sony.com&sz=128' },
@@ -104,6 +109,4 @@ export const BRANDS = [
   { name: 'Klipsch', logo: 'https://www.google.com/s2/favicons?domain=klipsch.com&sz=128' },
   { name: 'OSD Audio', logo: 'https://www.google.com/s2/favicons?domain=osdaudio.com&sz=128' },
   { name: 'Liberty', logo: 'https://ui-avatars.com/api/?name=Liberty&background=random&color=fff&size=128' },
-  { name: 'IndoAsian', logo: 'https://www.google.com/s2/favicons?domain=indoasian.com&sz=128' },
-  { name: 'Hager', logo: 'https://www.google.com/s2/favicons?domain=hager.com&sz=128' }
 ];

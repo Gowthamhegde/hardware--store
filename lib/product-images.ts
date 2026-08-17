@@ -5,15 +5,33 @@
 
 // Brand logos
 export const BRAND_LOGOS = {
+  anchor: '/images/anchor/logo.png',
   kolors: '/images/kolors/logo.jpeg',
   legrand: '/product-images/legrand/Legrand-Logo.png',
   norisys: '/images/norisys/logo.png',
-  panasonic: '/product-images/panasonic/panasonic/Panasonic-logo.jpg',
+  panasonic: '/images/panasonic/Panasonic-logo.jpg',
   finolex: '/images/finolex/logo.jpg',
 };
 
 // Company-specific image mappings (ALL IMAGES)
 const COMPANY_IMAGES = {
+  anchor: [
+    '/images/anchor/switch (1).jpeg',
+    '/images/anchor/switch (1).jpg',
+    '/images/anchor/switch (1).png',
+    '/images/anchor/switch (1).webp',
+    '/images/anchor/switch (2).jpg',
+    '/images/anchor/switch (3).jpg',
+    '/images/anchor/colour-plate.png',
+    '/images/anchor/wire (1).jpeg',
+    '/images/anchor/wire (1).jpg',
+    '/images/anchor/wire (1).png',
+    '/images/anchor/wire (2).jpeg',
+    '/images/anchor/wire (2).jpg',
+    '/images/anchor/wire (3).jpg',
+    '/images/anchor/wire (4).jpg',
+    '/images/anchor/wire.png',
+  ],
   kolors: [
     '/product-images/kolors/kolors/716bXbLET-L.jpg',
     '/product-images/kolors/kolors/images-2.jpeg',
@@ -78,6 +96,13 @@ const COMPANY_IMAGES = {
     '/product-images/norisys/norisys/images-21.jpeg',
   ],
   panasonic: [
+    '/images/panasonic/switch (1).jpeg',
+    '/images/panasonic/switch (1).jpg',
+    '/images/panasonic/switch (1).png',
+    '/images/panasonic/switch (1).webp',
+    '/images/panasonic/switch (2).jpeg',
+    '/images/panasonic/switch (2).png',
+    '/images/panasonic/switch (3).png',
     '/product-images/panasonic/panasonic/images-2.jpeg',
     '/product-images/panasonic/panasonic/images-3.jpeg',
     '/product-images/panasonic/panasonic/Panasonic1__ACE.jpg',
@@ -106,6 +131,11 @@ const COMPANY_IMAGES = {
 export function getProductImageByBrand(brand: string, productId: string, fallbackUrl?: string): string {
   const brandLower = brand?.toLowerCase();
   
+  // If fallbackUrl is directly provided as an exact product image or external URL, prioritize it
+  if (fallbackUrl && fallbackUrl !== '' && !fallbackUrl.startsWith('/store-photos/')) {
+    return fallbackUrl;
+  }
+  
   // Check if we have images for this brand
   if (brandLower && COMPANY_IMAGES[brandLower as keyof typeof COMPANY_IMAGES]) {
     const images = COMPANY_IMAGES[brandLower as keyof typeof COMPANY_IMAGES];
@@ -118,12 +148,12 @@ export function getProductImageByBrand(brand: string, productId: string, fallbac
   }
   
   // Fallback to provided URL or first available product image
-  if (fallbackUrl) {
+  if (fallbackUrl && fallbackUrl !== '') {
     return fallbackUrl;
   }
   
   // Use first available image from any brand as final fallback
-  const allImages = [...COMPANY_IMAGES.kolors, ...COMPANY_IMAGES.legrand, ...COMPANY_IMAGES.norisys, ...COMPANY_IMAGES.panasonic, ...COMPANY_IMAGES.finolex];
+  const allImages = [...COMPANY_IMAGES.anchor, ...COMPANY_IMAGES.kolors, ...COMPANY_IMAGES.legrand, ...COMPANY_IMAGES.norisys, ...COMPANY_IMAGES.panasonic, ...COMPANY_IMAGES.finolex];
   return allImages[0] || '/placeholder-product.png';
 }
 
@@ -150,7 +180,7 @@ export function getRandomBrandImage(brand: string): string {
   const images = getImagesByBrand(brand);
   if (images.length === 0) {
     // Use first available image from any brand as fallback
-    const allImages = [...COMPANY_IMAGES.kolors, ...COMPANY_IMAGES.legrand, ...COMPANY_IMAGES.norisys, ...COMPANY_IMAGES.panasonic, ...COMPANY_IMAGES.finolex];
+    const allImages = [...COMPANY_IMAGES.anchor, ...COMPANY_IMAGES.kolors, ...COMPANY_IMAGES.legrand, ...COMPANY_IMAGES.norisys, ...COMPANY_IMAGES.panasonic, ...COMPANY_IMAGES.finolex];
     return allImages[0] || '/placeholder-product.png';
   }
   return images[Math.floor(Math.random() * images.length)];

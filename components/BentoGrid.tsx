@@ -208,7 +208,7 @@ export default function BentoGrid() {
 
           {/* HOME THEATRE — hero tile, 7/12 wide, 2 rows tall */}
           <motion.div {...fadeUp(0.08, prefersReducedMotion)} className="md:col-span-7 md:row-span-2">
-            <TiltCard href={`/shop?category=${ht.slug}`} className="h-full min-h-[500px]" reducedMotion={prefersReducedMotion}>
+            <TiltCard href="/home-theatre" className="h-full min-h-[500px]" reducedMotion={prefersReducedMotion}>
               <div className="h-full flex flex-col justify-between p-10 bg-gradient-to-br from-foreground/[0.05] to-transparent">
                 <div>
                   <div className="flex items-center gap-4 mb-6">
@@ -384,7 +384,7 @@ export default function BentoGrid() {
             </h2>
           </div>
           <Link
-            href={productsInCart.length > 0 ? '/cart' : '/shop?category=home-theatre-audio'}
+            href={productsInCart.length > 0 ? '/cart' : '/home-theatre'}
             className="flex items-center gap-2 text-sm font-bold text-foreground/70 hover:text-foreground transition-colors uppercase tracking-widest font-display"
           >
             {productsInCart.length > 0 ? 'View cart' : 'View collection'} <ArrowRight className="w-4 h-4" />

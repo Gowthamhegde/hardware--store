@@ -1,11 +1,22 @@
 'use client';
 
 import { BRANDS } from '@/lib/constants';
-import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
+import React from 'react';
 
-export default function BrandGrid() {
+export default function BrandGrid({ onBrandSelect }: { onBrandSelect?: (brand: typeof BRANDS[0]) => void }) {
+  const router = useRouter();
+
+  const handleClick = (brand: typeof BRANDS[0]) => {
+    if (onBrandSelect) {
+      onBrandSelect(brand);
+    } else {
+      router.push(`/shop?brand=${encodeURIComponent(brand.name)}#catalog-section`);
+    }
+  };
+
   return (
     <div className="w-full py-10 relative">
       {/* Ambient background glow */}
@@ -30,9 +41,12 @@ export default function BrandGrid() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
             >
-              <Link
-                href={`/shop?brand=${encodeURIComponent(brand.name)}`}
-                className="group relative flex flex-col items-center justify-center p-6 h-full glass-card hover:bg-white/10 hover:border-signal/50 rounded-2xl transition-all duration-500 overflow-hidden"
+              <div
+                role="button"
+                tabIndex={0}
+                onClick={(e) => { e.preventDefault(); handleClick(brand); }}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClick(brand); } }}
+                className="cursor-pointer group relative flex flex-col items-center justify-center p-6 h-full glass-card hover:bg-white/10 hover:border-signal/50 rounded-2xl transition-all duration-500 overflow-hidden"
               >
                 {/* Hover gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-signal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -53,7 +67,7 @@ export default function BrandGrid() {
                 {/* Corner accents */}
                 <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/20 group-hover:border-signal/50 transition-colors m-2" />
                 <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/20 group-hover:border-signal/50 transition-colors m-2" />
-              </Link>
+              </div>
             </motion.div>
           ))}
         </div>
