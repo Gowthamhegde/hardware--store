@@ -21,11 +21,11 @@ export default function CartPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center max-w-md mx-auto"
         >
-          <ShoppingBag className="w-24 h-24 text-gray-300 mx-auto mb-6" />
-          <h1 className="font-heading text-3xl font-bold text-primary mb-4">
+          <ShoppingBag className="mx-auto mb-6 h-24 w-24 text-aluminum/50" />
+          <h1 className="mb-4 font-display text-3xl font-bold text-cable-white">
             Your Cart is Empty
           </h1>
-          <p className="text-gray-600 mb-8">
+          <p className="mb-8 text-aluminum">
             Add some products to get started
           </p>
           <Link href="/shop">
@@ -41,7 +41,7 @@ export default function CartPage() {
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="font-heading text-4xl font-bold text-primary mb-8"
+        className="font-display mb-8 text-4xl font-bold text-cable-white"
       >
         Shopping Cart
       </motion.h1>
@@ -55,7 +55,7 @@ export default function CartPage() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl p-6 shadow-md flex flex-col sm:flex-row gap-4"
+              className="flex flex-col gap-4 border border-aluminum/20 bg-background p-5 sm:flex-row"
             >
               <div className="relative w-full sm:w-32 h-32 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
                 <Image
@@ -68,23 +68,23 @@ export default function CartPage() {
               </div>
 
               <div className="flex-1">
-                <h3 className="font-semibold text-lg text-charcoal mb-2">
+                <h3 className="mb-2 text-lg font-semibold text-cable-white">
                   {item.product.name}
                 </h3>
-                <p className="text-sm text-gray-600 mb-4">{item.product.category}</p>
+                <p className="mb-4 text-sm text-aluminum">{item.product.category}</p>
                 
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center border border-gray-300 rounded-lg">
+                  <div className="flex items-center border border-aluminum/30">
                     <button
                       onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                      className="p-2 hover:bg-gray-100 transition-colors"
+                      className="p-2 transition-colors hover:bg-aluminum/10"
                     >
                       <Minus className="w-4 h-4" />
                     </button>
                     <span className="px-4 py-2 font-medium">{item.quantity}</span>
                     <button
                       onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                      className="p-2 hover:bg-gray-100 transition-colors"
+                      className="p-2 transition-colors hover:bg-aluminum/10"
                       disabled={item.quantity >= item.product.stock}
                     >
                       <Plus className="w-4 h-4" />
@@ -95,7 +95,7 @@ export default function CartPage() {
 
               <button
                 onClick={() => removeItem(item.product.id)}
-                className="p-2 hover:bg-red-50 rounded-lg transition-colors self-start"
+                className="self-start p-2 transition-colors hover:bg-live-red/10"
               >
                 <Trash2 className="w-5 h-5 text-red-500" />
               </button>
@@ -109,13 +109,17 @@ export default function CartPage() {
           animate={{ opacity: 1, x: 0 }}
           className="lg:col-span-1"
         >
-          <div className="bg-white rounded-xl p-6 shadow-md sticky top-24">
-            <h2 className="font-semibold text-xl mb-6">Order Summary</h2>
+          <div className="sticky top-24 border border-aluminum/20 bg-background p-6">
+          <h2 className="mb-6 font-display text-xl font-semibold text-cable-white">Order Summary</h2>
 
             <div className="space-y-4 mb-6">
               <div className="flex justify-between">
-                <span className="text-gray-600">Total Items</span>
-                <span className="font-semibold">{items.length} item{items.length !== 1 ? 's' : ''}</span>
+                <span className="text-aluminum">Items</span>
+                <span className="font-semibold text-cable-white">{items.reduce((sum, item) => sum + item.quantity, 0)}</span>
+              </div>
+              <div className="flex justify-between border-t border-aluminum/15 pt-4">
+                <span className="font-semibold text-cable-white">Subtotal</span>
+                <span className="font-display text-xl font-bold text-cable-white">{formatPrice(total)}</span>
               </div>
             </div>
 

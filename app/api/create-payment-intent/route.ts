@@ -1,3 +1,7 @@
+import { checkRateLimit } from '@/lib/security/rate-limit';
+import { getClientIP, rateLimitResponse } from '@/lib/security/auth-helpers';
+import { logRateLimitExceeded } from '@/lib/security/logger';
+
 function jsonResponse(body: unknown, status: number): Response {
   return new Response(JSON.stringify(body), {
     status,
@@ -7,10 +11,24 @@ function jsonResponse(body: unknown, status: number): Response {
 
 export async function POST(request: Request) {
   try {
+    const ip = getClientIP(request);
+
+    // Rate limiting - 10 payment intents per hour per IP
+    const rateLimitResult = await checkRateLimit(ip, 10, 60 * 60 * 1000);
+    if (!rateLimitResult.success) {
+      logRateLimitExceeded(ip, 'POST /api/create-payment-intent');
+      return rateLimitResponse(rateLimitResult.reset);
+    }
+
     const { amount, orderId, customer_email } = await request.json();
 
     if (!amount || amount <= 0) {
       return jsonResponse({ error: 'Invalid amount' }, 400);
+    }
+
+    // Validate amount is reasonable (prevent abuse)
+    if (amount > 10000000) { // $100,000 max
+      return jsonResponse({ error: 'Amount exceeds maximum allowed' }, 400);
     }
 
     const secretKey = process.env.STRIPE_SECRET_KEY;

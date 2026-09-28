@@ -2,7 +2,7 @@ const authService = require('../services/auth.service');
 
 const register = async (req, res, next) => {
   try {
-    const result = await authService.registerUser(req.body);
+    const result = await authService.registerUser(req.body, req);
     res.status(201).json(result);
   } catch (error) {
     next(error);
@@ -12,7 +12,7 @@ const register = async (req, res, next) => {
 const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
-    const result = await authService.loginUser(email, password);
+    const result = await authService.loginUser(email, password, req);
     res.status(200).json(result);
   } catch (error) {
     next(error);
@@ -41,7 +41,9 @@ const logout = async (req, res, next) => {
 
 const getMe = async (req, res, next) => {
   try {
-    res.status(200).json({ user: req.user });
+    // Return only safe user fields - never return password_hash
+    const { id, name, email, role, phone, created_at } = req.user;
+    res.status(200).json({ user: { id, name, email, role, phone, created_at } });
   } catch (error) {
     next(error);
   }
@@ -49,8 +51,11 @@ const getMe = async (req, res, next) => {
 
 const forgotPassword = async (req, res, next) => {
   try {
-    // Basic stub for forgot password since emailing is not fully requested
-    res.status(200).json({ message: 'Password reset instructions sent to email (mock)' });
+    // Always return same message regardless of whether email exists
+    // This prevents user enumeration via password reset
+    res.status(200).json({
+      message: 'If that email address is in our database, we will send a password reset email.',
+    });
   } catch (error) {
     next(error);
   }
@@ -58,7 +63,7 @@ const forgotPassword = async (req, res, next) => {
 
 const resetPassword = async (req, res, next) => {
   try {
-    // Basic stub
+    // Basic stub - implement token validation when email service is added
     res.status(200).json({ message: 'Password reset successful (mock)' });
   } catch (error) {
     next(error);
@@ -72,5 +77,5 @@ module.exports = {
   logout,
   getMe,
   forgotPassword,
-  resetPassword
+  resetPassword,
 };

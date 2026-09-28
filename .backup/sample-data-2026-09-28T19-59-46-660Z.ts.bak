@@ -1,0 +1,1997 @@
+import type { Product } from '@/types';
+import { EXPANDED_PRODUCTS } from './expanded-products';
+
+export const SAMPLE_PRODUCTS: Product[] = [
+  // Include all expanded brand products
+  ...EXPANDED_PRODUCTS,
+  
+  // Original products with valid images
+  {
+    "id": "anchor-600",
+    "name": "Anchor Roma Modular Switch 10A 1-Way",
+    "slug": "anchor-roma-modular-switch-10a-1-way",
+    "description": "Iconic Roma modular switch engineered for long-lasting reliability",
+    "long_description": "Authentic Anchor Roma modular switch. Features smooth rocking action, silver alloy contacts, and ISI certified electrical safety standards.",
+    "price": 2.2,
+    "category": "Switches & Sockets",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/switch (1).jpeg",
+    "stock": 150,
+    "specifications": {
+      "Brand": "Anchor",
+      "Series": "Roma",
+      "Rating": "10A 240V",
+      "Type": "Modular Switch"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-601",
+    "name": "Anchor Penta 6A Piano Switch",
+    "slug": "anchor-penta-6a-piano-switch-authentic",
+    "description": "Traditional heavy-duty piano switch by Anchor",
+    "long_description": "Authentic Anchor Penta non-modular piano switch. Built with robust urea-formaldehyde housing and tested for over 100,000 operations.",
+    "price": 1.5,
+    "category": "Switches & Sockets",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/switch (1).jpg",
+    "stock": 250,
+    "specifications": {
+      "Brand": "Anchor",
+      "Series": "Penta",
+      "Rating": "6A 240V",
+      "Type": "Piano Switch"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-602",
+    "name": "Anchor Roma Classic 16A Power Switch",
+    "slug": "anchor-roma-classic-16a-power-switch",
+    "description": "High current 16A modular switch with neon indicator",
+    "long_description": "Heavy duty 16A switch for appliances like geysers, air conditioners, and kitchen equipment. High spark suppression mechanism.",
+    "price": 3.4,
+    "category": "Switches & Sockets",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/switch (1).png",
+    "stock": 120,
+    "specifications": {
+      "Brand": "Anchor",
+      "Series": "Roma Classic",
+      "Rating": "16A Heavy Duty",
+      "Type": "Power Switch"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-603",
+    "name": "Anchor Vision Flat Modular Switch",
+    "slug": "anchor-vision-flat-modular-switch",
+    "description": "Sleek flush-finish minimalist switch module",
+    "long_description": "Modern flat-design modular switch from the Anchor Vision series. Ultra-low profile with soft-click actuation.",
+    "price": 3.8,
+    "category": "Switches & Sockets",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/switch (1).webp",
+    "stock": 90,
+    "specifications": {
+      "Brand": "Anchor",
+      "Series": "Vision",
+      "Rating": "10A",
+      "Type": "Flat Modular Switch"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-604",
+    "name": "Anchor Rider 16A 3-Pin Universal Socket",
+    "slug": "anchor-rider-16a-3-pin-universal-socket",
+    "description": "16A/6A twin shutter socket with safety protection",
+    "long_description": "Multi-pin universal socket with integrated child safety shutters and phosphor bronze contacts for firm grip.",
+    "price": 3.9,
+    "category": "Switches & Sockets",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/switch (2).jpg",
+    "stock": 110,
+    "specifications": {
+      "Brand": "Anchor",
+      "Series": "Rider",
+      "Rating": "16A / 6A Dual",
+      "Type": "Socket"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-605",
+    "name": "Anchor Woods 2-Way Bell Push Module",
+    "slug": "anchor-woods-2-way-bell-push-module",
+    "description": "Premium bell push switch with nameplate slot",
+    "long_description": "Durable spring-loaded bell push switch module designed for commercial and residential door entrances.",
+    "price": 2.9,
+    "category": "Switches & Sockets",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/switch (3).jpg",
+    "stock": 80,
+    "specifications": {
+      "Brand": "Anchor",
+      "Series": "Woods",
+      "Rating": "6A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-606",
+    "name": "Anchor Modular Colour Cover Plate",
+    "slug": "anchor-modular-colour-cover-plate",
+    "description": "Designer accent finish modular front plate",
+    "long_description": "Scratch resistant, UV stabilized modular plate that blends seamlessly with modern wall finishes and textures.",
+    "price": 4.5,
+    "category": "Switches & Sockets",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/colour-plate.png",
+    "stock": 140,
+    "specifications": {
+      "Brand": "Anchor",
+      "Material": "Polycarbonate",
+      "Type": "Front Cover Plate"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-607",
+    "name": "Anchor Advance 1.0 sqmm FR Wire (90m)",
+    "slug": "anchor-advance-1-0-sqmm-fr-wire-90m",
+    "description": "Flame retardant 1.0 sqmm electrical wire coil",
+    "long_description": "100% electrolytic grade copper with 99.97% purity. 90m coil with superior fire retardant PVC insulation.",
+    "price": 18,
+    "category": "Cables & Wires",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/wire (1).jpeg",
+    "stock": 95,
+    "specifications": {
+      "Brand": "Anchor",
+      "Gauge": "1.0 sqmm",
+      "Length": "90m Coil",
+      "Type": "FR Copper Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-608",
+    "name": "Anchor Advance Plus 1.5 sqmm House Wire",
+    "slug": "anchor-advance-plus-1-5-sqmm-house-wire",
+    "description": "1.5 sqmm single core multi-strand building wire",
+    "long_description": "Engineered for lighting and medium power load circuits. High oxygen index prevents spread of fire.",
+    "price": 24.5,
+    "category": "Cables & Wires",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/wire (1).jpg",
+    "stock": 120,
+    "specifications": {
+      "Brand": "Anchor",
+      "Gauge": "1.5 sqmm",
+      "Length": "90m Coil",
+      "Type": "House Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-609",
+    "name": "Anchor Ziva 2.5 sqmm Flame Retardant Wire",
+    "slug": "anchor-ziva-2-5-sqmm-flame-retardant-wire",
+    "description": "2.5 sqmm power wire for sockets and air conditioners",
+    "long_description": "Premium multi-strand copper wire rated for up to 22A continuous current. Heat resistant up to 85°C.",
+    "price": 36,
+    "category": "Cables & Wires",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/wire (1).png",
+    "stock": 85,
+    "specifications": {
+      "Brand": "Anchor",
+      "Gauge": "2.5 sqmm",
+      "Length": "90m Coil",
+      "Type": "FR Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-610",
+    "name": "Anchor Heavy Duty 4.0 sqmm Power Cable",
+    "slug": "anchor-heavy-duty-4-0-sqmm-power-cable",
+    "description": "4.0 sqmm high capacity mains & inverter cable",
+    "long_description": "Low electrical resistance for high load appliances such as main panel distribution, geysers, and EV chargers.",
+    "price": 52,
+    "category": "Cables & Wires",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/wire (2).jpeg",
+    "stock": 60,
+    "specifications": {
+      "Brand": "Anchor",
+      "Gauge": "4.0 sqmm",
+      "Length": "90m Coil",
+      "Type": "Heavy Duty Cable"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-611",
+    "name": "Anchor Industrial 6.0 sqmm Heavy Load Cable",
+    "slug": "anchor-industrial-6-0-sqmm-heavy-load-cable",
+    "description": "6.0 sqmm heavy industrial single core cable",
+    "long_description": "Designed for sub-main power feeds, heavy motor loads, and industrial grade power boards with zero voltage drop.",
+    "price": 78,
+    "category": "Cables & Wires",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/wire (2).jpg",
+    "stock": 45,
+    "specifications": {
+      "Brand": "Anchor",
+      "Gauge": "6.0 sqmm",
+      "Length": "90m Coil",
+      "Type": "Industrial Cable"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-612",
+    "name": "Anchor Flexible 3-Core Submersible Cable",
+    "slug": "anchor-flexible-3-core-submersible-cable",
+    "description": "Waterproof 3-core flat submersible pump cable",
+    "long_description": "Special grade PVC sheathed flexible flat cable resistant to water abrasion, moisture, and extreme temperature conditions.",
+    "price": 65,
+    "category": "Cables & Wires",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/wire (3).jpg",
+    "stock": 40,
+    "specifications": {
+      "Brand": "Anchor",
+      "Type": "3-Core Flat Cable",
+      "Use": "Submersible Pumps"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-613",
+    "name": "Anchor Multi-Strand Heat Resistant Wire",
+    "slug": "anchor-multi-strand-heat-resistant-wire",
+    "description": "High heat resistant flexible wiring coil",
+    "long_description": "HR-FRLSH (Heat Resistant Flame Retardant Low Smoke Halogen) copper cable for critical safety installations.",
+    "price": 42,
+    "category": "Cables & Wires",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/wire (4).jpg",
+    "stock": 70,
+    "specifications": {
+      "Brand": "Anchor",
+      "Grade": "HR-FRLSH",
+      "Length": "90m Coil",
+      "Type": "Safety Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+  {
+    "id": "anchor-614",
+    "name": "Anchor Armoured Mains Power Cable",
+    "slug": "anchor-armoured-mains-power-cable",
+    "description": "Armoured underground electrical service cable",
+    "long_description": "Steel wire armoured cable providing maximum mechanical protection for underground and outdoor distribution networks.",
+    "price": 95,
+    "category": "Cables & Wires",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/wire.png",
+    "stock": 35,
+    "specifications": {
+      "Brand": "Anchor",
+      "Type": "Armoured Power Cable",
+      "Use": "Main Incoming Line"
+    },
+    "created_at": "2026-09-28T19:58:38.775Z",
+    "updated_at": "2026-09-28T19:58:38.775Z"
+  },
+
+  // New integrated products from image scanner
+  {
+    "id": "prd-anchor-2000-tyv",
+    "name": "Anchor Modular Switch",
+    "slug": "anchor-switch-0-2gf",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Anchor product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.58,
+    "category": "Switches & Sockets",
+    "brand": "Anchor",
+    "image_url": "/images/anchor/logo.png",
+    "stock": 113,
+    "specifications": {
+      "Brand": "Anchor",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.785Z",
+    "updated_at": "2026-09-28T19:58:38.785Z"
+  },
+  {
+    "id": "prd-anchor-2001-l6g",
+    "name": "Anchor FR Wire 2.5 sqmm",
+    "slug": "anchor-wire-1",
+    "description": "Flame retardant electrical wire, ISI certified",
+    "long_description": "Authentic Anchor product. Flame retardant electrical wire, ISI certified. Suitable for residential and commercial installations.",
+    "price": 3.73,
+    "category": "Cables & Wires",
+    "brand": "Anchor",
+    "image_url": "/images/anchor wires and cables/images (1).jfif",
+    "stock": 60,
+    "specifications": {
+      "Brand": "Anchor",
+      "Category": "Cables & Wires",
+      "Gauge": "1.5 sqmm",
+      "Length": "90m",
+      "Type": "FR Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.785Z",
+    "updated_at": "2026-09-28T19:58:38.785Z"
+  },
+  {
+    "id": "prd-finolex-2000",
+    "name": "Finolex FR Wire 1.5 sqmm",
+    "slug": "finolex-wire-0",
+    "description": "Flame retardant electrical wire, ISI certified",
+    "long_description": "Authentic Finolex product. Flame retardant electrical wire, ISI certified. Suitable for residential and commercial installations.",
+    "price": 3.47,
+    "category": "Cables & Wires",
+    "brand": "Finolex",
+    "image_url": "/images/finolex/cable (1).jpg",
+    "stock": 38,
+    "specifications": {
+      "Brand": "Finolex",
+      "Category": "Cables & Wires",
+      "Gauge": "4.0 sqmm",
+      "Length": "90m",
+      "Type": "FR Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.785Z",
+    "updated_at": "2026-09-28T19:58:38.785Z"
+  },
+  {
+    "id": "prd-finolex-2001",
+    "name": "Finolex FR Wire 2.5 sqmm",
+    "slug": "finolex-wire-1",
+    "description": "Flame retardant electrical wire, ISI certified",
+    "long_description": "Authentic Finolex product. Flame retardant electrical wire, ISI certified. Suitable for residential and commercial installations.",
+    "price": 3.75,
+    "category": "Cables & Wires",
+    "brand": "Finolex",
+    "image_url": "/images/finolex/cable (2).jpg",
+    "stock": 120,
+    "specifications": {
+      "Brand": "Finolex",
+      "Category": "Cables & Wires",
+      "Gauge": "2.5 sqmm",
+      "Length": "90m",
+      "Type": "FR Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.785Z",
+    "updated_at": "2026-09-28T19:58:38.785Z"
+  },
+  {
+    "id": "prd-finolex-2002",
+    "name": "Finolex FR Wire 4.0 sqmm",
+    "slug": "finolex-wire-2",
+    "description": "Flame retardant electrical wire, ISI certified",
+    "long_description": "Authentic Finolex product. Flame retardant electrical wire, ISI certified. Suitable for residential and commercial installations.",
+    "price": 3.02,
+    "category": "Cables & Wires",
+    "brand": "Finolex",
+    "image_url": "/images/finolex/cable (3).jpg",
+    "stock": 74,
+    "specifications": {
+      "Brand": "Finolex",
+      "Category": "Cables & Wires",
+      "Gauge": "2.5 sqmm",
+      "Length": "90m",
+      "Type": "FR Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.785Z",
+    "updated_at": "2026-09-28T19:58:38.785Z"
+  },
+  {
+    "id": "prd-finolex-2003",
+    "name": "Finolex HRFR Cable",
+    "slug": "finolex-wire-3",
+    "description": "Flame retardant electrical wire, ISI certified",
+    "long_description": "Authentic Finolex product. Flame retardant electrical wire, ISI certified. Suitable for residential and commercial installations.",
+    "price": 4.23,
+    "category": "Cables & Wires",
+    "brand": "Finolex",
+    "image_url": "/images/finolex/cable (4).jpg",
+    "stock": 149,
+    "specifications": {
+      "Brand": "Finolex",
+      "Category": "Cables & Wires",
+      "Gauge": "4.0 sqmm",
+      "Length": "90m",
+      "Type": "FR Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.785Z",
+    "updated_at": "2026-09-28T19:58:38.785Z"
+  },
+  {
+    "id": "prd-finolex-2004",
+    "name": "Finolex Flexible Wire",
+    "slug": "finolex-wire-4",
+    "description": "Flame retardant electrical wire, ISI certified",
+    "long_description": "Authentic Finolex product. Flame retardant electrical wire, ISI certified. Suitable for residential and commercial installations.",
+    "price": 3.33,
+    "category": "Cables & Wires",
+    "brand": "Finolex",
+    "image_url": "/images/finolex/cable (5).jpg",
+    "stock": 139,
+    "specifications": {
+      "Brand": "Finolex",
+      "Category": "Cables & Wires",
+      "Gauge": "6.0 sqmm",
+      "Length": "90m",
+      "Type": "FR Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.785Z",
+    "updated_at": "2026-09-28T19:58:38.785Z"
+  },
+  {
+    "id": "prd-finolex-2005",
+    "name": "Finolex Dimmer Switch",
+    "slug": "finolex-switch-5",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Finolex product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.01,
+    "category": "Switches & Sockets",
+    "brand": "Finolex",
+    "image_url": "/images/finolex/logo.jpg",
+    "stock": 80,
+    "specifications": {
+      "Brand": "Finolex",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.785Z",
+    "updated_at": "2026-09-28T19:58:38.785Z"
+  },
+  {
+    "id": "prd-finolex-2006",
+    "name": "Finolex USB Socket",
+    "slug": "finolex-switch-6",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Finolex product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.07,
+    "category": "Switches & Sockets",
+    "brand": "Finolex",
+    "image_url": "/images/finolex/switch (1).jpg",
+    "stock": 62,
+    "specifications": {
+      "Brand": "Finolex",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-finolex-2007",
+    "name": "Finolex Modular Switch",
+    "slug": "finolex-switch-7",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Finolex product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.03,
+    "category": "Switches & Sockets",
+    "brand": "Finolex",
+    "image_url": "/images/finolex/switch (2).jpg",
+    "stock": 135,
+    "specifications": {
+      "Brand": "Finolex",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-finolex-2008",
+    "name": "Finolex Flat Switch",
+    "slug": "finolex-switch-8",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Finolex product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.07,
+    "category": "Switches & Sockets",
+    "brand": "Finolex",
+    "image_url": "/images/finolex/switch (3).jpg",
+    "stock": 180,
+    "specifications": {
+      "Brand": "Finolex",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-finolex-2009",
+    "name": "Finolex Bell Push",
+    "slug": "finolex-switch-9",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Finolex product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.27,
+    "category": "Switches & Sockets",
+    "brand": "Finolex",
+    "image_url": "/images/finolex/switch (4).jpg",
+    "stock": 125,
+    "specifications": {
+      "Brand": "Finolex",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-havells-2000-3du",
+    "name": "Havells FR Wire 1.5 sqmm",
+    "slug": "havells-wire-0",
+    "description": "Flame retardant electrical wire, ISI certified",
+    "long_description": "Authentic Havells product. Flame retardant electrical wire, ISI certified. Suitable for residential and commercial installations.",
+    "price": 4.6,
+    "category": "Cables & Wires",
+    "brand": "Havells",
+    "image_url": "/images/havells wires and cables/05-sqmm-havells-electrical-wi-20260123141315861.webp",
+    "stock": 36,
+    "specifications": {
+      "Brand": "Havells",
+      "Category": "Cables & Wires",
+      "Gauge": "4.0 sqmm",
+      "Length": "90m",
+      "Type": "FR Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-havells-2001-qxy",
+    "name": "Havells FR Wire 2.5 sqmm",
+    "slug": "havells-wire-1",
+    "description": "Flame retardant electrical wire, ISI certified",
+    "long_description": "Authentic Havells product. Flame retardant electrical wire, ISI certified. Suitable for residential and commercial installations.",
+    "price": 5.45,
+    "category": "Cables & Wires",
+    "brand": "Havells",
+    "image_url": "/images/havells wires and cables/images (1).jfif",
+    "stock": 113,
+    "specifications": {
+      "Brand": "Havells",
+      "Category": "Cables & Wires",
+      "Gauge": "1.5 sqmm",
+      "Length": "90m",
+      "Type": "FR Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-havells-2002-864",
+    "name": "Havells FR Wire 4.0 sqmm",
+    "slug": "havells-wire-2",
+    "description": "Flame retardant electrical wire, ISI certified",
+    "long_description": "Authentic Havells product. Flame retardant electrical wire, ISI certified. Suitable for residential and commercial installations.",
+    "price": 4.67,
+    "category": "Cables & Wires",
+    "brand": "Havells",
+    "image_url": "/images/havells wires and cables/images (1).png",
+    "stock": 49,
+    "specifications": {
+      "Brand": "Havells",
+      "Category": "Cables & Wires",
+      "Gauge": "1.0 sqmm",
+      "Length": "90m",
+      "Type": "FR Wire"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2000",
+    "name": "Kolors Modular Switch",
+    "slug": "kolors-switch-0",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.44,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/logo.jpeg",
+    "stock": 94,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2001",
+    "name": "Kolors Flat Switch",
+    "slug": "kolors-switch-1",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.43,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch.jpg",
+    "stock": 135,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2002",
+    "name": "Kolors Bell Push",
+    "slug": "kolors-switch-2",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.09,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch1.jpeg",
+    "stock": 121,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2003",
+    "name": "Kolors 16A Socket",
+    "slug": "kolors-switch-3",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.46,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch10.jpeg",
+    "stock": 241,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2004",
+    "name": "Kolors 6A Switch",
+    "slug": "kolors-switch-4",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.3,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch11.jpeg",
+    "stock": 60,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2005",
+    "name": "Kolors Dimmer Switch",
+    "slug": "kolors-switch-5",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.74,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch12.jpeg",
+    "stock": 226,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2006",
+    "name": "Kolors USB Socket",
+    "slug": "kolors-switch-6",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.03,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch13.jpeg",
+    "stock": 211,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2007",
+    "name": "Kolors Modular Switch",
+    "slug": "kolors-switch-7",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.87,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch14.jpeg",
+    "stock": 162,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2008",
+    "name": "Kolors Flat Switch",
+    "slug": "kolors-switch-8",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.28,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch15.jpeg",
+    "stock": 143,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2009",
+    "name": "Kolors Bell Push",
+    "slug": "kolors-switch-9",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.24,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch16.jpeg",
+    "stock": 236,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2010",
+    "name": "Kolors 16A Socket",
+    "slug": "kolors-switch-10",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.8,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch17.jpeg",
+    "stock": 96,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2011",
+    "name": "Kolors 6A Switch",
+    "slug": "kolors-switch-11",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.86,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch18.jpeg",
+    "stock": 129,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2012",
+    "name": "Kolors Dimmer Switch",
+    "slug": "kolors-switch-12",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.08,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch19.jpeg",
+    "stock": 152,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2013",
+    "name": "Kolors USB Socket",
+    "slug": "kolors-switch-13",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.42,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch2.jpeg",
+    "stock": 226,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2014",
+    "name": "Kolors Modular Switch",
+    "slug": "kolors-switch-14",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch3.jpeg",
+    "stock": 50,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2015",
+    "name": "Kolors Flat Switch",
+    "slug": "kolors-switch-15",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.07,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch4.jpeg",
+    "stock": 94,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2016",
+    "name": "Kolors Bell Push",
+    "slug": "kolors-switch-16",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.06,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch6.jpeg",
+    "stock": 158,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2017",
+    "name": "Kolors 16A Socket",
+    "slug": "kolors-switch-17",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.21,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch7.jpeg",
+    "stock": 235,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2018",
+    "name": "Kolors 6A Switch",
+    "slug": "kolors-switch-18",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.35,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch8.jpeg",
+    "stock": 58,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-kolors-2019",
+    "name": "Kolors Dimmer Switch",
+    "slug": "kolors-switch-19",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Kolors product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.04,
+    "category": "Switches & Sockets",
+    "brand": "Kolors",
+    "image_url": "/images/kolors/switch9.jpeg",
+    "stock": 128,
+    "specifications": {
+      "Brand": "Kolors",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2000",
+    "name": "Legrand Modular Switch",
+    "slug": "legrand-switch-0",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 5.91,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/Logo.png",
+    "stock": 220,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2001",
+    "name": "Legrand Flat Switch",
+    "slug": "legrand-switch-1",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 5.08,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch.jpeg",
+    "stock": 234,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2002",
+    "name": "Legrand Bell Push",
+    "slug": "legrand-switch-2",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 6.17,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch1.jpeg",
+    "stock": 52,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2003",
+    "name": "Legrand 16A Socket",
+    "slug": "legrand-switch-3",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.41,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch10.jpeg",
+    "stock": 115,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2004",
+    "name": "Legrand 6A Switch",
+    "slug": "legrand-switch-4",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 6.04,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch11.jpeg",
+    "stock": 231,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2005",
+    "name": "Legrand Dimmer Switch",
+    "slug": "legrand-switch-5",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 6.19,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch12.jpeg",
+    "stock": 74,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2006",
+    "name": "Legrand USB Socket",
+    "slug": "legrand-switch-6",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 5.85,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch13.jpeg",
+    "stock": 72,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2007",
+    "name": "Legrand Modular Switch",
+    "slug": "legrand-switch-7",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.83,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch14.jpeg",
+    "stock": 127,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2008",
+    "name": "Legrand Flat Switch",
+    "slug": "legrand-switch-8",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 6.11,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch15.jpeg",
+    "stock": 71,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2009",
+    "name": "Legrand Bell Push",
+    "slug": "legrand-switch-9",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 5.13,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch16.jpg",
+    "stock": 109,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2010",
+    "name": "Legrand 16A Socket",
+    "slug": "legrand-switch-10",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 5.7,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch2.jpeg",
+    "stock": 113,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2011",
+    "name": "Legrand 6A Switch",
+    "slug": "legrand-switch-11",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.21,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch3.jpeg",
+    "stock": 119,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2012",
+    "name": "Legrand Dimmer Switch",
+    "slug": "legrand-switch-12",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 5.42,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch4.jpeg",
+    "stock": 187,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2013",
+    "name": "Legrand USB Socket",
+    "slug": "legrand-switch-13",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 6.39,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch5.jpeg",
+    "stock": 210,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2014",
+    "name": "Legrand Modular Switch",
+    "slug": "legrand-switch-14",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 5.35,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch6.jpeg",
+    "stock": 238,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2015",
+    "name": "Legrand Flat Switch",
+    "slug": "legrand-switch-15",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.53,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch7.jpeg",
+    "stock": 199,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2016",
+    "name": "Legrand Bell Push",
+    "slug": "legrand-switch-16",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.57,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch8.jpeg",
+    "stock": 130,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-legrand-2017",
+    "name": "Legrand 16A Socket",
+    "slug": "legrand-switch-17",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Legrand product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.8,
+    "category": "Switches & Sockets",
+    "brand": "Legrand",
+    "image_url": "/images/legrand/switch9.jpeg",
+    "stock": 174,
+    "specifications": {
+      "Brand": "Legrand",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-luker-2000-wxt",
+    "name": "Luker Smart Door Lock",
+    "slug": "luker-smart-0-a61",
+    "description": "Smart home device with WiFi connectivity",
+    "long_description": "Authentic Luker product. Smart home device with WiFi connectivity. Suitable for residential and commercial installations.",
+    "price": 4.12,
+    "category": "Smart Home",
+    "brand": "Luker",
+    "image_url": "/images/luker fans,lights,smart locker/61IUjar0rnL._AC_UF350,350_QL80_.jpg",
+    "stock": 87,
+    "specifications": {
+      "Brand": "Luker",
+      "Category": "Smart Home",
+      "Type": "Ceiling Fan",
+      "Connectivity": "Bluetooth"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2000",
+    "name": "Norisys Modular Switch",
+    "slug": "norisys-switch-0",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.29,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/logo.png",
+    "stock": 220,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2001",
+    "name": "Norisys Flat Switch",
+    "slug": "norisys-switch-1",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.27,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (1).jpeg",
+    "stock": 237,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2002",
+    "name": "Norisys Bell Push",
+    "slug": "norisys-switch-2",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (10).jpeg",
+    "stock": 128,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2003",
+    "name": "Norisys 16A Socket",
+    "slug": "norisys-switch-3",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.79,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (11).jpeg",
+    "stock": 246,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2004",
+    "name": "Norisys 6A Switch",
+    "slug": "norisys-switch-4",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.1,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (12).jpeg",
+    "stock": 238,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2005",
+    "name": "Norisys Dimmer Switch",
+    "slug": "norisys-switch-5",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.67,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (13).jpeg",
+    "stock": 200,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2006",
+    "name": "Norisys USB Socket",
+    "slug": "norisys-switch-6",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.32,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (14).jpeg",
+    "stock": 223,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2007",
+    "name": "Norisys Modular Switch",
+    "slug": "norisys-switch-7",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.47,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (15).jpeg",
+    "stock": 200,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2008",
+    "name": "Norisys Flat Switch",
+    "slug": "norisys-switch-8",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.47,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (16).jpeg",
+    "stock": 138,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2009",
+    "name": "Norisys Bell Push",
+    "slug": "norisys-switch-9",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.21,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (17).jpeg",
+    "stock": 118,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2010",
+    "name": "Norisys 16A Socket",
+    "slug": "norisys-switch-10",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.03,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (18).jpeg",
+    "stock": 179,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2011",
+    "name": "Norisys 6A Switch",
+    "slug": "norisys-switch-11",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.54,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (19).jpeg",
+    "stock": 249,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2012",
+    "name": "Norisys Dimmer Switch",
+    "slug": "norisys-switch-12",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.91,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (2).jpeg",
+    "stock": 200,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2013",
+    "name": "Norisys USB Socket",
+    "slug": "norisys-switch-13",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.07,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (3).jpeg",
+    "stock": 66,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2014",
+    "name": "Norisys Modular Switch",
+    "slug": "norisys-switch-14",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.52,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (4).jpeg",
+    "stock": 232,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2015",
+    "name": "Norisys Flat Switch",
+    "slug": "norisys-switch-15",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.94,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (5).jpeg",
+    "stock": 239,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2016",
+    "name": "Norisys Bell Push",
+    "slug": "norisys-switch-16",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.55,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (6).jpeg",
+    "stock": 137,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2017",
+    "name": "Norisys 16A Socket",
+    "slug": "norisys-switch-17",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.2,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (7).jpeg",
+    "stock": 58,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2018",
+    "name": "Norisys 6A Switch",
+    "slug": "norisys-switch-18",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.06,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (8).jpeg",
+    "stock": 81,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-norisys-2019",
+    "name": "Norisys Dimmer Switch",
+    "slug": "norisys-switch-19",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Norisys product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.89,
+    "category": "Switches & Sockets",
+    "brand": "Norisys",
+    "image_url": "/images/norisys/switch (9).jpeg",
+    "stock": 95,
+    "specifications": {
+      "Brand": "Norisys",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-panasonic-2000",
+    "name": "Panasonic Modular Switch",
+    "slug": "panasonic-switch-0",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Panasonic product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 2.84,
+    "category": "Switches & Sockets",
+    "brand": "Panasonic",
+    "image_url": "/images/panasonic/Panasonic-logo.jpg",
+    "stock": 227,
+    "specifications": {
+      "Brand": "Panasonic",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-panasonic-2001",
+    "name": "Panasonic Flat Switch",
+    "slug": "panasonic-switch-1",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Panasonic product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 4.54,
+    "category": "Switches & Sockets",
+    "brand": "Panasonic",
+    "image_url": "/images/panasonic/switch (1).jpeg",
+    "stock": 146,
+    "specifications": {
+      "Brand": "Panasonic",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-panasonic-2002",
+    "name": "Panasonic Bell Push",
+    "slug": "panasonic-switch-2",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Panasonic product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.19,
+    "category": "Switches & Sockets",
+    "brand": "Panasonic",
+    "image_url": "/images/panasonic/switch (1).jpg",
+    "stock": 124,
+    "specifications": {
+      "Brand": "Panasonic",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-panasonic-2003",
+    "name": "Panasonic 16A Socket",
+    "slug": "panasonic-switch-3",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Panasonic product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.1,
+    "category": "Switches & Sockets",
+    "brand": "Panasonic",
+    "image_url": "/images/panasonic/switch (1).png",
+    "stock": 226,
+    "specifications": {
+      "Brand": "Panasonic",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Bell Push"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-panasonic-2004",
+    "name": "Panasonic 6A Switch",
+    "slug": "panasonic-switch-4",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Panasonic product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.4,
+    "category": "Switches & Sockets",
+    "brand": "Panasonic",
+    "image_url": "/images/panasonic/switch (1).webp",
+    "stock": 203,
+    "specifications": {
+      "Brand": "Panasonic",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-panasonic-2005",
+    "name": "Panasonic Dimmer Switch",
+    "slug": "panasonic-switch-5",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Panasonic product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.15,
+    "category": "Switches & Sockets",
+    "brand": "Panasonic",
+    "image_url": "/images/panasonic/switch (2).jpeg",
+    "stock": 198,
+    "specifications": {
+      "Brand": "Panasonic",
+      "Category": "Switches & Sockets",
+      "Rating": "10A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-panasonic-2006",
+    "name": "Panasonic USB Socket",
+    "slug": "panasonic-switch-6",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Panasonic product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.19,
+    "category": "Switches & Sockets",
+    "brand": "Panasonic",
+    "image_url": "/images/panasonic/switch (2).png",
+    "stock": 198,
+    "specifications": {
+      "Brand": "Panasonic",
+      "Category": "Switches & Sockets",
+      "Rating": "6A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-panasonic-2007",
+    "name": "Panasonic Modular Switch",
+    "slug": "panasonic-switch-7",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Panasonic product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 3.05,
+    "category": "Switches & Sockets",
+    "brand": "Panasonic",
+    "image_url": "/images/panasonic/switch (3).png",
+    "stock": 188,
+    "specifications": {
+      "Brand": "Panasonic",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Modular"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-schneider--2000-oeu",
+    "name": "Schneider Electric Modular Switch",
+    "slug": "schneider-electric-switch-0-8xz",
+    "description": "Premium modular switch for modern interiors",
+    "long_description": "Authentic Schneider Electric product. Premium modular switch for modern interiors. Suitable for residential and commercial installations.",
+    "price": 5.46,
+    "category": "Switches & Sockets",
+    "brand": "Schneider Electric",
+    "image_url": "/images/schneider electrics/6-a-schneider-unica-pure-modul-20260407004713100.webp",
+    "stock": 77,
+    "specifications": {
+      "Brand": "Schneider Electric",
+      "Category": "Switches & Sockets",
+      "Rating": "16A",
+      "Type": "Piano"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+  {
+    "id": "prd-yale-2000-rbs",
+    "name": "Yale Smart Door Lock",
+    "slug": "yale-smart-0-cq1",
+    "description": "Smart home device with WiFi connectivity",
+    "long_description": "Authentic Yale product. Smart home device with WiFi connectivity. Suitable for residential and commercial installations.",
+    "price": 9.8,
+    "category": "Smart Home",
+    "brand": "Yale",
+    "image_url": "/images/yale fans,lights,smart locker/images (1).jfif",
+    "stock": 68,
+    "specifications": {
+      "Brand": "Yale",
+      "Category": "Smart Home",
+      "Type": "LED Light",
+      "Connectivity": "Zigbee"
+    },
+    "created_at": "2026-09-28T19:58:38.786Z",
+    "updated_at": "2026-09-28T19:58:38.786Z"
+  },
+];

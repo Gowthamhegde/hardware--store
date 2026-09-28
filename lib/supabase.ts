@@ -5,14 +5,29 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 
+// Public client — uses anon key with RLS enforced
 export const supabase = isSupabaseConfigured
   ? createClient(supabaseUrl!, supabaseAnonKey!)
   : null;
 
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-export const adminSupabase = supabaseUrl && supabaseServiceKey
-  ? createClient(supabaseUrl, supabaseServiceKey)
-  : null;
+// Admin client — ONLY for server-side use (API routes, Server Components)
+// SECURITY: This key bypasses RLS — never pass it to client components or browser code
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY; // Note: NOT NEXT_PUBLIC_
+
+if (supabaseServiceKey && typeof window !== 'undefined') {
+  // This should never happen — if it does, there's a config mistake
+  console.error(
+    'SECURITY ERROR: SUPABASE_SERVICE_ROLE_KEY is accessible in the browser. ' +
+    'Do NOT use NEXT_PUBLIC_ prefix for this variable.'
+  );
+}
+
+export const adminSupabase =
+  supabaseUrl && supabaseServiceKey && typeof window === 'undefined'
+    ? createClient(supabaseUrl, supabaseServiceKey, {
+        auth: { persistSession: false },
+      })
+    : null;
 
 // Helper functions
 export async function getProducts(filters?: {
@@ -66,7 +81,7 @@ export async function getProducts(filters?: {
   }
 
   const { data, error } = await query.order('created_at', { ascending: false });
-  
+
   if (error) throw error;
   return data;
 }
@@ -83,14 +98,16 @@ export async function getProductBySlug(slug: string) {
     .select('*')
     .eq('slug', slug)
     .single();
-  
+
   if (error) throw error;
   return data;
 }
 
 export async function createOrder(orderData: any) {
   if (!supabase) {
-    throw new Error('Supabase is not configured. Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to enable order creation.');
+    throw new Error(
+      'Supabase is not configured. Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to enable order creation.'
+    );
   }
 
   const { data, error } = await supabase
@@ -98,7 +115,7 @@ export async function createOrder(orderData: any) {
     .insert([orderData])
     .select()
     .single();
-  
+
   if (error) throw error;
   return data;
 }
@@ -109,23 +126,26 @@ export async function getOrders(userId?: string) {
   }
 
   let query = supabase.from('orders').select('*');
-  
+
   if (userId) {
     query = query.eq('user_id', userId);
   }
-  
+
   const { data, error } = await query.order('created_at', { ascending: false });
-  
+
   if (error) throw error;
   return data;
 }
 
 export async function insertProduct(productData: any) {
-  if (!supabase) {
-    throw new Error('Supabase is not configured. Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to enable product creation.');
+  // insertProduct must only run server-side — use adminSupabase
+  if (!adminSupabase) {
+    throw new Error(
+      'Admin Supabase client is not available. Ensure SUPABASE_SERVICE_ROLE_KEY is set server-side.'
+    );
   }
 
-  const { data, error } = await supabase
+  const { data, error } = await adminSupabase
     .from('products')
     .insert([productData])
     .select()

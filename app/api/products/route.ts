@@ -1,14 +1,29 @@
 import { NextResponse } from 'next/server';
 import { supabase, adminSupabase } from '@/lib/supabase';
 import { getMockProducts, addMockProduct } from '@/lib/mock-store';
+import { checkRateLimit, RateLimits } from '@/lib/security/rate-limit';
+import { getClientIP, isAdminRequest, unauthorizedResponse, rateLimitResponse } from '@/lib/security/auth-helpers';
+import { validateQueryParams, validateRequestBody, productSchema, searchQuerySchema } from '@/lib/security/input-validation';
+import { logRateLimitExceeded, logUnauthorizedAccess } from '@/lib/security/logger';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const category = searchParams.get('category');
-  const search = searchParams.get('search');
-  const minPrice = searchParams.get('minPrice');
-  const maxPrice = searchParams.get('maxPrice');
-  const inStock = searchParams.get('inStock');
+  const ip = getClientIP(request);
+
+  // Rate limiting - 100 req/min for GET
+  const rateLimitResult = await checkRateLimit(ip, RateLimits.lenient.limit, RateLimits.lenient.window);
+  if (!rateLimitResult.success) {
+    logRateLimitExceeded(ip, 'GET /api/products');
+    return rateLimitResponse(rateLimitResult.reset);
+  }
+
+  // Validate query parameters
+  const validation = validateQueryParams(searchParams, searchQuerySchema);
+  if (!validation.success) {
+    return NextResponse.json({ error: validation.error }, { status: 400 });
+  }
+
+  const { category, search, minPrice, maxPrice, inStock } = validation.data;
 
   if (!supabase) {
     let products = getMockProducts();
@@ -43,9 +58,29 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
+    const ip = getClientIP(request);
+
+    // Rate limiting - 20 req/min for POST
+    const rateLimitResult = await checkRateLimit(ip, RateLimits.moderate.limit, RateLimits.moderate.window);
+    if (!rateLimitResult.success) {
+      logRateLimitExceeded(ip, 'POST /api/products');
+      return rateLimitResponse(rateLimitResult.reset);
+    }
+
+    // Admin authentication required
+    if (!isAdminRequest(request)) {
+      logUnauthorizedAccess(ip, 'POST /api/products', 'Not an admin');
+      return unauthorizedResponse('Admin authentication required to create products');
+    }
+
+    // Validate request body
+    const validation = await validateRequestBody(request, productSchema);
+    if (!validation.success) {
+      return NextResponse.json({ error: validation.error }, { status: 400 });
+    }
+
+    const body = validation.data;
     
-    // We use adminSupabase to bypass RLS since we have no auth implemented.
     const client = adminSupabase || supabase;
     if (!client) {
       // Use mock store

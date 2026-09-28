@@ -2,11 +2,21 @@ const { AppError } = require('../utils/errors');
 const env = require('../config/env');
 
 const errorHandler = (err, req, res, next) => {
-  console.error('Error:', err);
+  // Always log full error server-side
+  console.error('[ERROR]', {
+    message: err.message,
+    code: err.code,
+    path: req.path,
+    method: req.method,
+    ip: req.ip,
+    timestamp: new Date().toISOString(),
+    // Only log stack in development
+    ...(env.NODE_ENV === 'development' && { stack: err.stack }),
+  });
 
   let statusCode = 500;
   let code = 'INTERNAL_ERROR';
-  let message = 'Internal Server Error';
+  let message = 'An unexpected error occurred';
   let details = undefined;
 
   if (err instanceof AppError) {
@@ -17,18 +27,27 @@ const errorHandler = (err, req, res, next) => {
       details = err.errors;
     }
   } else if (err.name === 'PrismaClientKnownRequestError') {
-    // Handle specific Prisma errors
     if (err.code === 'P2002') {
       statusCode = 409;
       code = 'CONFLICT';
-      message = 'Unique constraint failed';
-      details = err.meta;
+      message = 'Resource already exists';
+      // Never expose Prisma meta in production
+      if (env.NODE_ENV === 'development') {
+        details = err.meta;
+      }
     }
   } else if (err.name === 'ZodError') {
     statusCode = 400;
     code = 'VALIDATION_ERROR';
-    message = 'Validation Error';
-    details = err.errors;
+    message = 'Validation failed';
+    details = err.errors.map(e => ({
+      field: e.path.join('.'),
+      message: e.message,
+    }));
+  } else if (err.message === 'Not allowed by CORS') {
+    statusCode = 403;
+    code = 'CORS_ERROR';
+    message = 'Origin not allowed';
   }
 
   const errorResponse = {
@@ -36,9 +55,10 @@ const errorHandler = (err, req, res, next) => {
       message,
       code,
       ...(details && { details }),
-    }
+    },
   };
 
+  // Only expose stack trace in development — never in production
   if (env.NODE_ENV === 'development' && statusCode === 500) {
     errorResponse.error.stack = err.stack;
   }
@@ -46,16 +66,16 @@ const errorHandler = (err, req, res, next) => {
   res.status(statusCode).json(errorResponse);
 };
 
-const notFoundHandler = (req, res, next) => {
+const notFoundHandler = (req, res) => {
   res.status(404).json({
     error: {
-      message: `Cannot find ${req.originalUrl} on this server`,
-      code: 'NOT_FOUND'
-    }
+      message: 'Resource not found',
+      code: 'NOT_FOUND',
+    },
   });
 };
 
 module.exports = {
   errorHandler,
-  notFoundHandler
+  notFoundHandler,
 };
