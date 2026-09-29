@@ -106,7 +106,7 @@ export default function TechnicalNav() {
                 <Link
                   key={href}
                   href={href}
-                  className="px-3 py-2 lg:px-4 rounded-full font-mono text-[10px] lg:text-xs font-medium text-aluminum hover:text-cable-white hover:bg-white/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal uppercase tracking-wider whitespace-nowrap"
+                  className="px-3 py-2 lg:px-4 rounded-full text-mono-responsive-xs font-medium text-aluminum hover:text-cable-white hover:bg-white/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal uppercase tracking-wider whitespace-nowrap touch-target"
                 >
                   {label}
                 </Link>
@@ -144,7 +144,7 @@ export default function TechnicalNav() {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       exit={{ scale: 0 }}
-                      className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 bg-signal text-enclosure text-[9px] sm:text-[10px] font-mono font-bold flex items-center justify-center shadow-[0_0_10px_rgba(111,231,196,0.3)] rounded-full"
+                      className="absolute -top-1 -right-1 w-6 h-6 bg-signal text-enclosure text-mono-responsive-xs font-bold flex items-center justify-center shadow-[0_0_10px_rgba(111,231,196,0.3)] rounded-full"
                     >
                       {itemCount > 9 ? '9+' : itemCount}
                     </motion.span>
@@ -183,7 +183,7 @@ export default function TechnicalNav() {
             <nav className="p-3 flex flex-col gap-1">
               <button
                 onClick={openSearch}
-                className="flex items-center gap-3 px-4 py-3 font-mono text-xs text-aluminum hover:text-signal hover:bg-signal/10 transition-all text-left uppercase tracking-wider rounded-xl"
+                className="flex items-center gap-3 px-4 py-3 text-mono-responsive-xs text-aluminum hover:text-signal hover:bg-signal/10 transition-all text-left uppercase tracking-wider rounded-xl touch-target"
               >
                 <Search className="w-4 h-4 shrink-0" />
                 Search products
@@ -193,7 +193,7 @@ export default function TechnicalNav() {
                   key={href}
                   href={href}
                   onClick={() => setMobileOpen(false)}
-                  className="px-4 py-3 font-mono text-xs text-aluminum hover:text-signal hover:bg-signal/10 transition-all uppercase tracking-wider rounded-xl"
+                  className="px-4 py-3 text-mono-responsive-xs text-aluminum hover:text-signal hover:bg-signal/10 transition-all uppercase tracking-wider rounded-xl touch-target"
                 >
                   {label}
                 </Link>
@@ -262,7 +262,7 @@ export default function TechnicalNav() {
                     >
                       {results.length === 0 ? (
                         <div className="px-4 py-6 text-center">
-                          <p className="font-mono text-xs text-aluminum/50">NO SIGNAL MATCH FOR &quot;{query}&quot;</p>
+                          <p className="text-mono-responsive-xs text-aluminum/70">NO SIGNAL MATCH FOR &quot;{query}&quot;</p>
                         </div>
                       ) : (
                         <ul className="divide-y divide-aluminum/10">
@@ -281,11 +281,11 @@ export default function TechnicalNav() {
                                     {product.name}
                                   </div>
                                   <div className="flex items-center gap-2 mt-0.5">
-                                    <span className="font-mono text-[9px] text-aluminum/60 uppercase tracking-wide">
+                                    <span className="text-mono-responsive-xs text-aluminum/80 uppercase tracking-wide">
                                       {product.category}
                                     </span>
                                     {product.brand && (
-                                      <span className="font-mono text-[9px] text-aluminum/40">· {product.brand}</span>
+                                      <span className="text-mono-responsive-xs text-aluminum/60">· {product.brand}</span>
                                     )}
                                   </div>
                                 </div>
@@ -302,7 +302,7 @@ export default function TechnicalNav() {
                           <Link
                             href={`/shop?search=${encodeURIComponent(query)}`}
                             onClick={() => setSearchOpen(false)}
-                            className="flex items-center justify-between font-mono text-[10px] text-aluminum/60 hover:text-signal transition-colors tracking-widest"
+                            className="flex items-center justify-between text-mono-responsive-xs text-aluminum/80 hover:text-signal transition-colors tracking-widest touch-target"
                           >
                             [ VIEW_ALL_SIGNALS ]
                             <ArrowRight className="w-3 h-3" />
@@ -315,7 +315,7 @@ export default function TechnicalNav() {
               </div>
 
               {/* Keyboard hint */}
-              <p className="text-center font-mono text-[9px] text-aluminum/40 mt-3 tracking-widest">
+              <p className="text-center text-mono-responsive-xs text-aluminum/60 mt-3 tracking-widest">
                 [ ESC TO TERMINATE ]
               </p>
             </motion.div>

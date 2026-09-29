@@ -35,7 +35,7 @@ function StockLED({ stock }: { stock: number }) {
         animate={isOut ? { opacity: 0.3 } : { opacity: [1, 0.3, 1] }}
         transition={isOut ? {} : { duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       />
-      <span className="font-mono text-[9px] text-aluminum/50 tracking-widest">{label}</span>
+      <span className="text-mono-responsive-xs text-aluminum/80 tracking-widest">{label}</span>
     </div>
   );
 }
@@ -84,7 +84,7 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
         >
           {/* SKU header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20">
-            <span className="font-mono text-[9px] text-white/50 tracking-widest uppercase">
+            <span className="text-mono-responsive-xs text-white/80 tracking-widest uppercase">
               {product.id.toUpperCase()}
             </span>
             <StockLED stock={product.stock} />
@@ -124,12 +124,12 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
 
             <div className="relative flex flex-wrap gap-x-4 gap-y-1">
               {specEntries.length > 0 ? specEntries.map(([key, val]) => (
-                <span key={key} className="font-mono text-[9px] uppercase tracking-wide">
-                  <span className="text-foreground/40">{key}: </span>
+                <span key={key} className="text-mono-responsive-xs uppercase tracking-wide">
+                  <span className="text-foreground/60">{key}: </span>
                   <span className="text-cable-white">{val}</span>
                 </span>
               )) : (
-                <span className="font-mono text-[9px] uppercase tracking-wide text-foreground/40">
+                <span className="text-mono-responsive-xs uppercase tracking-wide text-foreground/60">
                   {product.category}
                 </span>
               )}
@@ -139,7 +139,7 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
           {/* Name + add to cart */}
           <div className="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60">
             {product.brand && (
-              <span className="font-mono text-[9px] text-signal/70 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]">
+              <span className="text-mono-responsive-xs text-signal/80 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]">
                 {product.brand}
               </span>
             )}

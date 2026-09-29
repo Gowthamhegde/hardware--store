@@ -71,7 +71,7 @@ export default function TrustBanner() {
                 {feature.title}
               </h3>
               <p className="text-sm text-aluminum mb-2">{feature.desc}</p>
-              <span className="font-mono text-[10px] text-signal/70 tracking-wider">
+              <span className="text-mono-responsive-xs text-signal/80 tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]">
                 {feature.code}
               </span>
             </motion.div>

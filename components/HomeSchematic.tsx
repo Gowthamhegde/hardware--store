@@ -28,7 +28,7 @@ export default function HomeSchematic() {
             
             {/* Left Column (55%) */}
             <div className="w-full lg:w-[55%] flex flex-col items-start">
-              <motion.div {...fadeUp(0)} className="mb-6 flex items-center font-mono text-[10px] text-signal tracking-widest">
+              <motion.div {...fadeUp(0)} className="mb-6 flex items-center font-mono text-mono-responsive-sm text-signal tracking-widest">
                 <span>&gt; LIVE INVENTORY — 12,406 UNITS TRACKED</span>
                 <motion.span
                   animate={{ opacity: [1, 0, 1] }}
@@ -143,15 +143,15 @@ export default function HomeSchematic() {
           <div className="marquee-track flex gap-8 whitespace-nowrap">
             {[...Array(3)].map((_, i) => (
               <span key={i} className="flex gap-8 items-center">
-                <span className="font-mono text-[10px] text-aluminum/60 tracking-widest uppercase flex items-center gap-2">
+                <span className="font-mono text-mono-responsive-xs text-readable-secondary tracking-widest uppercase flex items-center gap-2">
                   <Activity className="w-3 h-3 text-signal" />
                   {featuredSpec1?.name.toUpperCase()} — IN STOCK
                 </span>
-                <span className="font-mono text-[10px] text-aluminum/60 tracking-widest uppercase flex items-center gap-2">
+                <span className="font-mono text-mono-responsive-xs text-readable-secondary tracking-widest uppercase flex items-center gap-2">
                   <span className="w-1 h-1 bg-live-red"></span>
                   {featuredSpec2?.name.toUpperCase()} — LOW STOCK
                 </span>
-                <span className="font-mono text-[10px] text-aluminum/60 tracking-widest uppercase flex items-center gap-2">
+                <span className="font-mono text-mono-responsive-xs text-readable-secondary tracking-widest uppercase flex items-center gap-2">
                   <span className="w-1 h-1 bg-signal"></span>
                   24 NEW COMPONENTS ADDED TODAY
                 </span>
@@ -175,15 +175,15 @@ export default function HomeSchematic() {
           <Link href={`/shop?category=${CATEGORIES[2].slug}`} className="md:row-span-2 md:col-span-1 group relative bg-[#111614] border border-aluminum/15 p-6 hover:border-signal/50 transition-colors flex flex-col justify-between">
             <div className="flex items-center justify-between">
               <Speaker className="w-6 h-6 text-aluminum group-hover:text-signal transition-colors" />
-              <span className="font-mono text-[9px] text-aluminum/40">SYS.01</span>
+              <span className="font-mono text-mono-responsive-xs text-readable-tertiary">SYS.01</span>
             </div>
             <div>
               <h3 className="font-display text-2xl font-bold text-cable-white mb-2">{CATEGORIES[2].name}</h3>
-              <p className="font-mono text-[10px] text-aluminum/60 uppercase max-w-[200px] mb-6">
+              <p className="font-mono text-mono-responsive-sm text-readable-secondary uppercase max-w-[200px] mb-6">
                 {CATEGORIES[2].description}
               </p>
               <div className="border-t border-aluminum/10 pt-4">
-                <span className="font-mono text-[9px] text-signal tracking-widest flex items-center gap-2">
+                <span className="font-mono text-mono-responsive-xs text-signal tracking-widest flex items-center gap-2">
                   <Activity className="w-3 h-3" />
                   LIVE PREVIEW: AVR-X2800H
                 </span>
@@ -199,11 +199,11 @@ export default function HomeSchematic() {
           <Link href={`/shop?category=${CATEGORIES[1].slug}`} className="group relative bg-[#111614] border border-aluminum/15 p-6 hover:border-signal/50 transition-colors flex flex-col justify-between">
             <div className="flex items-center justify-between">
               <Cable className="w-5 h-5 text-aluminum group-hover:text-signal transition-colors" />
-              <span className="font-mono text-[9px] text-aluminum/40">CBL.02</span>
+              <span className="font-mono text-mono-responsive-xs text-readable-tertiary">CBL.02</span>
             </div>
             <div>
               <h3 className="font-display text-lg font-bold text-cable-white mb-1">{CATEGORIES[1].name}</h3>
-              <div className="font-mono text-[10px] text-copper">GAUGE: {CATEGORIES[1].specs}</div>
+              <div className="font-mono text-mono-responsive-sm text-copper">GAUGE: {CATEGORIES[1].specs}</div>
             </div>
           </Link>
 

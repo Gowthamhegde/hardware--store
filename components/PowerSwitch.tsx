@@ -48,7 +48,7 @@ export default function PowerSwitch() {
         </motion.div>
 
         {/* Status Text Indicator */}
-        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 font-mono text-[10px] text-foreground/60 font-bold tracking-widest z-20 whitespace-nowrap">
+        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-mono-responsive-xs text-foreground/80 font-bold tracking-widest z-20 whitespace-nowrap">
           {isLight ? 'THEME: LIGHT' : 'THEME: BLACK'}
         </div>
       </motion.button>

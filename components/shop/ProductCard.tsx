@@ -44,7 +44,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
               className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
             />
             {product.stock < 10 && product.stock > 0 && (
-              <div className="absolute top-4 right-4 bg-live-red/20 text-live-red text-xs px-3 py-1 rounded-full border border-live-red/20 backdrop-blur-md">
+              <div className="absolute top-4 right-4 bg-live-red/30 text-live-red text-responsive-sm px-3 py-1 rounded-full border border-live-red/40 backdrop-blur-md">
                 Only {product.stock} left
               </div>
             )}
@@ -56,7 +56,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
           </div>
 
           <div className="p-5">
-            <p className="font-mono text-[10px] text-aluminum mb-2 uppercase tracking-widest">{product.category}</p>
+            <p className="text-mono-responsive-sm text-aluminum mb-2 uppercase tracking-widest">{product.category}</p>
             <h3 className="font-semibold text-lg text-cable-white mb-2 line-clamp-2 group-hover:text-signal transition-colors uppercase">
               {product.name}
             </h3>
