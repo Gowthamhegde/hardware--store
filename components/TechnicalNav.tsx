@@ -2,13 +2,14 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShoppingCart, Search, Menu, X, ArrowRight, Sun, Moon } from 'lucide-react';
 import { useCartStore } from '@/lib/store';
 import { useTheme } from '@/app/providers';
 import { STORE_CONFIG } from '@/lib/constants';
-import { SAMPLE_PRODUCTS } from '@/lib/sample-data';
+import type { Product } from '@/types';
 import { formatPrice } from '@/lib/utils';
 import { getStorePhotoByKey } from '@/lib/store-images';
 
@@ -20,10 +21,12 @@ const NAV_LINKS = [
 ];
 
 export default function TechnicalNav() {
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState('');
+  const [results, setResults] = useState<Product[]>([]);
   const [mounted, setMounted] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const itemCount = useCartStore((state) => state.getItemCount());
@@ -61,19 +64,46 @@ export default function TechnicalNav() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  const results = query.trim().length >= 2
-    ? SAMPLE_PRODUCTS.filter((p) =>
-        p.name.toLowerCase().includes(query.toLowerCase()) ||
-        p.category.toLowerCase().includes(query.toLowerCase()) ||
-        p.brand?.toLowerCase().includes(query.toLowerCase()) ||
-        p.description.toLowerCase().includes(query.toLowerCase())
-      ).slice(0, 6)
-    : [];
+  useEffect(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+    if (!searchOpen || normalizedQuery.length < 2) {
+      setResults([]);
+      return;
+    }
+
+    let active = true;
+    const timeoutId = window.setTimeout(() => {
+      import('@/lib/sample-data')
+        .then(({ SAMPLE_PRODUCTS }) => {
+          if (!active) return;
+          setResults(
+            SAMPLE_PRODUCTS.filter((product) =>
+              product.name.toLowerCase().includes(normalizedQuery) ||
+              product.category.toLowerCase().includes(normalizedQuery) ||
+              product.brand?.toLowerCase().includes(normalizedQuery) ||
+              product.description.toLowerCase().includes(normalizedQuery)
+            ).slice(0, 6)
+          );
+        })
+        .catch(() => {
+          if (active) setResults([]);
+        });
+    }, 180);
+
+    return () => {
+      active = false;
+      window.clearTimeout(timeoutId);
+    };
+  }, [query, searchOpen]);
 
   const openSearch = useCallback(() => {
     setSearchOpen(true);
     setMobileOpen(false);
   }, []);
+
+  const prefetchRoute = useCallback((href: string) => {
+    router.prefetch(href);
+  }, [router]);
 
   return (
     <>
@@ -84,7 +114,7 @@ export default function TechnicalNav() {
             isScrolled
               ? 'py-2.5 px-4 sm:py-3 sm:px-6'
               : 'py-3 px-4 sm:py-4 sm:px-8'
-          } overflow-hidden`}
+          }`}
           aria-label="Main navigation"
         >
         <div className="flex items-center justify-between gap-2">
@@ -93,10 +123,9 @@ export default function TechnicalNav() {
               <div className="w-9 h-9 sm:w-10 sm:h-10 relative overflow-hidden rounded-full border border-white/20 bg-black/50 group-hover:border-signal/50 group-hover:shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300">
                 <Image src="/logo.jpeg" alt="" fill sizes="40px" className="object-cover" />
               </div>
-              <div className="hidden sm:block">
-                <div className="font-display font-bold text-cable-white text-lg tracking-tight group-hover:text-signal transition-colors">
-                  {STORE_CONFIG.name}
-                </div>
+              <div className="min-w-0 font-display font-bold text-cable-white tracking-tight group-hover:text-signal transition-colors">
+                <span className="sm:hidden text-sm">VIGNESH</span>
+                <span className="hidden sm:block text-lg">{STORE_CONFIG.name}</span>
               </div>
             </Link>
 
@@ -106,9 +135,13 @@ export default function TechnicalNav() {
                 <Link
                   key={href}
                   href={href}
-                  className="px-3 py-2 lg:px-4 rounded-full text-mono-responsive-xs font-medium text-aluminum hover:text-cable-white hover:bg-white/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal uppercase tracking-wider whitespace-nowrap touch-target"
+                  onMouseEnter={() => prefetchRoute(href)}
+                  onFocus={() => prefetchRoute(href)}
+                  onTouchStart={() => prefetchRoute(href)}
+                  className="group relative inline-flex items-center justify-center gap-2 px-3 py-2 lg:px-4 rounded-full font-display text-sm font-semibold text-aluminum hover:text-cable-white hover:bg-white/10 transition-all duration-200 motion-safe:hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal whitespace-nowrap touch-target motion-reduce:transition-none"
                 >
-                  {label}
+                  <span className="transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transition-none">{label}</span>
+                  <span aria-hidden="true" className="absolute bottom-2 left-4 right-4 h-px origin-left scale-x-0 bg-signal transition-transform duration-200 group-hover:scale-x-100 group-focus-visible:scale-x-100 motion-reduce:transition-none" />
                 </Link>
               ))}
             </div>
@@ -117,7 +150,7 @@ export default function TechnicalNav() {
             <div className="flex items-center gap-1">
               <button
                 onClick={openSearch}
-                className="p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal rounded-full"
+                className="touch-target rounded-full p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal"
                 aria-label="Open search"
               >
                 <Search className="w-4 h-4" />
@@ -125,7 +158,7 @@ export default function TechnicalNav() {
 
               <button
                 onClick={toggleTheme}
-                className="p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal rounded-full"
+                className="touch-target rounded-full p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal"
                 aria-label="Toggle Theme"
               >
                 {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -133,7 +166,7 @@ export default function TechnicalNav() {
 
               <button
                 onClick={() => setCartOpen(true)}
-                className="relative p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal rounded-full"
+                className="relative touch-target rounded-full p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal"
                 aria-label={`Cart, ${mounted ? itemCount : 0} item${mounted && itemCount !== 1 ? 's' : ''}`}
               >
                 <ShoppingCart className="w-4 h-4" />
@@ -153,7 +186,7 @@ export default function TechnicalNav() {
               </button>
 
               <button
-                className="md:hidden p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal rounded-full"
+                className="lg:hidden touch-target rounded-full p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal"
                 onClick={() => setMobileOpen((v) => !v)}
                 aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={mobileOpen}
@@ -178,12 +211,12 @@ export default function TechnicalNav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-20 sm:top-24 left-1/2 -translate-x-1/2 z-40 w-[95%] max-w-sm bg-enclosure border border-aluminum/20 md:hidden overflow-hidden shadow-2xl rounded-2xl"
+            className="fixed top-20 sm:top-24 left-1/2 -translate-x-1/2 z-40 w-[95%] max-w-sm bg-enclosure border border-aluminum/20 lg:hidden overflow-hidden shadow-2xl rounded-2xl"
           >
             <nav className="p-3 flex flex-col gap-1">
               <button
                 onClick={openSearch}
-                className="flex items-center gap-3 px-4 py-3 text-mono-responsive-xs text-aluminum hover:text-signal hover:bg-signal/10 transition-all text-left uppercase tracking-wider rounded-xl touch-target"
+                className="flex items-center gap-3 px-4 py-3 font-display text-sm font-semibold text-aluminum hover:text-signal hover:bg-signal/10 transition-all text-left rounded-xl touch-target"
               >
                 <Search className="w-4 h-4 shrink-0" />
                 Search products
@@ -193,7 +226,10 @@ export default function TechnicalNav() {
                   key={href}
                   href={href}
                   onClick={() => setMobileOpen(false)}
-                  className="px-4 py-3 text-mono-responsive-xs text-aluminum hover:text-signal hover:bg-signal/10 transition-all uppercase tracking-wider rounded-xl touch-target"
+                  onMouseEnter={() => prefetchRoute(href)}
+                  onFocus={() => prefetchRoute(href)}
+                  onTouchStart={() => prefetchRoute(href)}
+                  className="group flex items-center justify-between px-4 py-3 font-display text-sm font-semibold text-aluminum hover:text-signal hover:bg-signal/10 hover:translate-x-1 transition-all rounded-xl touch-target motion-reduce:transition-none"
                 >
                   {label}
                 </Link>

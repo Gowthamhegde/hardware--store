@@ -12,7 +12,7 @@ function AudioWaveform({ isLight }: { isLight: boolean }) {
   const elapsedRef = useRef(0);
 
   const basePositions = useMemo(() => {
-    const geom = new THREE.PlaneGeometry(60, 60, 80, 80);
+    const geom = new THREE.PlaneGeometry(60, 60, 40, 40);
     return new Float32Array(geom.attributes.position.array);
   }, []);
 
@@ -52,7 +52,7 @@ function AudioWaveform({ isLight }: { isLight: boolean }) {
 
   return (
     <mesh ref={meshRef} rotation={[-Math.PI / 2 + 0.3, 0, 0]} position={[0, -6, -15]}>
-      <planeGeometry ref={geomRef} args={[60, 60, 80, 80]} />
+      <planeGeometry ref={geomRef} args={[60, 60, 40, 40]} />
       <meshBasicMaterial
         wireframe
         color={isLight ? '#0284C7' : '#00f3ff'}
@@ -68,7 +68,7 @@ function AudioWaveformAccent({ isLight }: { isLight: boolean }) {
   const elapsedRef = useRef(0);
 
   const basePositions = useMemo(() => {
-    const geom = new THREE.PlaneGeometry(60, 60, 60, 60);
+    const geom = new THREE.PlaneGeometry(60, 60, 30, 30);
     return new Float32Array(geom.attributes.position.array);
   }, []);
 
@@ -96,7 +96,7 @@ function AudioWaveformAccent({ isLight }: { isLight: boolean }) {
 
   return (
     <mesh rotation={[-Math.PI / 2 + 0.3, 0, 0]} position={[0, -6, -15]}>
-      <planeGeometry ref={geomRef} args={[60, 60, 60, 60]} />
+      <planeGeometry ref={geomRef} args={[60, 60, 30, 30]} />
       <meshBasicMaterial
         wireframe
         color={isLight ? '#E11D48' : '#ff00ea'}
@@ -113,7 +113,7 @@ export default function BackgroundModel() {
 
   return (
     <div className="fixed inset-0 z-0 pointer-events-none opacity-90 mix-blend-normal dark:mix-blend-screen">
-      <Canvas camera={{ position: [0, 2, 12], fov: 60 }}>
+      <Canvas camera={{ position: [0, 2, 12], fov: 60 }} dpr={[1, 1.25]}>
         <fog attach="fog" args={[isLight ? '#FFFFFF' : '#030014', 10, 35]} />
         <AudioWaveform isLight={isLight} />
         <AudioWaveformAccent isLight={isLight} />

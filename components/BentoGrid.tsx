@@ -1,12 +1,13 @@
 'use client';
 
 import { motion, useScroll, useTransform, useMotionTemplate, useMotionValue } from 'framer-motion';
-import { useRef, MouseEvent } from 'react';
+import { useEffect, useRef, useState, MouseEvent } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Plug, Cable, Speaker, Smartphone, Tag, ArrowRight, Zap } from 'lucide-react';
 import { CATEGORIES, STORE_CONFIG } from '@/lib/constants';
 import TechnicalProductCard from './TechnicalProductCard';
-import { SAMPLE_PRODUCTS } from '@/lib/sample-data';
+import type { Product } from '@/types';
 import { usePrefersReducedMotion } from '@/lib/hooks';
 import { STORE_PHOTOS } from '@/lib/store-images';
 import { useCartStore } from '@/lib/store';
@@ -51,20 +52,12 @@ function TiltCard({ children, className, href, reducedMotion = false }: { childr
     mouseY.set(clientY - top - height / 2);
   }
 
-  const rotateX = useTransform(mouseY, [-200, 200], reducedMotion ? [0, 0] : [5, -5]);
-  const rotateY = useTransform(mouseX, [-200, 200], reducedMotion ? [0, 0] : [-5, 5]);
-
   const CardContent = (
     <motion.div
       onMouseMove={handleMouseMove}
       onMouseLeave={() => {
         mouseX.set(0);
         mouseY.set(0);
-      }}
-      style={{
-        rotateX,
-        rotateY,
-        transformPerspective: 1000,
       }}
       whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 400, damping: 30 }}
@@ -112,14 +105,49 @@ export default function BentoGrid() {
   // Get products from cart instead of static featured list
   const cartItems = useCartStore((s) => s.items);
   const productsInCart = cartItems.map(item => item.product);
-  
-  // Show cart products if available, otherwise fallback to featured products
-  const featured = productsInCart.length > 0 
-    ? productsInCart.slice(0, 6) 
-    : SAMPLE_PRODUCTS.filter((p) => p.category === 'Home Theatre & Audio').slice(0, 3);
+  const [defaultFeatured, setDefaultFeatured] = useState<Product[]>([]);
+  const featuredSectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (productsInCart.length > 0 || !featuredSectionRef.current) return;
+
+    let active = true;
+    const loadFeaturedProducts = () => {
+      import('@/lib/sample-data')
+        .then(({ SAMPLE_PRODUCTS }) => {
+          if (active) {
+            setDefaultFeatured(
+              SAMPLE_PRODUCTS.filter((product) => product.category === 'Home Theatre & Audio').slice(0, 3)
+            );
+          }
+        })
+        .catch(() => {
+          if (active) setDefaultFeatured([]);
+        });
+    };
+
+    if (typeof IntersectionObserver === 'undefined') {
+      loadFeaturedProducts();
+      return () => { active = false; };
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      loadFeaturedProducts();
+    }, { rootMargin: '240px' });
+
+    observer.observe(featuredSectionRef.current);
+    return () => {
+      active = false;
+      observer.disconnect();
+    };
+  }, [productsInCart.length]);
+
+  const featured = productsInCart.length > 0 ? productsInCart.slice(0, 6) : defaultFeatured;
 
   return (
-    <div className="relative z-10 overflow-hidden">
+    <div className="relative z-10 w-full overflow-hidden">
       {/* ── HERO ──────────────────────────────────────────────── */}
       <section ref={heroRef} className="relative container mx-auto px-4 pt-24 sm:pt-28 pb-12 sm:pb-16 flex flex-col items-center text-center">
         {/* Eyebrow badge */}
@@ -138,7 +166,7 @@ export default function BentoGrid() {
         <motion.div style={{ y: headlineY, scale: headlineScale }} className="relative z-20 w-full">
           <motion.h1
             {...fadeUp(0.04, prefersReducedMotion)}
-            className="font-display text-[clamp(2.8rem,12vw,6.5rem)] md:text-8xl lg:text-[100px] font-black text-transparent bg-clip-text leading-[0.9] tracking-tighter mb-4 sm:mb-6 pb-2 break-words"
+            className="gradient-text font-display text-[clamp(2.8rem,12vw,6.5rem)] md:text-8xl lg:text-[100px] font-black leading-[0.9] tracking-tighter mb-4 sm:mb-6 pb-2 break-words"
             style={{
               backgroundImage: 'linear-gradient(to bottom right, var(--foreground), rgba(150, 150, 150, 0.4))',
             }}
@@ -196,10 +224,12 @@ export default function BentoGrid() {
                   : 'min-h-[140px] sm:min-h-[180px]'
               }`}
             >
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${photo})` }}
-                aria-label={`VIGNESH Electrical Power House photo ${index + 1}`}
+              <Image
+                src={photo}
+                alt={`VIGNESH Electrical Power House photo ${index + 1}`}
+                fill
+                sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 20vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
             </motion.div>
@@ -341,7 +371,7 @@ export default function BentoGrid() {
         >
           {STATS.map(({ value, label }) => (
             <div key={label} className="flex flex-col items-center justify-center py-6 sm:py-8 px-3 sm:px-4 gap-1 sm:gap-2 bg-foreground/[0.02]">
-              <span className="font-display text-2xl sm:text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50">{value}</span>
+              <span className="gradient-text font-display text-2xl sm:text-3xl md:text-5xl font-black bg-gradient-to-b from-foreground to-foreground/50">{value}</span>
               <span className="font-display text-[10px] sm:text-xs font-semibold text-foreground/50 tracking-widest text-center uppercase">{label}</span>
             </div>
           ))}
@@ -378,7 +408,7 @@ export default function BentoGrid() {
       </section>
 
       {/* ── FEATURED HOME THEATRE PRODUCTS ───────────────────── */}
-      <section className="relative container mx-auto px-4 py-10 sm:py-16 z-20">
+      <section ref={featuredSectionRef} className="relative container mx-auto px-4 py-10 sm:py-16 z-20">
         <motion.div {...fadeUp(0, prefersReducedMotion)} className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-12">
           <div>
             <p className="font-display font-semibold text-[10px] sm:text-xs text-foreground/60 tracking-widest mb-2 uppercase">

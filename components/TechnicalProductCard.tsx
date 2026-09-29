@@ -16,7 +16,7 @@ interface Props {
   index?: number;
 }
 
-// Stock LED — animated, colour-coded
+// Stock LED — static, colour-coded
 // ponytail: 1.5px is literal per Req 5.6 — inline style beats inventing a custom Tailwind size
 function StockLED({ stock }: { stock: number }) {
   const isOut = stock === 0;
@@ -29,11 +29,9 @@ function StockLED({ stock }: { stock: number }) {
       aria-label={`Stock status: ${label}`}
       role="status"
     >
-      <motion.span
-        className={`block rounded-full ${color}`}
+      <span
+        className={`block rounded-full ${color} ${isOut ? 'opacity-30' : ''}`}
         style={{ width: '1.5px', height: '1.5px' }}
-        animate={isOut ? { opacity: 0.3 } : { opacity: [1, 0.3, 1] }}
-        transition={isOut ? {} : { duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       />
       <span className="text-mono-responsive-xs text-aluminum/80 tracking-widest">{label}</span>
     </div>
@@ -71,7 +69,7 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 32 }}
+      initial={{ y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.35, delay: index * 0.07 }}
@@ -84,7 +82,7 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
         >
           {/* SKU header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-black/20">
-            <span className="text-mono-responsive-xs text-white/80 tracking-widest uppercase">
+            <span className="text-mono-responsive-xs text-foreground/80 tracking-widest uppercase">
               {product.id.toUpperCase()}
             </span>
             <StockLED stock={product.stock} />
@@ -129,7 +127,7 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
                   <span className="text-cable-white">{val}</span>
                 </span>
               )) : (
-                <span className="text-mono-responsive-xs uppercase tracking-wide text-foreground/60">
+                <span className="text-mono-responsive-xs uppercase tracking-wide text-foreground/70">
                   {product.category}
                 </span>
               )}
@@ -143,7 +141,7 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
                 {product.brand}
               </span>
             )}
-            <h3 className="font-display text-base font-semibold text-cable-white leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md">
+            <h3 className="font-display text-base font-semibold text-foreground leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md">
               {product.name}
             </h3>
 
@@ -157,7 +155,7 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
                   className={`relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase ${
                     isComparing
                       ? 'bg-signal/20 border-signal text-signal shadow-signal'
-                      : 'bg-background/50 border-foreground/20 text-foreground/50 hover:border-signal hover:text-signal hover:shadow-signal'
+                      : 'bg-background/50 border-foreground/20 text-foreground/70 hover:border-signal hover:text-signal hover:shadow-signal'
                   }`}
                   aria-label="Compare"
                 >
@@ -169,7 +167,7 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
                   className={`relative flex items-center justify-center p-2 rounded-full border transition-all duration-300 uppercase ${
                     product.stock === 0
                       ? 'bg-white/5 border-white/10 text-white/30 cursor-not-allowed'
-                      : 'bg-black/50 border-white/20 text-white/50 hover:border-copper hover:text-copper hover:shadow-magenta'
+                      : 'bg-black/50 border-white/20 text-foreground/70 hover:border-copper hover:text-copper hover:shadow-magenta'
                   }`}
                   aria-label="Add to cart"
                 >

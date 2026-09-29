@@ -98,25 +98,39 @@ export default function ProductPage() {
   const addItem = useCartStore((s) => s.addItem);
 
   useEffect(() => {
-    Promise.all([
-      fetch(`/api/products/${slug}`).then(r => r.ok ? r.json() : null),
-      fetch(`/api/products`).then(r => r.ok ? r.json() : [])
-    ])
-    .then(([prodData, allProducts]) => {
-      setProduct(prodData);
-      if (prodData) {
-        setRelated(
-          allProducts
-            .filter((p: Product) => p.category === prodData.category && p.id !== prodData.id)
-            .slice(0, 3)
+    let active = true;
+    setLoading(true);
+    setProduct(null);
+    setRelated([]);
+
+    async function loadProduct() {
+      try {
+        const response = await fetch(`/api/products/${slug}`);
+        const productData: Product | null = response.ok ? await response.json() : null;
+        if (!active) return;
+
+        setProduct(productData);
+        setLoading(false);
+        if (!productData) return;
+
+        const relatedResponse = await fetch(
+          `/api/products?category=${encodeURIComponent(productData.category)}&limit=4`
         );
+        const categoryProducts: Product[] = relatedResponse.ok ? await relatedResponse.json() : [];
+        if (active) {
+          setRelated(categoryProducts.filter((item) => item.id !== productData.id).slice(0, 3));
+        }
+      } catch (error) {
+        if (!active) return;
+        console.error(error);
+        setLoading(false);
       }
-      setLoading(false);
-    })
-    .catch(err => {
-      console.error(err);
-      setLoading(false);
-    });
+    }
+
+    void loadProduct();
+    return () => {
+      active = false;
+    };
   }, [slug]);
 
   if (loading) {

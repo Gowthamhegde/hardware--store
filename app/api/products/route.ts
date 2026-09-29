@@ -23,7 +23,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: validation.error }, { status: 400 });
   }
 
-  const { category, search, minPrice, maxPrice, inStock } = validation.data;
+  const { category, search, minPrice, maxPrice, inStock, limit } = validation.data;
 
   if (!supabase) {
     let products = getMockProducts();
@@ -35,7 +35,8 @@ export async function GET(request: Request) {
     if (minPrice) products = products.filter(p => p.price >= parseFloat(minPrice));
     if (maxPrice) products = products.filter(p => p.price <= parseFloat(maxPrice));
     if (inStock === 'true') products = products.filter(p => p.stock > 0);
-    
+    if (limit) products = products.slice(0, limit);
+
     return NextResponse.json(products);
   }
 
@@ -47,7 +48,10 @@ export async function GET(request: Request) {
   if (maxPrice) query = query.lte('price', parseFloat(maxPrice));
   if (inStock === 'true') query = query.gt('stock', 0);
 
-  const { data, error } = await query.order('created_at', { ascending: false });
+  let orderedQuery = query.order('created_at', { ascending: false });
+  if (limit) orderedQuery = orderedQuery.limit(limit);
+
+  const { data, error } = await orderedQuery;
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });

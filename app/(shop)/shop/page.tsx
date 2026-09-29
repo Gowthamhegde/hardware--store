@@ -11,6 +11,7 @@ import { formatPrice } from '@/lib/utils';
 import { useCartStore } from '@/lib/store';
 import BrandGrid from '@/components/BrandGrid';
 import type { Product } from '@/types';
+import { SAMPLE_PRODUCTS } from '@/lib/sample-data';
 
 const PRICE_RANGES = [
   { label: 'Any', value: 'all' },
@@ -21,6 +22,8 @@ const PRICE_RANGES = [
 ];
 
 type SortKey = 'default' | 'price-asc' | 'price-desc' | 'name-asc' | 'stock-desc';
+const PRODUCTS_PER_PAGE = 24;
+
 const SORT_OPTIONS: { label: string; value: SortKey }[] = [
   { label: 'Default', value: 'default' },
   { label: 'Price: low → high', value: 'price-asc' },
@@ -111,8 +114,9 @@ function ShopContent() {
   
   // Grid vs List view
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState<Product[]>(SAMPLE_PRODUCTS);
+  const [visibleCount, setVisibleCount] = useState(PRODUCTS_PER_PAGE);
+  const [loading, setLoading] = useState(false);
   const addItem = useCartStore(s => s.addItem);
 
   useEffect(() => {
@@ -181,6 +185,10 @@ function ShopContent() {
     }
     return list;
   }, [products, selectedCategory, selectedBrand, priceRange, inStockOnly, sortKey, searchQuery]);
+
+  useEffect(() => {
+    setVisibleCount(PRODUCTS_PER_PAGE);
+  }, [selectedCategory, selectedBrand, priceRange, inStockOnly, sortKey, searchQuery]);
 
   const activeCategory = CATEGORIES.find((c) => c.slug === selectedCategory);
   const activeFilters = [
@@ -355,11 +363,23 @@ function ShopContent() {
                <button onClick={resetFilters} className="font-mono text-[10px] text-copper hover:text-signal hover:shadow-signal uppercase transition-colors">CLEAR_PARAMETERS</button>
              </div>
           ) : (
-             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-               {filtered.map((product, i) => (
-                 <TechnicalProductCard key={product.id} product={product} index={i} />
-               ))}
-             </div>
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                {filtered.slice(0, visibleCount).map((product, i) => (
+                  <TechnicalProductCard key={product.id} product={product} index={i} />
+                ))}
+              </div>
+              {filtered.length > visibleCount && (
+                <div className="mt-8 flex justify-center">
+                  <button
+                    onClick={() => setVisibleCount((count) => count + PRODUCTS_PER_PAGE)}
+                    className="rounded-full border border-aluminum/20 px-6 py-3 font-display text-sm font-semibold text-aluminum transition-colors hover:border-signal/50 hover:text-signal focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal"
+                  >
+                    Show more products ({filtered.length - visibleCount} remaining)
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

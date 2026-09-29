@@ -127,6 +127,19 @@
     text-wrap: balance;
   }
 
+  .gradient-text {
+    color: var(--foreground);
+  }
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .gradient-text {
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
   /* Responsive Typography Utilities */
   .text-responsive-xs { font-size: var(--text-xs); line-height: 1.5; }
   .text-responsive-sm { font-size: var(--text-sm); line-height: 1.5; }

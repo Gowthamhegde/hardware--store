@@ -77,6 +77,7 @@ export const searchQuerySchema = z.object({
   minPrice: z.string().regex(/^\d+(\.\d{1,2})?$/).optional(),
   maxPrice: z.string().regex(/^\d+(\.\d{1,2})?$/).optional(),
   inStock: z.enum(['true', 'false']).optional(),
+  limit: z.coerce.number().int().min(1).max(100).optional(),
 });
 
 /**

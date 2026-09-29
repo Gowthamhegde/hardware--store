@@ -1,14 +1,12 @@
 import BentoGrid from '@/components/BentoGrid';
-import dynamic from 'next/dynamic';
-const BackgroundModel = dynamic(() => import('@/components/BackgroundModel'), { ssr: false });
-
+import DeferredBackgroundModel from '@/components/DeferredBackgroundModel';
 import BrandGrid from '@/components/BrandGrid';
 
 export default function HomePage() {
   return (
     <div className="relative min-h-screen bg-enclosure transition-colors duration-500">
       {/* Animated Background */}
-      <BackgroundModel />
+      <DeferredBackgroundModel />
       
       {/* Main Content Overlay */}
       <div className="relative z-10 flex flex-col items-center">
