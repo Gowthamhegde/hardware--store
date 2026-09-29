@@ -78,13 +78,13 @@ export default function TechnicalNav() {
   return (
     <>
       {/* ── Main nav bar ── */}
-      <div className="fixed top-3 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-4xl transition-all duration-300">
+      <div className="fixed top-3 sm:top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl transition-all duration-300">
         <nav
-          className={`transition-all duration-500 rounded-full border border-white/10 ${
+          className={`glass-panel transition-all duration-500 rounded-full ${
             isScrolled
-              ? 'bg-enclosure/60 backdrop-blur-3xl py-2.5 px-4 sm:py-3 sm:px-6 shadow-glass'
-              : 'bg-white/5 backdrop-blur-2xl py-3 px-4 sm:py-4 sm:px-8 shadow-glass'
-          }`}
+              ? 'py-2.5 px-4 sm:py-3 sm:px-6'
+              : 'py-3 px-4 sm:py-4 sm:px-8'
+          } overflow-hidden`}
           aria-label="Main navigation"
         >
         <div className="flex items-center justify-between gap-2">
@@ -101,7 +101,7 @@ export default function TechnicalNav() {
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden md:flex items-center gap-1 lg:gap-2">
+            <div className="hidden lg:flex min-w-0 flex-1 items-center justify-center gap-1 lg:gap-2">
               {NAV_LINKS.map(({ href, label }) => (
                 <Link
                   key={href}
@@ -144,7 +144,7 @@ export default function TechnicalNav() {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       exit={{ scale: 0 }}
-                      className="absolute -top-1 -right-1 w-6 h-6 bg-signal text-enclosure text-mono-responsive-xs font-bold flex items-center justify-center shadow-[0_0_10px_rgba(111,231,196,0.3)] rounded-full"
+                      className="absolute -top-1 -right-1 w-6 h-6 bg-signal text-enclosure text-mono-responsive-xs font-bold flex items-center justify-center shadow-[0_0_10px_rgba(0,243,255,0.3)] rounded-full"
                     >
                       {itemCount > 9 ? '9+' : itemCount}
                     </motion.span>
@@ -228,7 +228,7 @@ export default function TechnicalNav() {
               aria-label="Search products"
               aria-modal="true"
             >
-              <div className="bg-enclosure border border-aluminum/20 overflow-hidden shadow-2xl transition-colors duration-500">
+              <div className="bg-enclosure border border-aluminum/20 overflow-hidden shadow-2xl transition-colors duration-500 rounded-2xl">
                 {/* Input row */}
                 <div className="flex items-center gap-4 px-4 py-3 sm:px-6 sm:py-4 border-b border-aluminum/10 relative">
                   <div className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-transparent via-signal/50 to-transparent" />
@@ -302,7 +302,7 @@ export default function TechnicalNav() {
                           <Link
                             href={`/shop?search=${encodeURIComponent(query)}`}
                             onClick={() => setSearchOpen(false)}
-                            className="flex items-center justify-between text-mono-responsive-xs text-aluminum/80 hover:text-signal transition-colors tracking-widest touch-target"
+                            className="flex items-center justify-between text-xs text-aluminum/80 hover:text-signal transition-colors tracking-widest min-h-[44px]"
                           >
                             [ VIEW_ALL_SIGNALS ]
                             <ArrowRight className="w-3 h-3" />
@@ -315,7 +315,7 @@ export default function TechnicalNav() {
               </div>
 
               {/* Keyboard hint */}
-              <p className="text-center text-mono-responsive-xs text-aluminum/60 mt-3 tracking-widest">
+              <p className="text-center text-xs text-aluminum/60 mt-3 tracking-widest">
                 [ ESC TO TERMINATE ]
               </p>
             </motion.div>

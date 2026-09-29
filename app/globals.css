@@ -196,21 +196,26 @@
   }
 
   .glass-panel {
-    background-color: var(--glass-bg);
+    background: var(--glass-bg);
     backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border: 1px solid var(--glass-border);
-    @apply shadow-glass;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 
   .glass-card {
-    background-color: var(--glass-bg);
+    background: var(--glass-bg);
     backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
     border: 1px solid var(--glass-border);
-    @apply shadow-glass transition-all duration-500 relative overflow-hidden;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
   }
   
   .glass-card:hover {
-    background-color: var(--glass-hover-bg);
+    background: var(--glass-hover-bg);
     border-color: var(--signal);
   }
   
@@ -223,7 +228,10 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-signal via-copper to-live-red;
+    background: linear-gradient(to right, var(--signal), var(--copper), var(--live-red));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
   .bg-orb-1 {
