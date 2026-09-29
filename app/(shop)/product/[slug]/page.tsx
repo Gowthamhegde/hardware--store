@@ -152,21 +152,21 @@ export default function ProductPage() {
     product.stock === 0 ? 'out' : product.stock < 10 ? 'low' : 'in';
 
   return (
-    <div className="container mx-auto px-4 py-32 min-h-screen">
+    <div className="container mx-auto px-4 py-20 sm:py-28 lg:py-32 min-h-screen">
       {/* Floating Breadcrumb */}
-      <nav className="flex flex-wrap items-center gap-1.5 font-mono text-[9px] text-aluminum/50 uppercase bg-[#0a0d0c]/80 backdrop-blur-sm p-3 mb-8 border border-aluminum/10 w-fit rounded-lg" aria-label="Breadcrumb">
-        <Link href="/" className="hover:text-signal transition-colors">HOME</Link>
-        <ChevronRight className="w-3 h-3" />
-        <Link href="/shop" className="hover:text-signal transition-colors">CATALOG</Link>
-        <ChevronRight className="w-3 h-3" />
-        <Link href={`/shop?category=${catSlug}`} className="hover:text-signal transition-colors">
+      <nav className="flex flex-wrap items-center gap-1 sm:gap-1.5 font-mono text-[9px] text-aluminum/50 uppercase bg-[#0a0d0c]/80 backdrop-blur-sm p-2 sm:p-3 mb-6 sm:mb-8 border border-aluminum/10 w-fit rounded-lg max-w-full overflow-hidden" aria-label="Breadcrumb">
+        <Link href="/" className="hover:text-signal transition-colors shrink-0">HOME</Link>
+        <ChevronRight className="w-3 h-3 shrink-0" />
+        <Link href="/shop" className="hover:text-signal transition-colors shrink-0">CATALOG</Link>
+        <ChevronRight className="w-3 h-3 shrink-0" />
+        <Link href={`/shop?category=${catSlug}`} className="hover:text-signal transition-colors truncate max-w-[100px] sm:max-w-none">
           {product.category}
         </Link>
-        <ChevronRight className="w-3 h-3" />
-        <span className="text-signal truncate max-w-[200px]">{product.name}</span>
+        <ChevronRight className="w-3 h-3 shrink-0" />
+        <span className="text-signal truncate max-w-[120px] sm:max-w-[200px]">{product.name}</span>
       </nav>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 lg:gap-16">
         {/* Chamber 1: Image */}
         <div className="w-full flex flex-col justify-start">
           <motion.div
@@ -206,22 +206,22 @@ export default function ProductPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="flex flex-col gap-6 glass-panel p-8 lg:p-10 rounded-3xl"
+            className="flex flex-col gap-4 sm:gap-6 glass-panel p-4 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl"
           >
             <div>
-              <button className="flex items-center gap-2 px-3 py-1.5 border border-aluminum/20 bg-background/50 hover:text-signal transition-colors font-mono text-[10px] uppercase mb-4 w-fit">
+              <button className="flex items-center gap-2 px-3 py-1.5 border border-aluminum/20 bg-background/50 hover:text-signal transition-colors font-mono text-[10px] uppercase mb-4 w-fit rounded">
                 <Share2 className="w-3.5 h-3.5" />
-                <span>Share Config</span>
+                <span>Share</span>
               </button>
-              <div className="flex items-center gap-3 mb-3 border-b border-aluminum/10 pb-2">
-                <span className="font-mono text-[10px] text-white/50 tracking-widest uppercase">ID: {product.id}</span>
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 border-b border-aluminum/10 pb-2">
+                <span className="font-mono text-[9px] sm:text-[10px] text-white/50 tracking-widest uppercase truncate max-w-[140px] sm:max-w-none">ID: {product.id}</span>
                 {product.brand && (
-                  <span className="font-mono text-[10px] text-signal bg-signal/10 px-2 py-0.5 rounded tracking-widest uppercase border border-signal/20">
-                    MFR: {product.brand}
+                  <span className="font-mono text-[10px] text-signal bg-signal/10 px-2 py-0.5 rounded tracking-widest uppercase border border-signal/20 shrink-0">
+                    {product.brand}
                   </span>
                 )}
               </div>
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-cable-white leading-tight uppercase tracking-tight drop-shadow-md">
+              <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cable-white leading-tight uppercase tracking-tight drop-shadow-md">
                 {product.name}
               </h1>
               

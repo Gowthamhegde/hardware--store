@@ -78,19 +78,19 @@ export default function TechnicalNav() {
   return (
     <>
       {/* ── Main nav bar ── */}
-      <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-4xl transition-all duration-300">
+      <div className="fixed top-3 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-4xl transition-all duration-300">
         <nav
           className={`transition-all duration-500 rounded-full border border-white/10 ${
             isScrolled
-              ? 'bg-enclosure/60 backdrop-blur-3xl py-3 px-6 shadow-glass'
-              : 'bg-white/5 backdrop-blur-2xl py-4 px-8 shadow-glass'
+              ? 'bg-enclosure/60 backdrop-blur-3xl py-2.5 px-4 sm:py-3 sm:px-6 shadow-glass'
+              : 'bg-white/5 backdrop-blur-2xl py-3 px-4 sm:py-4 sm:px-8 shadow-glass'
           }`}
           aria-label="Main navigation"
         >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-2">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group" aria-label={`${STORE_CONFIG.name} home`}>
-              <div className="w-10 h-10 relative overflow-hidden rounded-full border border-white/20 bg-black/50 group-hover:border-signal/50 group-hover:shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300">
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink-0" aria-label={`${STORE_CONFIG.name} home`}>
+              <div className="w-9 h-9 sm:w-10 sm:h-10 relative overflow-hidden rounded-full border border-white/20 bg-black/50 group-hover:border-signal/50 group-hover:shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300">
                 <Image src="/logo.jpeg" alt="" fill sizes="40px" className="object-cover" />
               </div>
               <div className="hidden sm:block">
@@ -101,12 +101,12 @@ export default function TechnicalNav() {
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden md:flex items-center gap-2">
+            <div className="hidden md:flex items-center gap-1 lg:gap-2">
               {NAV_LINKS.map(({ href, label }) => (
                 <Link
                   key={href}
                   href={href}
-                  className="px-4 py-2 rounded-full font-mono text-xs font-medium text-aluminum hover:text-cable-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal uppercase tracking-wider"
+                  className="px-3 py-2 lg:px-4 rounded-full font-mono text-[10px] lg:text-xs font-medium text-aluminum hover:text-cable-white hover:bg-white/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal uppercase tracking-wider whitespace-nowrap"
                 >
                   {label}
                 </Link>
@@ -114,10 +114,10 @@ export default function TechnicalNav() {
             </div>
 
             {/* Right actions */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               <button
                 onClick={openSearch}
-                className="p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal"
+                className="p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal rounded-full"
                 aria-label="Open search"
               >
                 <Search className="w-4 h-4" />
@@ -125,7 +125,7 @@ export default function TechnicalNav() {
 
               <button
                 onClick={toggleTheme}
-                className="p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal"
+                className="p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal rounded-full"
                 aria-label="Toggle Theme"
               >
                 {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -133,7 +133,7 @@ export default function TechnicalNav() {
 
               <button
                 onClick={() => setCartOpen(true)}
-                className="relative p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal"
+                className="relative p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal rounded-full"
                 aria-label={`Cart, ${mounted ? itemCount : 0} item${mounted && itemCount !== 1 ? 's' : ''}`}
               >
                 <ShoppingCart className="w-4 h-4" />
@@ -144,7 +144,7 @@ export default function TechnicalNav() {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       exit={{ scale: 0 }}
-                      className="absolute -top-1 -right-1 w-5 h-5 bg-signal text-enclosure text-[10px] font-mono font-bold flex items-center justify-center shadow-[0_0_10px_rgba(111,231,196,0.3)]"
+                      className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 bg-signal text-enclosure text-[9px] sm:text-[10px] font-mono font-bold flex items-center justify-center shadow-[0_0_10px_rgba(111,231,196,0.3)] rounded-full"
                     >
                       {itemCount > 9 ? '9+' : itemCount}
                     </motion.span>
@@ -153,7 +153,7 @@ export default function TechnicalNav() {
               </button>
 
               <button
-                className="md:hidden p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal"
+                className="md:hidden p-2 sm:p-2.5 text-aluminum hover:text-signal hover:bg-signal/10 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-signal rounded-full"
                 onClick={() => setMobileOpen((v) => !v)}
                 aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={mobileOpen}
@@ -178,22 +178,22 @@ export default function TechnicalNav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-24 left-1/2 -translate-x-1/2 z-40 w-[95%] max-w-5xl bg-enclosure border border-aluminum/20 md:hidden overflow-hidden shadow-2xl"
+            className="fixed top-20 sm:top-24 left-1/2 -translate-x-1/2 z-40 w-[95%] max-w-sm bg-enclosure border border-aluminum/20 md:hidden overflow-hidden shadow-2xl rounded-2xl"
           >
-            <nav className="p-4 flex flex-col gap-2">
+            <nav className="p-3 flex flex-col gap-1">
               <button
                 onClick={openSearch}
-                className="flex items-center gap-3 px-4 py-3 font-mono text-xs text-aluminum hover:text-signal hover:bg-signal/10 transition-all text-left uppercase tracking-wider"
+                className="flex items-center gap-3 px-4 py-3 font-mono text-xs text-aluminum hover:text-signal hover:bg-signal/10 transition-all text-left uppercase tracking-wider rounded-xl"
               >
-                <Search className="w-4 h-4" />
-                [ Search schematic ]
+                <Search className="w-4 h-4 shrink-0" />
+                Search products
               </button>
               {NAV_LINKS.map(({ href, label }) => (
                 <Link
                   key={href}
                   href={href}
                   onClick={() => setMobileOpen(false)}
-                  className="px-4 py-3 font-mono text-xs text-aluminum hover:text-signal hover:bg-signal/10 transition-all uppercase tracking-wider"
+                  className="px-4 py-3 font-mono text-xs text-aluminum hover:text-signal hover:bg-signal/10 transition-all uppercase tracking-wider rounded-xl"
                 >
                   {label}
                 </Link>
@@ -230,7 +230,7 @@ export default function TechnicalNav() {
             >
               <div className="bg-enclosure border border-aluminum/20 overflow-hidden shadow-2xl transition-colors duration-500">
                 {/* Input row */}
-                <div className="flex items-center gap-4 px-6 py-4 border-b border-aluminum/10 relative">
+                <div className="flex items-center gap-4 px-4 py-3 sm:px-6 sm:py-4 border-b border-aluminum/10 relative">
                   <div className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-transparent via-signal/50 to-transparent" />
                   <Search className="w-5 h-5 text-signal flex-shrink-0 animate-pulse-fast" />
                   <input
@@ -238,8 +238,8 @@ export default function TechnicalNav() {
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="QUERY: ENTER COMPONENT NAME OR SPEC..."
-                    className="flex-1 bg-transparent font-mono text-sm text-cable-white placeholder:text-aluminum/40 focus:outline-none uppercase"
+                    placeholder="Search products..."
+                    className="flex-1 bg-transparent font-mono text-sm text-cable-white placeholder:text-aluminum/40 focus:outline-none min-w-0"
                     aria-label="Search query"
                   />
                   <button

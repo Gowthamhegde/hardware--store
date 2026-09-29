@@ -21,6 +21,12 @@ export const metadata: Metadata = {
   description: "Hardware, switches, cables, home theatre and electronic items with a practical local-store feel.",
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: {

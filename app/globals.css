@@ -40,10 +40,13 @@
   body {
     background-color: var(--background);
     color: var(--cable-white);
-    antialiased: true;
     font-family: var(--font-inter), system-ui, sans-serif;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    /* Prevent horizontal overflow on mobile */
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body::-webkit-scrollbar {
@@ -154,5 +157,49 @@
   @keyframes marquee-scroll {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+  }
+
+  /* Spatial glass — used by BentoGrid tiles */
+  .spatial-glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+  }
+
+  /* Spatial text glow */
+  .spatial-text-glow {
+    text-shadow: 0 0 80px rgba(150, 150, 150, 0.3);
+  }
+
+  /* shadow-spatial utility */
+  .shadow-spatial {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Minimum tap target size for accessibility on mobile */
+  button, a, [role="button"] {
+    min-height: 36px;
+    min-width: 36px;
+  }
+
+  /* Custom scrollbar for panels */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--aluminum);
+    border-radius: 3px;
+    opacity: 0.3;
+  }
+
+  @keyframes blob {
+    0%   { transform: translate(0px, 0px) scale(1); }
+    33%  { transform: translate(30px, -50px) scale(1.1); }
+    66%  { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
   }
 }
