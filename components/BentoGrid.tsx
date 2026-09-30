@@ -443,11 +443,16 @@ export default function BentoGrid() {
           <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 z-10 pointer-events-none bg-gradient-to-l from-background to-transparent" aria-hidden="true" />
 
           {/* Scrolling track */}
-          <div className="marquee-track" aria-hidden="true">
+          <div className="marquee-track">
             {[...BRANDS, ...BRANDS].map((b, i) => (
-              <span key={i} className="font-display font-bold text-base sm:text-xl text-foreground/20 tracking-[0.3em] mx-8 sm:mx-12 flex-shrink-0">
+              <Link
+                key={`${b}-${i}`}
+                href={`/shop?brand=${encodeURIComponent(b)}`}
+                aria-label={`View ${b} products`}
+                className="font-display font-bold text-base sm:text-xl text-foreground/20 hover:text-signal tracking-[0.3em] mx-8 sm:mx-12 flex-shrink-0 transition-colors"
+              >
                 {b}
-              </span>
+              </Link>
             ))}
           </div>
         </div>
