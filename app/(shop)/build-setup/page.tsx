@@ -6,7 +6,6 @@ import { ArrowRight, CheckCircle2, ChevronRight, Settings2, Zap, Activity } from
 import Image from 'next/image';
 import { SAMPLE_PRODUCTS } from '@/lib/sample-data';
 import { CATEGORIES } from '@/lib/constants';
-import { formatPrice } from '@/lib/utils';
 import { useCartStore } from '@/lib/store';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
@@ -32,11 +31,6 @@ export default function BuildSetupPage() {
   );
 
   const totalSelected = Object.keys(selectedItems).length;
-  const totalPrice = Object.values(selectedItems).reduce((sum, id) => {
-    const p = SAMPLE_PRODUCTS.find(p => p.id === id);
-    return sum + (p?.price || 0);
-  }, 0);
-
   const handleSelect = (productId: string) => {
     setSelectedItems(prev => ({
       ...prev,
@@ -138,7 +132,17 @@ export default function BuildSetupPage() {
 
                     <div className="relative h-32 bg-enclosure border-b border-aluminum/10 p-4 flex items-center justify-center">
                       <div className="relative w-full h-full opacity-80 hover:opacity-100 transition-opacity">
-                        <Image src={getStorePhotoByKey(product.id, product.image_url, product.brand)} alt={product.name} fill sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-contain" />
+                        <Image
+                          src={getStorePhotoByKey(product.id, product.image_url, product.brand)}
+                          alt={product.name}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                          className="object-contain"
+                          onError={(event) => {
+                            event.currentTarget.onerror = null;
+                            event.currentTarget.src = '/switch.webp';
+                          }}
+                        />
                       </div>
                     </div>
                     
@@ -215,9 +219,6 @@ export default function BuildSetupPage() {
                           <div className="text-[10px] text-cable-white leading-tight truncate max-w-[160px]">
                             {selectedProduct.name}
                           </div>
-                          <div className="text-[9px] text-signal mt-1">
-                            {formatPrice(selectedProduct.price)}
-                          </div>
                         </div>
                         <button
                           onClick={() => {
@@ -242,10 +243,6 @@ export default function BuildSetupPage() {
               <div className="flex justify-between items-center text-[10px] text-aluminum mb-1">
                 <span>COMPONENTS:</span>
                 <span>{totalSelected} / {STEPS.length}</span>
-              </div>
-              <div className="flex justify-between items-end">
-                <span className="text-[10px] text-aluminum">TOTAL_SYS_VALUE:</span>
-                <span className="text-lg font-bold text-copper">{formatPrice(totalPrice)}</span>
               </div>
             </div>
             
