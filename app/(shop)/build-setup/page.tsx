@@ -136,6 +136,7 @@ export default function BuildSetupPage() {
                           src={getStorePhotoByKey(product.id, product.image_url, product.brand)}
                           alt={product.name}
                           fill
+                          unoptimized
                           sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
                           className="object-contain"
                           onError={(event) => {
