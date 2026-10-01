@@ -4,15 +4,15 @@ export const STORE_CONFIG = {
   name: "VIGNESH Electrical Power House",
   tagline: "Hardware, electricals, home theatre and electronic items",
   description: "Switches, cables, lighting, home theatre and electronic items for every project",
-  phone: "+1 (555) 782-4430",
+  phone: "97409 44002",
   email: "sales@vigneshelectricalpowerhouse.com",
   address: {
-    line1: "123 Industrial Avenue",
-    line2: "Suite 100",
-    city: "Your City",
-    state: "State",
-    zip: "12345",
-    country: "Country",
+    line1: "West of Chord Road 2nd Stage, West of Chord Road",
+    line2: "Stage 2, Basaveshwar Nagar",
+    city: "Bengaluru",
+    state: "karnataka",
+    zip: "560086",
+    country: "India",
   },
   hours: {
     weekday: "Monday - Friday: 8:00 AM - 6:00 PM",
@@ -20,7 +20,7 @@ export const STORE_CONFIG = {
     sunday: "Sunday: Closed",
   },
   social: {
-    whatsapp: "+1234567890", // Without + or spaces
+    whatsapp: "97409 44002", // Without + or spaces
     facebook: "https://facebook.com/electropro",
     instagram: "https://instagram.com/electropro",
   },

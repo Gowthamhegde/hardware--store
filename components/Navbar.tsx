@@ -63,6 +63,9 @@ export default function Navbar() {
             <Link href="/about" className="font-display text-sm text-aluminum hover:text-signal transition-colors uppercase tracking-wide">
               About
             </Link>
+            <Link href="/our-work" className="font-display text-sm text-aluminum hover:text-signal transition-colors uppercase tracking-wide">
+              Our Work
+            </Link>
             <Link href="/contact" className="font-display text-sm text-aluminum hover:text-signal transition-colors uppercase tracking-wide">
               Contact
             </Link>
@@ -115,6 +118,9 @@ export default function Navbar() {
             </Link>
             <Link href="/about" className="block py-3 font-mono text-sm text-charcoal hover:text-accent uppercase tracking-wide">
               About
+            </Link>
+            <Link href="/our-work" className="block py-3 font-mono text-sm text-charcoal hover:text-accent uppercase tracking-wide">
+              Our Work
             </Link>
             <Link href="/contact" className="block py-3 font-mono text-sm text-charcoal hover:text-accent uppercase tracking-wide">
               Contact

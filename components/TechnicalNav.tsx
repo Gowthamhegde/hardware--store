@@ -18,6 +18,7 @@ const NAV_LINKS = [
   { href: '/home-theatre', label: 'Home theatre' },
   { href: '/shop?category=cables-wires', label: 'Cables & wires' },
   { href: '/build-setup', label: 'Build a setup' },
+  { href: '/our-work', label: 'Our work' },
 ];
 
 export default function TechnicalNav() {

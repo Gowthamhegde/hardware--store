@@ -53,13 +53,19 @@ export default function Footer() {
               [ PROTOCOLS ]
             </h4>
             <ul className="space-y-2">
-              {['About Us', 'Contact', 'Shipping Specs', 'Return Policy'].map((link) => (
-                <li key={link}>
+              {[
+                { label: 'About Us', href: '/about' },
+                { label: 'Our Work', href: '/our-work' },
+                { label: 'Contact', href: '/contact' },
+                { label: 'Shipping Specs', href: '#' },
+                { label: 'Return Policy', href: '#' },
+              ].map((link) => (
+                <li key={link.label}>
                   <Link
-                    href="#"
+                    href={link.href}
                     className="font-mono text-xs text-aluminum/80 hover:text-signal transition-colors"
                   >
-                    {link}
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -91,8 +97,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {STORE_CONFIG.name}. ALL RIGHTS RESERVED.
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="font-mono text-[10px] text-aluminum/40 hover:text-signal">TERMS</Link>
-            <Link href="#" className="font-mono text-[10px] text-aluminum/40 hover:text-signal">PRIVACY</Link>
+            <Link href="/terms" className="font-mono text-[10px] text-aluminum/40 hover:text-signal">TERMS</Link>
+            <Link href="/privacy" className="font-mono text-[10px] text-aluminum/40 hover:text-signal">PRIVACY</Link>
           </div>
         </div>
       </div>

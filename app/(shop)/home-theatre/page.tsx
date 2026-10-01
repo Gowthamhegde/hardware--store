@@ -42,7 +42,12 @@ export default function HomeTheatrePage() {
       <div className="relative z-20 max-w-7xl mx-auto px-6 pb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, i) => (
-            <TechnicalProductCard key={product.id} product={product} index={i} />
+            <TechnicalProductCard
+              key={product.id}
+              product={product}
+              index={i}
+              imageFallback="/images/Home theater/images.jfif"
+            />
           ))}
         </div>
       </div>

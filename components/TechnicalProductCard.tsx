@@ -14,6 +14,7 @@ import { getStorePhotoByKey } from '@/lib/store-images';
 interface Props {
   product: Product;
   index?: number;
+  imageFallback?: string;
 }
 
 // Stock LED — static, colour-coded
@@ -38,13 +39,11 @@ function StockLED({ stock }: { stock: number }) {
   );
 }
 
-export default function TechnicalProductCard({ product, index = 0 }: Props) {
+export default function TechnicalProductCard({ product, index = 0, imageFallback = '/switch.webp' }: Props) {
   const addItem = useCartStore((s) => s.addItem);
   const { toggleCompare, compareItems } = useCompareStore();
   const [pulsing, setPulsing] = useState(false);
   const [imageSrc, setImageSrc] = useState(() => getStorePhotoByKey(product.id, product.image_url, product.brand));
-  const imageFallback = '/switch.webp';
-
   const isComparing = compareItems.some(p => p.id === product.id);
 
   // Connection-pulse: progress along the SVG trace line
