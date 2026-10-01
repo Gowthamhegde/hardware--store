@@ -91,6 +91,7 @@ export default function ProductPage() {
   const { slug } = useParams<{ slug: string }>();
   const [product, setProduct] = useState<Product | null>(null);
   const [related, setRelated] = useState<Product[]>([]);
+  const [imageSrc, setImageSrc] = useState('');
   const [loading, setLoading] = useState(true);
   
   const [qty, setQty] = useState(1);
@@ -110,6 +111,7 @@ export default function ProductPage() {
         if (!active) return;
 
         setProduct(productData);
+        setImageSrc(productData ? getStorePhotoByKey(productData.id, productData.image_url, productData.brand) : '');
         setLoading(false);
         if (!productData) return;
 
@@ -190,7 +192,7 @@ export default function ProductPage() {
           >
             {/* Inner ambient glow */}
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-signal/10 pointer-events-none" />
-            <Image src={getStorePhotoByKey(product.id, product.image_url, product.brand)} alt={product.name} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-contain p-12 opacity-80 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-700" />
+            <Image src={imageSrc} alt={product.name} fill sizes="(max-width: 1024px) 100vw, 50vw" onError={() => setImageSrc('/switch.webp')} className="object-contain p-12 opacity-80 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-700" />
 
             {/* HUD Overlay */}
             <div className="absolute inset-0 pointer-events-none border-[0.5px] border-signal/10 m-4">
@@ -230,9 +232,9 @@ export default function ProductPage() {
               <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 border-b border-aluminum/10 pb-2">
                 <span className="font-mono text-[9px] sm:text-[10px] text-white/50 tracking-widest uppercase truncate max-w-[140px] sm:max-w-none">ID: {product.id}</span>
                 {product.brand && (
-                  <span className="font-mono text-[10px] text-signal bg-signal/10 px-2 py-0.5 rounded tracking-widest uppercase border border-signal/20 shrink-0">
+                  <Link href={`/shop?brand=${encodeURIComponent(product.brand)}`} className="font-mono text-[10px] text-signal bg-signal/10 px-2 py-0.5 rounded tracking-widest uppercase border border-signal/20 shrink-0 hover:bg-signal/20 hover:underline">
                     {product.brand}
-                  </span>
+                  </Link>
                 )}
               </div>
               <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cable-white leading-tight uppercase tracking-tight drop-shadow-md">

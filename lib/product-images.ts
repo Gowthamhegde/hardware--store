@@ -10,6 +10,7 @@ export const BRAND_LOGOS = {
   norisys: '/images/norisys/logo.png',
   panasonic: '/images/panasonic/Panasonic-logo.jpg',
   finolex: '/images/finolex/logo.jpg',
+  hager: '/images/hager/logo.svg',
 };
 
 const COMPANY_IMAGES: Record<string, string[]> = {
@@ -253,6 +254,30 @@ const COMPANY_IMAGES: Record<string, string[]> = {
     '/images/Home theater/images (3).jfif',
     '/images/Home theater/images (4).jfif',
     '/images/Home theater/images (5).jfif',
+  ],
+  crabtree: [
+    '/images/anchor/switch (1).jpeg',
+    '/images/anchor/switch (2).jpg',
+    '/images/legrand/switch3.jpeg',
+    '/images/legrand/switch6.jpeg',
+  ],
+  indoasian: [
+    '/images/norisys/switch (1).jpeg',
+    '/images/norisys/switch (4).jpeg',
+    '/images/panasonic/switch (1).jpeg',
+    '/images/panasonic/switch (2).jpeg',
+  ],
+  hager: [
+    '/images/legrand/switch8.jpeg',
+    '/images/legrand/switch10.jpeg',
+    '/images/norisys/switch (7).jpeg',
+    '/images/norisys/switch (10).jpeg',
+  ],
+  'hi-fi': [
+    '/images/Home theater/images.jfif',
+    '/images/Home theater/images (1).jfif',
+    '/images/Home theater/images (2).jfif',
+    '/images/Home theater/images (3).jfif',
   ],
 };
 

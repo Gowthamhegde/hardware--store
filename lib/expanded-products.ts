@@ -1006,6 +1006,41 @@ const homeTheatreProducts: Product[] = [
   },
 ];
 
+const additionalBrandProducts: Product[] = [
+  ...[
+    ['Crabtree', 'Crabtree Athena 6A 1-Way Switch', '/images/anchor/switch (1).jpeg', 3.2],
+    ['Crabtree', 'Crabtree 16A Universal Socket', '/images/anchor/switch (2).jpg', 5.8],
+    ['Crabtree', 'Crabtree Bell Push Module', '/images/legrand/switch3.jpeg', 4.4],
+    ['Crabtree', 'Crabtree 2M Modular Plate', '/images/legrand/switch6.jpeg', 6.5],
+    ['IndoAsian', 'IndoAsian 6A Modular Switch', '/images/norisys/switch (1).jpeg', 2.9],
+    ['IndoAsian', 'IndoAsian 16A Power Socket', '/images/norisys/switch (4).jpeg', 5.2],
+    ['IndoAsian', 'IndoAsian Fan Regulator', '/images/panasonic/switch (1).jpeg', 7.4],
+    ['IndoAsian', 'IndoAsian 3M Cover Plate', '/images/panasonic/switch (2).jpeg', 4.8],
+    ['Hager', 'Hager 6A Modular Switch', '/images/legrand/switch8.jpeg', 4.1],
+    ['Hager', 'Hager 16A Appliance Switch', '/images/legrand/switch10.jpeg', 7.6],
+    ['Hager', 'Hager Distribution Board Module', '/images/norisys/switch (7).jpeg', 12.5],
+    ['Hager', 'Hager 2M Cover Plate', '/images/norisys/switch (10).jpeg', 5.9],
+    ['Hi-Fi', 'Hi-Fi Bookshelf Speaker Pair', '/images/Home theater/images.jfif', 149.0],
+    ['Hi-Fi', 'Hi-Fi Dolby Atmos Soundbar', '/images/Home theater/images (1).jfif', 229.0],
+    ['Hi-Fi', 'Hi-Fi AV Receiver', '/images/Home theater/images (2).jfif', 399.0],
+    ['Hi-Fi', 'Hi-Fi Active Subwoofer', '/images/Home theater/images (3).jfif', 279.0],
+  ].map(([brand, name, image_url, price], index) => ({
+    id: `additional-${String(brand).toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${1300 + index}`,
+    name: String(name),
+    slug: `additional-${String(brand).toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${1300 + index}`,
+    description: `${brand} product for dependable electrical and home technology installations`,
+    long_description: `Authentic ${brand} product selected for reliable performance and everyday installation requirements.`,
+    price: Number(price),
+    category: String(brand) === 'Hi-Fi' ? 'Home Theatre & Audio' : 'Switches & Sockets',
+    brand: String(brand),
+    image_url: String(image_url),
+    stock: 24 + index * 4,
+    specifications: { Brand: String(brand), Type: String(brand) === 'Hi-Fi' ? 'Audio Equipment' : 'Modular Electrical', Rating: String(brand) === 'Hi-Fi' ? 'Premium' : '10A / 16A' },
+    created_at: ts,
+    updated_at: ts,
+  })),
+];
+
 // ─── EXPORTS ──────────────────────────────────────────────────────────────────
 export const EXPANDED_PRODUCTS: Product[] = [
   ...anchorProducts,
@@ -1019,6 +1054,7 @@ export const EXPANDED_PRODUCTS: Product[] = [
   ...yaleProducts,
   ...lukerProducts,
   ...homeTheatreProducts,
+  ...additionalBrandProducts,
 ];
 
 export const PRODUCTS_BY_BRAND = {
@@ -1033,4 +1069,8 @@ export const PRODUCTS_BY_BRAND = {
   yale: yaleProducts,
   luker: lukerProducts,
   homeTheatre: homeTheatreProducts,
+  crabtree: additionalBrandProducts.filter((product) => product.brand === 'Crabtree'),
+  indoasian: additionalBrandProducts.filter((product) => product.brand === 'IndoAsian'),
+  hager: additionalBrandProducts.filter((product) => product.brand === 'Hager'),
+  hiFi: additionalBrandProducts.filter((product) => product.brand === 'Hi-Fi'),
 };

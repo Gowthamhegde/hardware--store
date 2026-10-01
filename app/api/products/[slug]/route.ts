@@ -19,6 +19,8 @@ export async function GET(request: Request, { params }: { params: { slug: string
     .single();
 
   if (error) {
+    const fallbackProduct = getMockProducts().find((item) => item.slug === slug);
+    if (fallbackProduct) return NextResponse.json(fallbackProduct);
     return NextResponse.json({ error: error.message }, { status: 404 });
   }
 

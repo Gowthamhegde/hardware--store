@@ -42,6 +42,8 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
   const addItem = useCartStore((s) => s.addItem);
   const { toggleCompare, compareItems } = useCompareStore();
   const [pulsing, setPulsing] = useState(false);
+  const [imageSrc, setImageSrc] = useState(() => getStorePhotoByKey(product.id, product.image_url, product.brand));
+  const imageFallback = '/switch.webp';
 
   const isComparing = compareItems.some(p => p.id === product.id);
 
@@ -93,11 +95,12 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
             {/* Ambient inner glow for image */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0" />
             <Image
-              src={getStorePhotoByKey(product.id, product.image_url, product.brand)}
+              src={imageSrc}
               alt={product.name}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-contain p-4 group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100 z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(0,243,255,0.4)]"
+              onError={() => setImageSrc(imageFallback)}
             />
           </div>
 
@@ -137,9 +140,17 @@ export default function TechnicalProductCard({ product, index = 0 }: Props) {
           {/* Name + add to cart */}
           <div className="flex flex-col gap-3 px-4 pt-4 pb-5 flex-1 bg-gradient-to-b from-transparent to-background/60">
             {product.brand && (
-              <span className="text-mono-responsive-xs text-signal/80 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)]">
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  window.location.assign(`/shop?brand=${encodeURIComponent(product.brand!)}`);
+                }}
+                className="w-fit text-left text-mono-responsive-xs text-signal/80 uppercase tracking-widest drop-shadow-[0_0_5px_rgba(0,243,255,0.5)] hover:text-signal hover:underline"
+              >
                 {product.brand}
-              </span>
+              </button>
             )}
             <h3 className="font-display text-base font-semibold text-foreground leading-snug group-hover:text-signal transition-colors line-clamp-2 uppercase drop-shadow-md">
               {product.name}

@@ -57,7 +57,20 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  return NextResponse.json(data);
+  const databaseProducts = data ?? [];
+  const databaseSlugs = new Set(databaseProducts.map((product) => product.slug));
+  let fallbackProducts = getMockProducts().filter((product) => !databaseSlugs.has(product.slug));
+
+  if (category) fallbackProducts = fallbackProducts.filter((product) => product.category === category);
+  if (search) {
+    const q = search.toLowerCase();
+    fallbackProducts = fallbackProducts.filter((product) => product.name.toLowerCase().includes(q));
+  }
+  if (minPrice) fallbackProducts = fallbackProducts.filter((product) => product.price >= parseFloat(minPrice));
+  if (maxPrice) fallbackProducts = fallbackProducts.filter((product) => product.price <= parseFloat(maxPrice));
+  if (inStock === 'true') fallbackProducts = fallbackProducts.filter((product) => product.stock > 0);
+
+  return NextResponse.json(limit ? [...databaseProducts, ...fallbackProducts].slice(0, limit) : [...databaseProducts, ...fallbackProducts]);
 }
 
 export async function POST(request: Request) {

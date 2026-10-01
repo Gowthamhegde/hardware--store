@@ -102,6 +102,7 @@ function FilterSection({
 
 function ShopContent() {
   const searchParams = useSearchParams();
+  const searchParamsString = searchParams.toString();
 
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedBrand, setSelectedBrand] = useState('all');
@@ -147,7 +148,7 @@ function ShopContent() {
 
     const sq = searchParams.get('search') ?? '';
     setSearchQuery(sq);
-  }, [searchParams]);
+  }, [searchParams, searchParamsString]);
 
   const filtered = useMemo(() => {
     let list = products.filter((p) => {
@@ -155,7 +156,7 @@ function ShopContent() {
         const catSlug = CATEGORIES.find((c) => c.name === p.category)?.slug;
         if (catSlug !== selectedCategory) return false;
       }
-      if (selectedBrand !== 'all' && p.brand !== selectedBrand) return false;
+      if (selectedBrand !== 'all' && p.brand?.trim().toLowerCase() !== selectedBrand.trim().toLowerCase()) return false;
       if (inStockOnly && p.stock === 0) return false;
       if (priceRange !== 'all') {
         if (priceRange.endsWith('+')) {
@@ -241,7 +242,7 @@ function ShopContent() {
         <div className="flex flex-wrap gap-1.5">
           <Chip active={selectedBrand === 'all'} onClick={() => setSelectedBrand('all')}>All</Chip>
           {ALL_BRANDS.map((b) => (
-            <Chip key={b} active={selectedBrand === b} onClick={() => setSelectedBrand(b)}>{b}</Chip>
+            <Chip key={b} active={selectedBrand.trim().toLowerCase() === b.trim().toLowerCase()} onClick={() => setSelectedBrand(b)}>{b}</Chip>
           ))}
         </div>
       </FilterSection>
