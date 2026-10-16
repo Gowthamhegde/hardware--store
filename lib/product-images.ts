@@ -299,10 +299,10 @@ const COMPANY_IMAGES: Record<string, string[]> = {
 /**
  * Get product image based on brand.
  * If the product already has a real image path, use it.
- * Otherwise pick deterministically from the brand's image pool.
+ * Otherwise pick deterministically from the brand's image pool using improved distribution.
  */
 export function getProductImageByBrand(brand: string, productId: string, fallbackUrl?: string): string {
-  // Real image already on the product — don't override
+  // Real image already on the product — use it (unless it's a generic store photo)
   if (fallbackUrl && fallbackUrl !== '' && !fallbackUrl.startsWith('/store-photos/')) {
     return fallbackUrl;
   }
@@ -311,14 +311,24 @@ export function getProductImageByBrand(brand: string, productId: string, fallbac
   const images = COMPANY_IMAGES[brandLower];
 
   if (images && images.length > 0) {
-    // Deterministic: same productId always maps to the same image
-    const hash = productId.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    return images[hash % images.length];
+    // Improved hash function for better distribution
+    let hash = 0;
+    for (let i = 0; i < productId.length; i++) {
+      const char = productId.charCodeAt(i);
+      // djb2 hash algorithm - better distribution than simple sum
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash; // Convert to 32bit integer
+    }
+    // Ensure positive index and map to available images
+    const index = Math.abs(hash) % images.length;
+    return images[index];
   }
 
+  // Fallback chain
   if (fallbackUrl && fallbackUrl !== '') return fallbackUrl;
-
-  return COMPANY_IMAGES['anchor'][0];
+  
+  // Last resort fallback
+  return COMPANY_IMAGES['anchor'][0] || '/images/anchor/switch (1).jpeg';
 }
 
 /**
