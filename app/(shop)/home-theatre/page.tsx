@@ -40,16 +40,22 @@ export default function HomeTheatrePage() {
 
       {/* Cinematic Grid */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, i) => (
-            <TechnicalProductCard
-              key={product.id}
-              product={product}
-              index={i}
-              imageFallback="/images/Home theater/images.jfif"
-            />
-          ))}
-        </div>
+        {products.length === 0 ? (
+          <div className="text-center py-20">
+            <p className="font-mono text-aluminum/60 text-sm uppercase tracking-wider">No products found</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product, i) => (
+              <TechnicalProductCard
+                key={product.id}
+                product={product}
+                index={i}
+                imageFallback="/images/Home theater/klipsch-reference-5-2-home-theater-system-620.jpg"
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

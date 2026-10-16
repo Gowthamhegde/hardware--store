@@ -255,6 +255,21 @@ const COMPANY_IMAGES: Record<string, string[]> = {
     '/images/Home theater/images (4).jfif',
     '/images/Home theater/images (5).jfif',
   ],
+  klipsch: [
+    '/images/Home theater/klipsch-reference-5-2-home-theater-system-620.jpg',
+    '/images/Home theater/focal-sopra-no3-home-cinema-7-1-speaker-package-500x500.webp',
+    '/images/Home theater/1200Wx1200H_39d6a9f7-df0a-4d8c-b6d4-70d31fe15919_1200x630.webp',
+  ],
+  focal: [
+    '/images/Home theater/focal-sopra-no3-home-cinema-7-1-speaker-package-500x500.webp',
+    '/images/Home theater/1200Wx1200H_39d6a9f7-df0a-4d8c-b6d4-70d31fe15919_1200x630.webp',
+    '/images/Home theater/images.jfif',
+  ],
+  marantz: [
+    '/images/Home theater/1200Wx1200H_39d6a9f7-df0a-4d8c-b6d4-70d31fe15919_1200x630.webp',
+    '/images/Home theater/images (1).jfif',
+    '/images/Home theater/images (2).jfif',
+  ],
   crabtree: [
     '/images/anchor/switch (1).jpeg',
     '/images/anchor/switch (2).jpg',
