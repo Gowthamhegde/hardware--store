@@ -76,6 +76,7 @@ export default function OurWorkPage() {
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"
                   className="object-cover transition-transform duration-700 hover:scale-105"
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <span className="absolute left-5 bottom-4 font-mono text-xs tracking-[0.25em] text-white/80">PROJECT {project.number}</span>
